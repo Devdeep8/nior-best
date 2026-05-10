@@ -51,7 +51,7 @@ export function useGSAP<T extends HTMLElement = HTMLElement>(
 
     contextRef.current = ctx;
 
-    return () => {
+    return () => { 
       ctx.revert();
       cleanupScrollTriggers();
     };
