@@ -9,14 +9,14 @@ const testimonials = [
     quote: "Working with CodersExpress has been a great experience for MyBoat Ride. They handled our social media and website efficiently and delivered everything exactly within the promised timeline. The team was responsive, professional, and easy to work with. We’re really happy with the quality of work and overall experience.",
     name: "Gurpreet Bakshi",
     company: "Ceo, MyBoatRide",
-    avatar: "https://cdn.prod.website-files.com/6687c6ec7db3d4bbcf259b6a/66c20e7b2c21f55a63aa278b_bicoahmed.avif",
+    avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871444/coders%20express/company%20logos/7_fgprla.png",
   },
   {
     id: 2,
     quote: "Our experience with CodersExpress for Macaire’s branding and logo design has been excellent. They understood our vision perfectly and created a brand identity that truly reflects our style. The process was smooth, the team was supportive throughout, and the final outcome exceeded our expectations.",
     name: "Harshdeep Singh",
     company: "Founder, Macaire",
-    avatar: "https://cdn.prod.website-files.com/6687c6ec7db3d4bbcf259b6a/66c20e7b2c21f55a63aa278b_bicoahmed.avif",
+    avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871463/coders%20express/company%20logos/15_glaovk.png",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const testimonials = [
     quote: "We had a great experience working with CodersExpress for our webinar content. From ideation and creative planning to designing and delivering the final videos, the team handled everything seamlessly. They understood our requirements well, stayed on track with timelines, and delivered engaging content that matched our vision perfectly.",
     name: "Aman Singh",
     company: "CEO, Feed Sync",
-    avatar: "https://cdn.prod.website-files.com/6687c6ec7db3d4bbcf259b6a/66c20e7b2c21f55a63aa278b_bicoahmed.avif",
+    avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871443/coders%20express/company%20logos/6_jflud9.png",
   },
   {
     id: 5,
@@ -105,8 +105,8 @@ export function TestimonialsSection() {
           >
             {/* Top row: Avatar placeholder & Logo placeholder */}
             <div className="flex justify-between items-start mb-12">
-              <div className="w-20 h-20 bg-[#1a1a1a] rounded-full overflow-hidden grayscale relative">
-                {/* Avatar */}
+              <div className="w-20 h-20 bg-white rounded-full overflow-hidden relative flex items-center justify-center">
+                {/* Avatar / Logo */}
                 {t.avatar && (
                   <Image
                     src={t.avatar}
@@ -114,7 +114,7 @@ export function TestimonialsSection() {
                     fill
                     unoptimized
                     sizes="80px"
-                    className="object-cover"
+                    className="object-contain p-2"
                   />
                 )}
               </div>
