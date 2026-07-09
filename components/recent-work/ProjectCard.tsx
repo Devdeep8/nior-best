@@ -15,6 +15,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  /** Seek the video to the configured start time (if any) */
+  const seekToStart = () => {
+    const vid = videoRef.current;
+    if (vid && project.videoStartTime) {
+      vid.currentTime = project.videoStartTime;
+    }
+  };
 
   // Scroll-in animation (once, staggered by index)
   useEffect(() => {
@@ -73,24 +82,17 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <div ref={imgRef} className="relative w-full h-full bg-[#111]">
         {project.videoSrc ? (
           <video
+            ref={videoRef}
             src={project.videoSrc}
             className="absolute inset-0 h-full w-full object-cover"
             autoPlay
             muted
             playsInline
-            onLoadedMetadata={(e) => {
-              if (project.videoStartTime) {
-                e.currentTarget.currentTime = project.videoStartTime;
-              }
-            }}
-            onEnded={(e) => {
-              if (project.videoStartTime) {
-                e.currentTarget.currentTime = project.videoStartTime;
-                e.currentTarget.play();
-              } else {
-                e.currentTarget.currentTime = 0;
-                e.currentTarget.play();
-              }
+            onLoadedMetadata={seekToStart}
+            onLoadedData={seekToStart}
+            onEnded={() => {
+              seekToStart();
+              videoRef.current?.play();
             }}
           />
         ) : (
