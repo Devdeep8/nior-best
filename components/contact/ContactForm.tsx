@@ -92,15 +92,14 @@ export function CustomSelect({ label, required, options, placeholder, name }: Ba
       <div ref={containerRef} className="relative w-full">
         {/* Hidden input stores the select state for standard native form retrieval */}
         <input type="hidden" name={name} value={selectedValue} required={required} />
-        
+
         <div
           onClick={() => {
             setIsOpen(!isOpen);
             setIsFocused(true);
           }}
-          className={`flex items-center justify-between w-full text-base border-b py-3 cursor-pointer transition-colors ${
-            isOpen || isFocused ? "border-white/70" : "border-white/20"
-          }`}
+          className={`flex items-center justify-between w-full text-base border-b py-3 cursor-pointer transition-colors ${isOpen || isFocused ? "border-white/70" : "border-white/20"
+            }`}
         >
           <span className={selectedValue ? "text-white" : "text-[#444]"}>
             {selectedValue || placeholder || "Select option"}
@@ -148,15 +147,16 @@ export function ProjectEnquiryForm() {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
-    
+
     const formData = new FormData(e.currentTarget);
     const payload = {
       type: "project-enquiry",
       name: formData.get("name"),
       email: formData.get("email"),
+      phone: formData.get("phone"),
       reason: formData.get("reason"),
       companyName: formData.get("companyName"),
-      companyStage: formData.get("companyStage"),
+      companyInstagram: formData.get("companyInstagram"),
       hearAboutUs: formData.get("hearAboutUs"),
       message: formData.get("message"),
     };
@@ -197,38 +197,47 @@ export function ProjectEnquiryForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+      {/* Row 1: Name + Mail */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <TextInput label="Name" name="name" required placeholder="John Smith" />
-        <TextInput label="Email" name="email" type="email" required placeholder="Enter your email" />
+        <TextInput label="Mail id" name="email" type="email" required placeholder="you@example.com" />
       </div>
       <FormDivider />
-      
+
+      {/* Contact number */}
+      <TextInput label="Contact number" name="phone" type="tel" required placeholder="+1 234 567 8900" />
+      <FormDivider />
+
+      {/* Reason to connect */}
       <CustomSelect
-        label="Reason to contact?"
+        label="Reason to connect?"
         name="reason"
         required
         placeholder="Select a reason"
         options={serviceOptions}
       />
       <FormDivider />
-      
+
+      {/* Row 2: Company name + Company instagram (both optional) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <TextInput label="Company name" name="companyName" required placeholder="Enter your company" />
-        <CustomSelect 
-          label="What stage is your company?" 
-          name="companyStage"
-          required 
-          placeholder="Select stage"
-          options={["Pre-Seed", "Seed", "Series A", "Series B+", "Established", "Other"]} 
-        />
+        <TextInput label="Company name" name="companyName" placeholder="Your company" />
+        <TextInput label="Company instagram" name="companyInstagram" placeholder="@yourhandle" />
       </div>
       <FormDivider />
-      
-      <TextInput label="How did you hear about us?" name="hearAboutUs" required placeholder="Enter your response" />
+
+      {/* How did you hear — dropdown, required */}
+      <CustomSelect
+        label="How did you hear about us?"
+        name="hearAboutUs"
+        required
+        placeholder="SELECT OPTION"
+        options={["Instagram", "Friends & Family", "Facebook", "Others"]}
+      />
       <FormDivider />
-      
-      <TextArea label="Message" name="message" required placeholder="Leave a message" />
-      
+
+      {/* Message — optional */}
+      <TextArea label="Leave a message" name="message" placeholder="Anything you'd like us to know (optional)" />
+
       {error && <div className="text-red-400 text-sm -mt-4">{error}</div>}
 
       <div className="pt-4">
@@ -253,7 +262,7 @@ export function MinimalForm() {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
-    
+
     const formData = new FormData(e.currentTarget);
     const payload = {
       type: "minimal-enquiry",
@@ -304,7 +313,7 @@ export function MinimalForm() {
       </div>
       <FormDivider />
       <TextArea label="Message" name="message" required placeholder="Leave a message" />
-      
+
       {error && <div className="text-red-400 text-sm -mt-4">{error}</div>}
 
       <div className="pt-4">
