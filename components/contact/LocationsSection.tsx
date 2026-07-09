@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 // Reusable Live Clock Component
 function LiveClock({ timezone }: { timezone: string }) {
@@ -25,7 +24,11 @@ function LiveClock({ timezone }: { timezone: string }) {
     return () => clearInterval(interval);
   }, [timezone]);
 
-  if (!time) return <div className="min-w-[72px] h-8 bg-white/5 animate-pulse rounded-full" />;
+  if (!time) {
+    return (
+      <div className="min-w-[72px] h-8 bg-white/5 animate-pulse rounded-full" />
+    );
+  }
 
   return (
     <div className="bg-[#222222] px-4 py-2 rounded-full text-white font-normal text-sm tracking-wide whitespace-nowrap select-none shrink-0">
@@ -35,11 +38,14 @@ function LiveClock({ timezone }: { timezone: string }) {
 }
 
 export function LocationsSection() {
+  const LAT = "28.645368605639444";
+  const LNG = "77.14755761534256";
+
   const location = {
     city: "Delhi",
     email: "delhi@codersexpress.com",
     timezone: "Asia/Kolkata",
-    imageSrc: "/assets/contact/shalender-kumar-XjKaPInYVCM-unsplash.jpg",
+    mapEmbedSrc: `https://www.google.com/maps?q=${LAT},${LNG}&z=16&output=embed`,
   };
 
   return (
@@ -60,20 +66,19 @@ export function LocationsSection() {
           transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="w-full flex flex-col"
         >
-          {/* Image — scales height per breakpoint */}
-          <div className="group w-full bg-[#1a1a1a] rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden relative cursor-pointer shadow-2xl"
+          {/* Map — scales height per breakpoint, same footprint as the old image */}
+          <div
+            className="group w-full bg-[#1a1a1a] rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden relative shadow-2xl"
             style={{ height: "clamp(260px, 55vw, 680px)" }}
           >
-            <Image
-              src={location.imageSrc}
-              alt={`${location.city} Location`}
-              fill
-              className="object-cover grayscale brightness-90 group-hover:brightness-100 transition-all duration-[800ms] ease-out group-hover:scale-[1.04]"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 80vw"
-              priority
+            <iframe
+              src={location.mapEmbedSrc}
+              title={`${location.city} Location Map`}
+              className="absolute inset-0 w-full h-full border-0 grayscale brightness-90 group-hover:brightness-100 group-hover:grayscale-0 transition-all duration-[800ms] ease-out"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
-            {/* Bottom gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Info Bar */}
@@ -84,8 +89,8 @@ export function LocationsSection() {
                 {location.city}
               </span>
               <span className="text-white/40 shrink-0">—</span>
-              <a
-                href={`mailto:${location.email}`}
+
+              <a href={`mailto:${location.email}`}
                 className="text-white/60 text-sm sm:text-base lg:text-lg font-normal truncate border-b border-transparent hover:border-white hover:text-white transition-all duration-200 min-w-0"
               >
                 {location.email}

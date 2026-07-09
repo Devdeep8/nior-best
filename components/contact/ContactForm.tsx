@@ -229,7 +229,6 @@ export function ProjectEnquiryForm() {
       <CustomSelect
         label="How did you hear about us?"
         name="hearAboutUs"
-        required
         placeholder="SELECT OPTION"
         options={["Instagram", "Friends & Family", "Facebook", "Others"]}
       />

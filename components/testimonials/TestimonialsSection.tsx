@@ -113,7 +113,7 @@ export function TestimonialsSection() {
             {/* Top row: Avatar placeholder & Logo placeholder */}
             <div className="flex justify-between items-start mb-12">
               <div
-                className="w-20 h-20 rounded-full overflow-hidden relative flex items-center justify-center"
+                className="w-23 h-23 rounded-full overflow-hidden relative flex items-center justify-center"
                 style={{ background: t.avatarBg === "black" ? "#111" : "#ffffff" }}
               >
                 {/* Avatar / Logo */}
@@ -124,7 +124,7 @@ export function TestimonialsSection() {
                     fill
                     unoptimized
                     sizes="80px"
-                    className="object-contain p-1.5"
+                    className="object-contain"
                   />
                 )}
               </div>

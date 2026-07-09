@@ -31,16 +31,15 @@ export default async function BlogsPage() {
             <span className="font-mono text-[11px] tracking-[0.2em] text-white/40 uppercase">
               [ JOURNAL & INSIGHTS ]
             </span>
-            
+
             {/* Page Title */}
             <h1 className="text-5xl md:text-7xl font-serif tracking-tight text-white font-medium">
-              Writings <span className="text-white/30">&</span> Ideas
+              Insights <span className="text-white/30">&</span> Ideas
             </h1>
 
             {/* Subtext */}
             <p className="text-white/60 text-lg md:text-xl font-normal leading-relaxed mt-4">
-              Explore our latest thoughts on cinematic web design, engineering solutions, 
-              luxury brand psychology, and custom product development.
+              Stay ahead in the digital world with expert insights, practical marketing tips, SEO strategies, social media trends, website best practices, and industry updates. Explore our blogs to discover actionable ideas that help your business grow, connect with the right audience, and achieve lasting digital success.
             </p>
           </div>
         </div>

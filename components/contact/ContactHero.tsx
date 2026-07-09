@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ProjectEnquiryForm, MinimalForm } from "./ContactForm";
 
-const FULL_TEXT = "If you are interested in talking about a new project — please complete the form or send us an email.";
+const FULL_TEXT = "Get in touch with our team to discuss your business goals and digital marketing needs. Fill out the form below, and we'll connect with you shortly.";
 
 // Identify specific groupings of words to track coloring styles easily
 const highlights = {
@@ -86,8 +86,8 @@ export function ContactHero() {
                 {/* Animated Underline */}
                 <span
                   className={`absolute bottom-0 right-0 w-full h-[1.5px] transition-transform duration-300 ease-out transform ${isActive
-                      ? "bg-white scale-x-100 origin-left"
-                      : "bg-brand scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-right"
+                    ? "bg-white scale-x-100 origin-left"
+                    : "bg-brand scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-right"
                     }`}
                 />
               </button>

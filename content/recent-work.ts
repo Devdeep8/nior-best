@@ -64,7 +64,7 @@ export const recentWorkContent: RecentWorkContent = {
     },
     {
       id: "moonpay",
-      name: "MoonPay × NYFW",
+      name: "CGI Video",
       tag: "Brand",
       image: "/images/recent-work/moonpay.png",
       size: "wide",

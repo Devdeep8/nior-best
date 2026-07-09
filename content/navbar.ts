@@ -26,7 +26,6 @@ export const navbarContent = {
   navLinks: [
     { label: "Work", href: "/#recent-work" },
     { label: "Studio", href: "/studio" },
-    { label: "Ventures", href: "/#signature-engagements" },
     { label: "Blogs", href: "/blogs" },
     { label: "Contact", href: "/contact" },
   ] as NavItem[],
