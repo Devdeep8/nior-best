@@ -4,6 +4,21 @@ import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
+/** Converts a YouTube watch URL to an embed URL, or returns null for non-YouTube srcs. */
+function getYouTubeEmbedUrl(src: string): string | null {
+  try {
+    const url = new URL(src);
+    const id =
+      (url.hostname.includes("youtube.com") && url.searchParams.get("v")) ||
+      (url.hostname === "youtu.be" && url.pathname.slice(1));
+    if (!id) return null;
+    // autoplay=1 so it plays immediately when the overlay opens
+    return `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+  } catch {
+    return null;
+  }
+}
+
 export interface RecommendedVideo {
   id: string;
   title: string;
@@ -110,15 +125,28 @@ export function FullscreenVideoPlayer({
         >
           {/* Main Video Container */}
           <div className="relative w-full h-full flex items-center justify-center group">
-            <video
-              ref={videoRef}
-              src={currentVideo}
-              className="w-full h-full max-h-screen object-contain cursor-pointer"
-              onClick={handlePlayToggle}
-              onEnded={handleVideoEnded}
-              playsInline
-              controls={false} // Completely custom premium aesthetic without native controls
-            />
+            {getYouTubeEmbedUrl(currentVideo) ? (
+              /* ── YouTube fullscreen iframe ── */
+              <iframe
+                src={getYouTubeEmbedUrl(currentVideo)!}
+                className="w-full h-full"
+                allow="autoplay; fullscreen; encrypted-media"
+                allowFullScreen
+                title="Video player"
+                style={{ border: "none" }}
+              />
+            ) : (
+              /* ── Direct mp4 player ── */
+              <video
+                ref={videoRef}
+                src={currentVideo}
+                className="w-full h-full max-h-screen object-contain cursor-pointer"
+                onClick={handlePlayToggle}
+                onEnded={handleVideoEnded}
+                playsInline
+                controls={false}
+              />
+            )}
 
             {/* Central Pause Indicator Overlay (Fades out) */}
             <AnimatePresence>
