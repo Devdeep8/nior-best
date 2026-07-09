@@ -50,7 +50,7 @@ export const recentWorkContent: RecentWorkContent = {
       size: "normal",
       year: "2024",
       videoSrc: "https://res.cloudinary.com/deepcnbrz/video/upload/v1778609224/coders%20express/Copy_of_Copy_of_Video_08-_Wox_Box_b9tphy.mp4",
-      videoStartTime: 3,
+      videoStartTime: 5,
     },
     {
       id: "crypto-autos",
