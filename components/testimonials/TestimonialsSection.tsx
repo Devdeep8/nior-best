@@ -42,7 +42,7 @@ const testimonials = [
     quote: "Working with CodersExpress for our social media management and marketing has been a wonderful experience. From editing impactful videos to handling our digital presence, the team has been dedicated and professional throughout. They understand our vision, maintain consistency, and have helped us communicate our message effectively across platforms.",
     name: "Hardayal Singh",
     company: "Founder, United Sikhs",
-    avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783594562/6230893929339491028_kpswda.jpg",
+    avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783597694/6230893929339491072_t2ayvr.jpg",
     avatarBg: "white" as const,
   },
   {
