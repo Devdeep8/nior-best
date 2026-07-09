@@ -17,13 +17,31 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   const imgRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  /** Seek the video to the configured start time (if any) */
-  const seekToStart = () => {
+  // Seek to configured start time as soon as the browser can actually seek.
+  // 'canplay' fires after enough data is buffered — the only reliable hook
+  // for Cloudinary/streaming sources where metadata arrives before the
+  // stream is seekable.
+  useEffect(() => {
     const vid = videoRef.current;
-    if (vid && project.videoStartTime) {
-      vid.currentTime = project.videoStartTime;
+    if (!vid || !project.videoStartTime) return;
+
+    const startTime = project.videoStartTime;
+
+    const applyStartTime = () => {
+      vid.currentTime = startTime;
+    };
+
+    if (vid.readyState >= 3) {
+      // HAVE_FUTURE_DATA or better — can seek immediately
+      applyStartTime();
+    } else {
+      vid.addEventListener("canplay", applyStartTime, { once: true });
     }
-  };
+
+    return () => {
+      vid.removeEventListener("canplay", applyStartTime);
+    };
+  }, [project.videoStartTime]);
 
   // Scroll-in animation (once, staggered by index)
   useEffect(() => {
@@ -88,11 +106,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             autoPlay
             muted
             playsInline
-            onLoadedMetadata={seekToStart}
-            onLoadedData={seekToStart}
             onEnded={() => {
-              seekToStart();
-              videoRef.current?.play();
+              const vid = videoRef.current;
+              if (!vid) return;
+              vid.currentTime = project.videoStartTime ?? 0;
+              vid.play();
             }}
           />
         ) : (
