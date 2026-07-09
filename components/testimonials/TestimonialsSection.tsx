@@ -51,7 +51,7 @@ const testimonials = [
     name: "Kabir Sawhney",
     company: "Co-founder, torque & gear",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783594336/6230893929339491025_d4g6m2.jpg",
-    avatarBg: "white" as const,
+    avatarBg: "black" as const,
   },
 ];
 

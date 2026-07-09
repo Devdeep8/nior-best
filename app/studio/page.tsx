@@ -11,7 +11,7 @@ export default function StudioPage() {
   return (
     <main className="min-h-screen bg-black selection:bg-brand/30">
       <Navbar />
-      
+
       <StudioHero />
 
       <StudioManifesto />
@@ -24,22 +24,22 @@ export default function StudioPage() {
 
       <StudioServices />
 
-      <StudioResults />
+      {/* <StudioResults /> */}
 
       <StudioStatement />
 
       <StudioTeam />
 
-      <StudioModel />
+      {/* <StudioModel /> */}
 
-      <StudioFocus />
+      {/* <StudioFocus /> */}
 
       <ScrollMarquee text="Hear from founders." />
 
       <TestimonialsSection />
 
       <BookCallSection />
-      
+
       <Footer />
     </main>
   );
