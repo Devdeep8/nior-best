@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/footer/Footer";
 import { StudioHero, StudioManifesto, StudioReel, StudioAbout, StudioClients, StudioServices, StudioResults, StudioStatement, StudioTeam, StudioModel, StudioFocus } from "@/components/studio";
 import { ScrollMarquee } from "@/components/ui/ScrollMarquee";
-import { TestimonialsSection } from "@/components/testimonials/TestimonialsSection";
+import { StudioTestimonials } from "@/components/studio/StudioTestimonials";
 import { BookCallSection } from "@/components/book-call/BookCallSection";
 
 export default function StudioPage() {
@@ -28,7 +28,7 @@ export default function StudioPage() {
 
       <StudioStatement />
 
-      <StudioTeam />
+      {/*<StudioTeam />*/}
 
       {/* <StudioModel /> */}
 
@@ -36,7 +36,7 @@ export default function StudioPage() {
 
       <ScrollMarquee text="Hear from founders." />
 
-      <TestimonialsSection />
+      <StudioTestimonials />
 
       <BookCallSection />
 
