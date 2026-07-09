@@ -102,7 +102,7 @@ export function TaglineContainers() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container,
-        start: "top 85%",
+        start: "top bottom", // fire as soon as cards enter the viewport
         toggleActions: "play none none reverse",
       },
     });
@@ -111,9 +111,9 @@ export function TaglineContainers() {
       items,
       {
         opacity: 0,
-        y: 60,
-        scale: 0.95,
-        rotationX: 15,
+        y: 30,
+        scale: 0.97,
+        rotationX: 8,
         force3D: true
       },
       {
@@ -122,10 +122,10 @@ export function TaglineContainers() {
         scale: 1,
         rotationX: 0,
         force3D: true,
-        duration: textRevealContent.animation.containerDuration,
-        stagger: 0.15,
-        delay: textRevealContent.animation.containerDelay,
-        ease: "power4.out",
+        duration: 0.9,
+        stagger: 0.12,
+        delay: 0,
+        ease: "power3.out",
         clearProps: "transform",
       }
     );
