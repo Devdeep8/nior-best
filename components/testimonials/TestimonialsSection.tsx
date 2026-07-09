@@ -3,27 +3,31 @@
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
+// avatarBg: "white" | "black" — set to "black" when the logo is white/light on transparent
 const testimonials = [
   {
     id: 1,
-    quote: "Working with CodersExpress has been a great experience for MyBoat Ride. They handled our social media and website efficiently and delivered everything exactly within the promised timeline. The team was responsive, professional, and easy to work with. We’re really happy with the quality of work and overall experience.",
+    quote: "Working with CodersExpress has been a great experience for MyBoat Ride. They handled our social media and website efficiently and delivered everything exactly within the promised timeline. The team was responsive, professional, and easy to work with. We're really happy with the quality of work and overall experience.",
     name: "Gurpreet Bakshi",
     company: "Ceo, MyBoatRide",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871444/coders%20express/company%20logos/7_fgprla.png",
+    avatarBg: "white" as const,
   },
   {
     id: 2,
-    quote: "Our experience with CodersExpress for Macaire’s branding and logo design has been excellent. They understood our vision perfectly and created a brand identity that truly reflects our style. The process was smooth, the team was supportive throughout, and the final outcome exceeded our expectations.",
+    quote: "Our experience with CodersExpress for Macaire's branding and logo design has been excellent. They understood our vision perfectly and created a brand identity that truly reflects our style. The process was smooth, the team was supportive throughout, and the final outcome exceeded our expectations.",
     name: "Harshdeep Singh",
     company: "Founder, Macaire",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871463/coders%20express/company%20logos/15_glaovk.png",
+    avatarBg: "white" as const,
   },
   {
     id: 3,
-    quote: "Working with CodersExpress for our social media marketing and website development was a smooth and satisfying experience. Their team understood our requirements well, maintained clear communication throughout the process, and delivered quality work on time. We’re really happy with the overall results and the support we received.",
+    quote: "Working with CodersExpress for our social media marketing and website development was a smooth and satisfying experience. Their team understood our requirements well, maintained clear communication throughout the process, and delivered quality work on time. We're really happy with the overall results and the support we received.",
     name: "Harsh Tanwar",
     company: "Founder, LevelUpSkool",
-    avatar: "https://cdn.prod.website-files.com/6687c6ec7db3d4bbcf259b6a/66c20e7b2c21f55a63aa278b_bicoahmed.avif",
+    avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783594335/6230893929339491024_kqkyxw.jpg",
+    avatarBg: "white" as const,
   },
   {
     id: 4,
@@ -31,20 +35,23 @@ const testimonials = [
     name: "Aman Singh",
     company: "CEO, Feed Sync",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871443/coders%20express/company%20logos/6_jflud9.png",
+    avatarBg: "black" as const, // white logo — needs dark background
   },
   {
     id: 5,
     quote: "Working with CodersExpress for our social media management and marketing has been a wonderful experience. From editing impactful videos to handling our digital presence, the team has been dedicated and professional throughout. They understand our vision, maintain consistency, and have helped us communicate our message effectively across platforms.",
     name: "Hardayal Singh",
     company: "Founder, United Sikhs",
-    avatar: "https://cdn.prod.website-files.com/6687c6ec7db3d4bbcf259b6a/66c20e7b2c21f55a63aa278b_bicoahmed.avif",
+    avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783594562/6230893929339491028_kpswda.jpg",
+    avatarBg: "white" as const,
   },
   {
     id: 6,
     quote: "Working with CodersExpress for our social media management has been a great experience. From handling shoots and content ideation to managing our overall social presence, the team has been creative, proactive, and consistent. They understand our brand well and always come up with fresh ideas that align with our vision.",
     name: "Kabir Sawhney",
     company: "Co-founder, torque & gear",
-    avatar: "https://cdn.prod.website-files.com/6687c6ec7db3d4bbcf259b6a/66c20e7b2c21f55a63aa278b_bicoahmed.avif",
+    avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783594336/6230893929339491025_d4g6m2.jpg",
+    avatarBg: "white" as const,
   },
 ];
 
@@ -105,7 +112,10 @@ export function TestimonialsSection() {
           >
             {/* Top row: Avatar placeholder & Logo placeholder */}
             <div className="flex justify-between items-start mb-12">
-              <div className="w-20 h-20 bg-white rounded-full overflow-hidden relative flex items-center justify-center">
+              <div
+                className="w-20 h-20 rounded-full overflow-hidden relative flex items-center justify-center"
+                style={{ background: t.avatarBg === "black" ? "#111" : "#ffffff" }}
+              >
                 {/* Avatar / Logo */}
                 {t.avatar && (
                   <Image
@@ -114,7 +124,7 @@ export function TestimonialsSection() {
                     fill
                     unoptimized
                     sizes="80px"
-                    className="object-contain p-2"
+                    className="object-contain p-1.5"
                   />
                 )}
               </div>
