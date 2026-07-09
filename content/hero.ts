@@ -70,9 +70,10 @@ export const heroContent: HeroContent = {
     src: "https://res.cloudinary.com/deepcnbrz/video/upload/v1778419667/3197cdd6-1ef0a0b9_fianin.mp4",
     alt: "Abstract dark video background with futuristic visual effects",
     fallbackColor: "#0a0a0a",
-    // OLD (Cloudinary mp4 — swap back by pasting this as thumbnailVideoSrc value):
+    // OLD urls (swap back by pasting one as thumbnailVideoSrc value):
     // "https://res.cloudinary.com/deepcnbrz/video/upload/v1778743838/coders%20express/volvo_ryz9sp.mp4"
-    thumbnailVideoSrc: "https://www.youtube.com/watch?v=Ro_3DJ9w0cI",
+    // "https://www.youtube.com/watch?v=Ro_3DJ9w0cI"
+    thumbnailVideoSrc: "https://res.cloudinary.com/deepcnbrz/video/upload/v1783592510/video6230893928879497424_j7wkzf.mp4",
     recommendedVideos: [
       {
         id: "rec-1",
