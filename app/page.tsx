@@ -23,7 +23,7 @@ export default function Home() {
 
       {/* Text Reveal Section - Custom highlighted words */}
       <TextRevealSection
-        highlightedWords={["disruptive", "category", "defining"]} // Only highlight these specific words
+        highlightedWords={["high-performance", "cut", "40%"]} // Only highlight these specific words
         enableHighlight={true} // Turn on word highlighting
       />
 

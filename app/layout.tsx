@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import { Navbar } from "@/components/Navbar";
+import { PageTransition } from "@/components/PageTransition";
 import "./globals.css";
 
 const inter = Inter({
@@ -80,7 +81,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-full antialiased">
         <Navbar />
-        <main id="top">{children}</main>
+        <main id="top">
+          <PageTransition>{children}</PageTransition>
+        </main>
         
         {/* Global visual elements injected by the configuration */}
         <div id="scroll-progress"></div>

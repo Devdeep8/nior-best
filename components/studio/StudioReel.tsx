@@ -59,10 +59,10 @@ export function StudioReel() {
   return (
     <section
       ref={sectionRef}
-      className="w-full"
+      className="relative w-full overflow-hidden"
       style={{
         backgroundColor: "var(--background)",
-        padding: "0 0 var(--space-2xl, 120px) 0",
+        padding: "var(--space-2xl, 120px) 0",
       }}
     >
       {/* Label */}

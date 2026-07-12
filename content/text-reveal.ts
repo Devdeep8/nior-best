@@ -43,12 +43,12 @@ export interface TextRevealContent {
 
 export const textRevealContent: TextRevealContent = {
   text: {
-    content: "Powering Businesses with Digital Innovation",
-    ariaLabel: "Powering Businesses with Digital Innovation",
-    initialColor: "#888",
+    content: "We design high-performance systems that cut customer acquisition costs by up to 40%.",
+    ariaLabel: "We design high-performance systems that cut customer acquisition costs by up to 40%.",
+    initialColor: "#444",
     revealedColor: "#ffffff",
-    highlightedWords: ["disruptive", "category", "defining"], // Words that highlight first/brighter
-    highlightColor: "#ffffff",
+    highlightedWords: ["high-performance", "cut", "40%"], // Words that highlight first/brighter
+    highlightColor: "#ca7a3a",
     defaultMaxWidth: "900px",
   },
 

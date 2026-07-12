@@ -1,8 +1,11 @@
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/footer";
 import { getBlogs } from "@/lib/blogs";
-import { BlogListClient } from "@/components/blog/BlogListClient";
+
+// Dynamic imports for below-the-fold components to reduce initial page load size
+const BlogListClient = dynamic(() => import("@/components/blog/BlogListClient").then(m => m.BlogListClient), { ssr: true });
+const Footer = dynamic(() => import("@/components/footer/Footer").then(m => m.Footer), { ssr: true });
 
 export const metadata: Metadata = {
   title: "Blogs & Insights",
