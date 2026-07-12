@@ -1,7 +1,7 @@
 "use client";
 
 interface SectionLabelsProps {
-  index: string;
+  index?: string;
   title: string;
   indexColor?: string;
   titleColor?: string;
@@ -11,32 +11,28 @@ interface SectionLabelsProps {
 }
 
 export function SectionLabels({
-  index,
   title,
-  indexColor = "#555",
-  titleColor = "#555",
-  fontSize = "11px",
-  letterSpacing = "0.2em",
+  titleColor = "#999",
   className = "",
 }: SectionLabelsProps) {
   return (
     <div
-      className={`relative w-full flex items-center border-b border-white/15 pb-4 mb-12 ${className}`}
+      className={`relative w-full flex items-center justify-between border-b border-white/10 pb-4 mb-12 ${className}`}
     >
-      {/* Far-left: [02] */}
-      <span
-        className="uppercase"
-        style={{ color: indexColor, fontSize, letterSpacing }}
-      >
-        {index}
-      </span>
+      {/* Left: Brand Dot + Section Title */}
+      <div className="flex items-center gap-3">
+        <span className="w-1.5 h-1.5 bg-brand rounded-full animate-pulse" />
+        <span
+          className="uppercase font-medium tracking-[0.22em] text-[11px] text-white/60"
+          style={{ color: titleColor }}
+        >
+          {title}
+        </span>
+      </div>
 
-      {/* Centered: OUR CAPABILITIES */}
-      <span
-        className="uppercase absolute left-1/2 -translate-x-1/2"
-        style={{ color: titleColor, fontSize, letterSpacing }}
-      >
-        {title}
+      {/* Right: Studio mark */}
+      <span className="text-[10px] font-sans font-medium uppercase tracking-[0.3em] text-white/20 hidden sm:inline">
+        Coders Express Studio
       </span>
     </div>
   );

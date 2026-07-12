@@ -14,14 +14,25 @@ export function BookCallSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-white text-[clamp(28px,4.5vw,56px)] font-medium tracking-tight max-w-5xl leading-[1.1] mb-14"
+        className="text-white text-[clamp(28px,4.5vw,56px)] font-medium tracking-tight max-w-5xl leading-[1.1] mb-6"
       >
-        Get in touch to discuss your project with our team
+        Ready to stop wasting money and start scaling?
       </motion.h2>
+
+      {/* Description */}
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+        className="text-[#999] text-base md:text-lg max-w-2xl leading-relaxed mb-14"
+      >
+        Message us on WhatsApp to get a direct audit of how we can cut your overhead costs by up to 40% and double your pipeline. No tech jargon, just results.
+      </motion.p>
 
       {/* Animated "Book a Call" Button */}
       <motion.a
-        href="/contact"
+        href="https://wa.me/message/HHILA74EGXT4K1"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ opacity: 0, y: 20 }}
@@ -79,7 +90,7 @@ export function BookCallSection() {
             className="px-8 text-lg font-normal tracking-tight transition-colors duration-500"
             style={{ color: isHovered ? "#000000" : "#ffffff" }}
           >
-            Book a call today
+            Message on WhatsApp
           </motion.span>
         </motion.div>
       </motion.a>

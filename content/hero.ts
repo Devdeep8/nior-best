@@ -50,20 +50,20 @@ export interface HeroContent {
 
 export const heroContent: HeroContent = {
   headline: {
-    line1: "Powering Businesses",
-    line2: "With Digital Innovation",
-    ariaLabel: "Powering Businesses With Digital Innovation",
+    line1: "Scale Your Business,",
+    line2: "Not Your Overhead.",
+    ariaLabel: "Scale Your Business, Not Your Overhead.",
   },
 
   description: {
-    text: "We build digital experiences that drive growth, visibility, and long-term success. From strategy to execution, we help businesses scale with powerful marketing, creative storytelling, and performance-driven solutions.",
-    ariaLabel: "We build digital experiences that drive growth, visibility, and long-term success. From strategy to execution, we help businesses scale with powerful marketing, creative storytelling, and performance-driven solutions.",
+    text: "Stop wasting money on agencies selling empty impressions. We design high-performance web systems and digital campaigns that cut customer acquisition costs by up to 40%. You get direct revenue growth, not tech jargon.",
+    ariaLabel: "Stop wasting money on agencies selling empty impressions. We design high-performance web systems and digital campaigns that cut customer acquisition costs by up to 40%. You get direct revenue growth, not tech jargon.",
   },
 
   ctaButton: {
-    label: "Work with us",
-    href: "#contact",
-    ariaLabel: "Work with us - Get in touch",
+    label: "Message us on WhatsApp",
+    href: "https://wa.me/message/HHILA74EGXT4K1",
+    ariaLabel: "Message us on WhatsApp to start saving now",
   },
 
   video: {

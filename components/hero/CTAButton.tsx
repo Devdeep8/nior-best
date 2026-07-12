@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, forwardRef } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { gsap } from "@/lib/gsap-plugins";
 import { heroContent } from "@/content/hero";
 
@@ -68,7 +68,6 @@ export function CTAButton({
 }: CTAButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const arrowRef = useRef<SVGSVGElement>(null);
-  const controls = useAnimation();
 
   // GSAP hover animation for the arrow
   useEffect(() => {
@@ -134,8 +133,8 @@ export function CTAButton({
   // Base styles based on variant
   const baseClasses =
     variant === "outline"
-      ? "border-2 border-white text-white bg-transparent hover:bg-brand hover:text-white hover:border-brand"
-      : "border-2 border-transparent bg-white text-black hover:bg-transparent hover:border-brand hover:text-brand";
+      ? "border-2 border-white !text-white bg-transparent hover:bg-brand hover:!text-white hover:border-brand"
+      : "border-2 border-transparent bg-white !text-black hover:bg-transparent hover:border-brand hover:!text-brand";
 
   return (
     <motion.a
@@ -145,12 +144,9 @@ export function CTAButton({
       className={`inline-flex items-center gap-3 rounded-full px-8 py-4 text-lg font-medium transition-colors duration-300 ${baseClasses} ${className}`}
       variants={buttonVariants}
       initial="initial"
-      animate={controls}
+      animate="animate"
       whileHover="hover"
       whileTap="tap"
-      onAnimationComplete={() => {
-        controls.start("animate");
-      }}
     >
       <span>{label}</span>
       <span className="overflow-hidden">

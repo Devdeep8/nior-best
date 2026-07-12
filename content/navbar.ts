@@ -32,9 +32,9 @@ export const navbarContent = {
 
   // CTA button
   ctaButton: {
-    label: "Get In Touch",
-    href: "/contact",
-    ariaLabel: "Get In Touch",
+    label: "Message Us",
+    href: "https://wa.me/message/HHILA74EGXT4K1",
+    ariaLabel: "Message us on WhatsApp",
     icon: "chat", // chat icon
   },
 

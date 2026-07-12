@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { navbarContent, type SectionInfo } from "@/content/navbar";
 
 // Logo SVG Component
@@ -77,10 +78,15 @@ interface NavbarProps {
   sections?: SectionInfo[];
 }
 
+import { usePathname } from "next/navigation";
+
 export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
+  const pathname = usePathname();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [currentSection, setCurrentSection] = useState<SectionInfo | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  if (pathname?.startsWith("/admin")) return null;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -123,25 +129,25 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
       >
         <div className="relative mx-auto h-20 px-6 lg:px-12 flex items-center justify-between w-full">
           {/* Logo - Left */}
-          <a
+          <Link
             href={navbarContent.logo.href}
             className="flex items-center relative z-10 shrink-0"
             aria-label={navbarContent.logo.ariaLabel}
           >
             <LogoMark />
-          </a>
+          </Link>
 
           {/* Navigation Links - Center */}
           <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden items-center gap-8 md:flex lg:gap-12">
             {navbarContent.navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-[15px] text-white transition-colors duration-200 hover:text-[#ca7a3a] whitespace-nowrap"
                 onClick={handleNavClick}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -150,6 +156,8 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
             {/* Work with us button - Hidden on mobile */}
             <a
               href={navbarContent.ctaButton.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-3 rounded-full border border-white/30 bg-[#171717] px-5 py-3 text-[15px] text-white transition-colors duration-200 hover:bg-brand hover:border-brand hover:text-white"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
@@ -187,14 +195,16 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
       >
         {/* Mobile menu header */}
         <div className="flex h-20 items-center justify-between px-6">
-          <a href={navbarContent.logo.href} className="flex items-center">
+          <Link href={navbarContent.logo.href} className="flex items-center" onClick={handleNavClick}>
             <LogoMark />
-          </a>
+          </Link>
 
           <div className="flex items-center gap-3">
             {/* Chat icon button */}
             <a
               href={navbarContent.ctaButton.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-[#171717] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
@@ -216,13 +226,13 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
         <nav className="flex h-[calc(100vh-5rem)] flex-col items-center justify-center px-6">
           {navbarContent.navLinks.map((link, index) => (
             <div key={link.label} className="w-full max-w-sm">
-              <a
+              <Link
                 href={link.href}
                 className="block border-t border-white/10 py-6 text-center text-[28px] font-normal text-white hover:text-[#ca7a3a] transition-colors"
                 onClick={handleNavClick}
               >
                 {link.label}
-              </a>
+              </Link>
               {index === navbarContent.navLinks.length - 1 && (
                 <div className="border-t border-white/10" />
               )}

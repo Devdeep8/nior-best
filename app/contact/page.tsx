@@ -1,9 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/footer/Footer";
 import { ContactHero } from "@/components/contact/ContactHero";
-import { LocationsSection } from "@/components/contact/LocationsSection";
+
+// Dynamic imports for below-the-fold modules to maximize page load performance
+const LocationsSection = dynamic(() => import("@/components/contact/LocationsSection").then(m => m.LocationsSection), { ssr: true });
+const Footer = dynamic(() => import("@/components/footer/Footer").then(m => m.Footer), { ssr: true });
 
 // Placeholder for intermediate section still awaiting spec
 function PlaceholderSection({ title }: { title: string }) {
