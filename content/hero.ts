@@ -1,7 +1,7 @@
 /**
  * Hero Section Content Data
  * All text, links, and configuration for the hero component
- * Based on Coders Express hero section
+ * Based on Mixspace Studio hero section
  */
 
 export interface HeroContent {

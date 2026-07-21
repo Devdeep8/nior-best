@@ -12,7 +12,7 @@ export function HeroText() {
         transition={{ duration: 1, ease: "easeOut" }}
         className="text-[clamp(36px,9vw,72px)] font-normal leading-[1.1] text-white whitespace-normal md:whitespace-nowrap text-center md:text-left"
       >
-        Coders
+        Mixspace
       </motion.h1>
 
       {/* Line 2 */}
@@ -33,7 +33,7 @@ export function HeroText() {
           mt-2 md:mt-0
         "
       >
-        Express
+        Studio
       </motion.h1>
     </div>
   );

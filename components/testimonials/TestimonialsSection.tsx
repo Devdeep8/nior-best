@@ -7,7 +7,7 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    quote: "Working with CodersExpress has been a great experience for MyBoat Ride. They handled our social media and website efficiently and delivered everything exactly within the promised timeline. The team was responsive, professional, and easy to work with. We're really happy with the quality of work and overall experience.",
+    quote: "Working with Mixspace Studio has been a great experience for MyBoat Ride. They handled our social media and website efficiently and delivered everything exactly within the promised timeline. The team was responsive, professional, and easy to work with. We're really happy with the quality of work and overall experience.",
     name: "Gurpreet Bakshi",
     company: "Ceo, MyBoatRide",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871444/coders%20express/company%20logos/7_fgprla.png",
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "Our experience with CodersExpress for Macaire's branding and logo design has been excellent. They understood our vision perfectly and created a brand identity that truly reflects our style. The process was smooth, the team was supportive throughout, and the final outcome exceeded our expectations.",
+    quote: "Our experience with Mixspace Studio for Macaire's branding and logo design has been excellent. They understood our vision perfectly and created a brand identity that truly reflects our style. The process was smooth, the team was supportive throughout, and the final outcome exceeded our expectations.",
     name: "Harshdeep Singh",
     company: "Founder, Macaire",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871463/coders%20express/company%20logos/15_glaovk.png",
@@ -23,7 +23,7 @@ const testimonials = [
   },
   {
     id: 3,
-    quote: "Working with CodersExpress for our social media marketing and website development was a smooth and satisfying experience. Their team understood our requirements well, maintained clear communication throughout the process, and delivered quality work on time. We're really happy with the overall results and the support we received.",
+    quote: "Working with Mixspace Studio for our social media marketing and website development was a smooth and satisfying experience. Their team understood our requirements well, maintained clear communication throughout the process, and delivered quality work on time. We're really happy with the overall results and the support we received.",
     name: "Harsh Tanwar",
     company: "Founder, LevelUpSkool",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783594335/6230893929339491024_kqkyxw.jpg",
@@ -31,7 +31,7 @@ const testimonials = [
   },
   {
     id: 4,
-    quote: "We had a great experience working with CodersExpress for our webinar content. From ideation and creative planning to designing and delivering the final videos, the team handled everything seamlessly. They understood our requirements well, stayed on track with timelines, and delivered engaging content that matched our vision perfectly.",
+    quote: "We had a great experience working with Mixspace Studio for our webinar content. From ideation and creative planning to designing and delivering the final videos, the team handled everything seamlessly. They understood our requirements well, stayed on track with timelines, and delivered engaging content that matched our vision perfectly.",
     name: "Aman Singh",
     company: "CEO, Feed Sync",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778871443/coders%20express/company%20logos/6_jflud9.png",
@@ -39,7 +39,7 @@ const testimonials = [
   },
   {
     id: 5,
-    quote: "Working with CodersExpress for our social media management and marketing has been a wonderful experience. From editing impactful videos to handling our digital presence, the team has been dedicated and professional throughout. They understand our vision, maintain consistency, and have helped us communicate our message effectively across platforms.",
+    quote: "Working with Mixspace Studio for our social media management and marketing has been a wonderful experience. From editing impactful videos to handling our digital presence, the team has been dedicated and professional throughout. They understand our vision, maintain consistency, and have helped us communicate our message effectively across platforms.",
     name: "Hardayal Singh",
     company: "Founder, United Sikhs",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783597694/6230893929339491072_t2ayvr.jpg",
@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     id: 6,
-    quote: "Working with CodersExpress for our social media management has been a great experience. From handling shoots and content ideation to managing our overall social presence, the team has been creative, proactive, and consistent. They understand our brand well and always come up with fresh ideas that align with our vision.",
+    quote: "Working with Mixspace Studio for our social media management has been a great experience. From handling shoots and content ideation to managing our overall social presence, the team has been creative, proactive, and consistent. They understand our brand well and always come up with fresh ideas that align with our vision.",
     name: "Kabir Sawhney",
     company: "Co-founder, torque & gear",
     avatar: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783594336/6230893929339491025_d4g6m2.jpg",
