@@ -43,7 +43,7 @@ export function Footer() {
 
         {/* Right: Social Links */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-[11px] tracking-[0.15em]">
-          <a href="mailto:connect@mixspacestudio.com" className="flex items-center gap-2 hover:text-brand transition-colors group">
+          <a href="mailto:connect.mixspacestudio@gmail.com" className="flex items-center gap-2 hover:text-brand transition-colors group">
             <div className="w-1.5 h-1.5 rounded-full border border-[#555] group-hover:border-brand transition-colors"></div>
             MAIL
           </a>

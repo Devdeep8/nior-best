@@ -25,20 +25,17 @@ function withImageFallback<T extends { imageUrl: string | null }>(blog: T): T {
   return blog.imageUrl ? blog : { ...blog, imageUrl: FALLBACK_IMAGE_URL };
 }
 
-export async function getBlogs() {
+export async function getBlogs(): Promise<BlogPost[]> {
   try {
     const blogs = await prisma.blog.findMany({
       orderBy: {
         publishedAt: "desc",
       },
     });
-
-
-    
-    // DB has no rows yet — return static fallback without writing anything to it
-    return blogs
+    return (blogs as BlogPost[]).map(withImageFallback);
   } catch (error) {
-    console.error("Failed to fetch blogs from database, using static fallback:", error);
+    console.error("Failed to fetch blogs from database:", error);
+    return [];
   }
 }
 
