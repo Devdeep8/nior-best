@@ -12,8 +12,8 @@ function LogoMark() {
       {/* Primary White Logo */}
       <div className="col-start-1 row-start-1 flex items-center justify-center">
         <Image
-          src="/assets/logo/Coder-express-logo-white.png"
-          alt="Coders Express"
+          src="/assets/logo/Mixspace-Studio-logo-white.png"
+          alt="Mixspace Studio"
           width={1981}
           height={675}
           className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
@@ -23,8 +23,8 @@ function LogoMark() {
       {/* Hover Orange Logo */}
       <div className="col-start-1 row-start-1 flex items-center justify-center">
         <Image
-          src="/assets/logo/Coder express logo orange.png"
-          alt="Coders Express Hover"
+          src="/assets/logo/Mixspace Studio logo orange.png"
+          alt="Mixspace Studio Hover"
           width={1697}
           height={516}
           className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100 scale-[0.8]"

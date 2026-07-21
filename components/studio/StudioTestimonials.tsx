@@ -5,15 +5,15 @@ import Image from "next/image";
 const founders = [
   {
     name: "Anmol Singh Gujral",
-    role: "CEO, CodersExpress",
+    role: "CEO, Mixspace Studio",
     photo: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783598988/6230893929339491087_zq21js.jpg",
     initials: "AS",
     quote:
-      "At Coders Express, our vision has always been to bridge creativity with technology, helping businesses build a meaningful digital presence. Every strategy we create is driven by innovation, transparency, and measurable results. Our goal isn't just to deliver services - it's to become a long-term growth partner for every brand that trusts us.",
+      "At Mixspace Studio, our vision has always been to bridge creativity with technology, helping businesses build a meaningful digital presence. Every strategy we create is driven by innovation, transparency, and measurable results. Our goal isn't just to deliver services - it's to become a long-term growth partner for every brand that trusts us.",
   },
   {
     name: "Navjyot Singh",
-    role: "COO, CodersExpress",
+    role: "COO, Mixspace Studio",
     photo: "https://res.cloudinary.com/deepcnbrz/image/upload/v1783598988/6230893929339491086_ehxna8.jpg",
     initials: "NS",
     quote:
@@ -21,7 +21,7 @@ const founders = [
   },
   {
     name: "Harshita Dewan",
-    role: "Creative Director, CodersExpress",
+    role: "Creative Director, Mixspace Studio",
     photo: "",
     initials: "HD",
     quote:

@@ -82,7 +82,7 @@ export function StudioAbout() {
               textTransform: "uppercase" as const,
             }}
           >
-            About Coders Express®
+            About Mixspace Studio®
           </span>
         </div>
 
@@ -107,7 +107,7 @@ export function StudioAbout() {
             }}
           >
             {/* Mixed weight — lighter text / bold emphasis / lighter / bold */}
-            <span style={{ color: "rgba(255,255,255,0.45)", fontWeight: 300 }}>CodersExpress provides </span>
+            <span style={{ color: "rgba(255,255,255,0.45)", fontWeight: 300 }}>Mixspace Studio provides </span>
             <span style={{ color: "#ca7a3a", fontWeight: 700 }}>services globally with its design &amp; development studio </span>
             <span style={{ color: "rgba(255,255,255,0.45)", fontWeight: 300 }}>based in </span>
             <span style={{ color: "#ca7a3a", fontWeight: 700 }}>Delhi, India.</span>

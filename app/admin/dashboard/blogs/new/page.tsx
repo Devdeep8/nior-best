@@ -73,8 +73,8 @@ export default function NewBlogPage() {
         <div className="flex items-center gap-4">
           <Link href="/admin/dashboard">
             <Image
-              src="/assets/logo/Coder-express-logo-white.png"
-              alt="Coders Express Logo"
+              src="/assets/logo/Mixspace-Studio-logo-white.png"
+              alt="Mixspace Studio Logo"
               width={160}
               height={55}
               className="h-8 w-auto object-contain"

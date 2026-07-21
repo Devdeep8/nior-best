@@ -10,7 +10,7 @@ const Footer = dynamic(() => import("@/components/footer/Footer").then(m => m.Fo
 export const metadata: Metadata = {
   title: "Blogs & Insights",
   description:
-    "Explore our collection of articles, design strategies, engineering tutorials, and industry insights by the team at Coders Express.",
+    "Explore our collection of articles, design strategies, engineering tutorials, and industry insights by the team at Mixspace Studio.",
 };
 
 export const revalidate = 60; // Revalidate page every minute

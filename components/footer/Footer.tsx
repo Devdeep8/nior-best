@@ -27,7 +27,7 @@ export function Footer() {
       {/* Giant Brand Text */}
       <div className="w-full mb-6 select-none overflow-hidden flex items-center justify-center md:justify-start">
         <h1 className="text-[clamp(35px,11vw,200px)] font-bold tracking-tighter uppercase leading-[0.8] w-full text-center md:text-left whitespace-nowrap -ml-1 md:-ml-2 lg:-ml-4">
-          Coders Express
+          Mixspace Studio
         </h1>
       </div>
 
@@ -43,11 +43,11 @@ export function Footer() {
 
         {/* Right: Social Links */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-[11px] tracking-[0.15em]">
-          <a href="mailto:connect@codersexpress.com" className="flex items-center gap-2 hover:text-brand transition-colors group">
+          <a href="mailto:connect@mixspacestudio.com" className="flex items-center gap-2 hover:text-brand transition-colors group">
             <div className="w-1.5 h-1.5 rounded-full border border-[#555] group-hover:border-brand transition-colors"></div>
             MAIL
           </a>
-          <a href="https://www.instagram.com/codersexpress?igsh=aWQ0enhiYTM3c2ow&utm_source=qr" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors group">
+          <a href="https://www.instagram.com/mixspacestudio?igsh=aWQ0enhiYTM3c2ow&utm_source=qr" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors group">
             <div className="w-1.5 h-1.5 rounded-full border border-[#555] group-hover:border-brand transition-colors"></div>
             INSTAGRAM
           </a>
@@ -55,7 +55,7 @@ export function Footer() {
             <div className="w-1.5 h-1.5 rounded-full border border-[#555] group-hover:border-brand transition-colors"></div>
             FACEBOOK
           </a>
-          <a href="https://www.linkedin.com/company/codersexpress/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors group">
+          <a href="https://www.linkedin.com/company/mixspacestudio/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors group">
             <div className="w-1.5 h-1.5 rounded-full border border-[#555] group-hover:border-brand transition-colors"></div>
             LINKEDIN
           </a>

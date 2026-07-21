@@ -18,7 +18,7 @@ export function AboutUsSection({
 }: AboutUsSectionProps) {
   return (
     <section
-      id="about-coders-express"
+      id="about-mixspace-studio"
       className="relative flex min-h-screen flex-col items-center justify-center bg-black px-4 overflow-x-hidden sm:px-6 lg:px-8 py-40"
     >
       {/* Section Labels */}

@@ -17,9 +17,9 @@ export interface SectionInfo {
 export const navbarContent = {
   // Logo configuration
   logo: {
-    name: "CODERS EXPRESS",
+    name: "MIXSPACE STUDIO",
     href: "/",
-    ariaLabel: "CODERS EXPRESS - Home",
+    ariaLabel: "MIXSPACE STUDIO - Home",
   },
 
   // Navigation links
@@ -40,7 +40,7 @@ export const navbarContent = {
 
   // Section labels for scroll tracking
   sections: [
-    { index: "[01]", label: "ABOUT CODERS EXPRESS", id: "about-coders-express" },
+    { index: "[01]", label: "ABOUT MIXSPACE STUDIO", id: "about-mixspace-studio" },
     { index: "[02]", label: "OUR CAPABILITIES", id: "capabilities" },
     { index: "[03]", label: "RECENT WORK", id: "recent-work" },
     { index: "[04]", label: "SIGNATURE ENGAGEMENTS", id: "signature-engagements" },

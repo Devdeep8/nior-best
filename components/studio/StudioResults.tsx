@@ -12,7 +12,7 @@ const STATS = [
     id: "01",
     stat: "$3.5M",
     client: "Oh.xyz",
-    description: "Oh.xyz went on to raise $3.5M following Coders Express Seed sprint.",
+    description: "Oh.xyz went on to raise $3.5M following Mixspace Studio Seed sprint.",
     image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778653876/coders%20express/673e8e75d3a5a5dba9eb1f5c_Oh.xyz_qkou9n.webp",
     gradient: "linear-gradient(135deg, #0a0a14 0%, #1a0a2e 100%)",
   },
@@ -30,7 +30,7 @@ const STATS = [
     stat: "50K+",
     client: "Ringfence",
     description:
-      "Following Coders Express Incubation, AI Platform Ringfence has acquired over 50k waitlist signups.",
+      "Following Mixspace Studio Incubation, AI Platform Ringfence has acquired over 50k waitlist signups.",
     image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1778653875/coders%20express/673e8e75edfc15a41bc6e0d0_Ringfence_l1so8j.webp",
     gradient: "linear-gradient(135deg, #060d1a 0%, #0d1e2e 100%)",
   },

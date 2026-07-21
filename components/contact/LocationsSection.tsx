@@ -43,7 +43,7 @@ export function LocationsSection() {
 
   const location = {
     city: "Delhi",
-    email: "delhi@codersexpress.com",
+    email: "delhi@mixspacestudio.com",
     timezone: "Asia/Kolkata",
     mapEmbedSrc: `https://www.google.com/maps?q=${LAT},${LNG}&z=16&output=embed`,
   };

@@ -13,8 +13,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Coders Express — Global Branding & Design Studio",
-    template: "%s | Coders Express",
+    default: "Mixspace Studio — Global Branding & Design Studio",
+    template: "%s | Mixspace Studio",
   },
   description:
     "We are a premier global branding and digital design studio. We collaborate with ambitious founders to build world-class brands, high-converting websites, and cinematic digital experiences for the modern internet.",
@@ -25,31 +25,31 @@ export const metadata: Metadata = {
     "web development agency",
     "creative studio",
     "brand strategy",
-    "Coders Express",
+    "Mixspace Studio",
     "custom software development",
     "motion graphics design",
     "high-end websites",
     "Cinematic visual effects",
   ],
-  authors: [{ name: "Coders Express" }],
-  creator: "Coders Express",
-  publisher: "Coders Express",
+  authors: [{ name: "Mixspace Studio" }],
+  creator: "Mixspace Studio",
+  publisher: "Mixspace Studio",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Coders Express — Global Branding & Design Studio",
+    title: "Mixspace Studio — Global Branding & Design Studio",
     description: "Collaborating with ambitious founders to build world-class brands, high-converting websites, and cinematic digital experiences.",
-    url: "https://www.codersexpress.com",
-    siteName: "Coders Express",
+    url: "https://www.mixspacestudio.com",
+    siteName: "Mixspace Studio",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coders Express — Global Branding & Design Studio",
+    title: "Mixspace Studio — Global Branding & Design Studio",
     description: "Collaborating with ambitious founders to build world-class brands and cinematic digital experiences.",
   },
   robots: {

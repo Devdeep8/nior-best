@@ -104,8 +104,8 @@ export default function AdminPage() {
         {/* Brand Header */}
         <div className="flex flex-col items-center mb-8">
           <Image
-            src="/assets/logo/Coder-express-logo-white.png"
-            alt="Coders Express"
+            src="/assets/logo/Mixspace-Studio-logo-white.png"
+            alt="Mixspace Studio"
             width={200}
             height={68}
             className="h-10 w-auto object-contain mb-2"

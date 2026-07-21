@@ -16,14 +16,14 @@ const TEAM = [
     name: "Navjyot Singh",
     title: "Chief operating officer",
     photo: "",
-    bio: "Jamie oversees operations across all Coders Express verticals, ensuring seamless delivery across studio, ventures and marketing. With a background spanning strategy, operations and brand, Jamie brings the connective tissue that keeps complex, multi-stakeholder projects running on time and on brief.",
+    bio: "Jamie oversees operations across all Mixspace Studio verticals, ensuring seamless delivery across studio, ventures and marketing. With a background spanning strategy, operations and brand, Jamie brings the connective tissue that keeps complex, multi-stakeholder projects running on time and on brief.",
   },
   {
     id: "03",
     name: "Harshita Dewan",
     title: "Creative Director ( Content & Strategies)",
     photo: "",
-    bio: "Luca leads the creative vision across all Coders Express studio output. With a background in brand identity, motion and digital design, he has shaped campaigns and identities for Fortune 500 companies and emerging Web3 brands alike.",
+    bio: "Luca leads the creative vision across all Mixspace Studio studio output. With a background in brand identity, motion and digital design, he has shaped campaigns and identities for Fortune 500 companies and emerging Web3 brands alike.",
   },
 
 ];

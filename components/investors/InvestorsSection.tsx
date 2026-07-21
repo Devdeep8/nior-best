@@ -73,7 +73,7 @@ export function InvestorsSection() {
     <section className="bg-black py-24 sm:py-32 overflow-hidden border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16 text-center">
         <h2 className="text-[#555] text-xl md:text-2xl font-medium tracking-tight">
-          At Coders Express, we’re proud partners of brands making an impact.
+          At Mixspace Studio, we’re proud partners of brands making an impact.
         </h2>
       </div>
 

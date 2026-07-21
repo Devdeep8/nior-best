@@ -32,7 +32,7 @@ export function SectionLabels({
 
       {/* Right: Studio mark */}
       <span className="text-[10px] font-sans font-medium uppercase tracking-[0.3em] text-white/20 hidden sm:inline">
-        Coders Express Studio
+        Mixspace Studio
       </span>
     </div>
   );
