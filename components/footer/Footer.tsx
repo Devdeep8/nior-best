@@ -18,7 +18,7 @@ export function Footer() {
             placeholder="Email address"
             className="bg-[#141414] border border-transparent focus:border-white/10 rounded-full px-6 py-4 text-white text-lg placeholder:text-[#666] outline-none w-full md:w-[340px] transition-all"
           />
-          <button className="bg-transparent border border-white text-white w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-[#ca7a3a] hover:border-[#ca7a3a] hover:text-white transition-colors text-lg">
+          <button className="bg-transparent border border-white text-white w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-[#eabca8] hover:border-[#eabca8] hover:text-white transition-colors text-lg">
             Submit
           </button>
         </div>
@@ -47,7 +47,7 @@ export function Footer() {
             <div className="w-1.5 h-1.5 rounded-full border border-[#555] group-hover:border-brand transition-colors"></div>
             MAIL
           </a>
-          <a href="https://www.instagram.com/mixspacestudio?igsh=aWQ0enhiYTM3c2ow&utm_source=qr" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors group">
+          <a href="https://www.instagram.com/mixspacestudio?igsh=cXV3ZG12anBlbHlk" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors group">
             <div className="w-1.5 h-1.5 rounded-full border border-[#555] group-hover:border-brand transition-colors"></div>
             INSTAGRAM
           </a>

@@ -65,6 +65,7 @@ export function VideoBackground({
       {!hasError && (
         <video
           ref={videoRef}
+          src={src}
           autoPlay
           loop
           muted
@@ -72,9 +73,7 @@ export function VideoBackground({
           preload="auto" // Instruct browser to preload video data ASAP
           className="absolute inset-0 h-full w-full object-cover"
           style={{ opacity: isLoaded ? 1 : 0, transition: "opacity 0.5s ease-in-out" }}
-        >
-          <source src={src} type="video/mp4" />
-        </video>
+        />
       )}
 
       {/* Fallback background */}

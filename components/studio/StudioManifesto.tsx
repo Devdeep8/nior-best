@@ -13,7 +13,7 @@ const MANIFESTO_TEXT =
 
 // Use resolved hex — GSAP cannot tween FROM a CSS variable string
 const MUTED = "#555555"; // resolves --color-text-muted
-const LIT = "#ca7a3a";
+const LIT = "#eabca8";
 
 type GsapTimeline = ReturnType<typeof gsap.timeline>;
 

@@ -67,28 +67,28 @@ export const heroContent: HeroContent = {
   },
 
   video: {
-    src: "https://res.cloudinary.com/deepcnbrz/video/upload/v1778419667/3197cdd6-1ef0a0b9_fianin.mp4",
+    src: "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1778419667/3197cdd6-1ef0a0b9_fianin.mp4",
     alt: "Abstract dark video background with futuristic visual effects",
     fallbackColor: "#0a0a0a",
     // OLD urls (swap back by pasting one as thumbnailVideoSrc value):
-    // "https://res.cloudinary.com/deepcnbrz/video/upload/v1778743838/coders%20express/volvo_ryz9sp.mp4"
+    // "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1778743838/coders%20express/volvo_ryz9sp.mp4"
     // "https://www.youtube.com/watch?v=Ro_3DJ9w0cI"
-    thumbnailVideoSrc: "https://res.cloudinary.com/deepcnbrz/video/upload/v1783592510/video6230893928879497424_j7wkzf.mp4",
+    thumbnailVideoSrc: "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1783592510/video6230893928879497424_j7wkzf.mp4",
     recommendedVideos: [
       {
         id: "rec-1",
         title: "McLaren Studio",
-        src: "https://res.cloudinary.com/deepcnbrz/video/upload/v1778609300/coders%20express/Copy_of_McLaren_studio_edit_o5jm4d.mp4"
+        src: "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1778609300/coders%20express/Copy_of_McLaren_studio_edit_o5jm4d.mp4"
       },
       {
         id: "rec-2",
         title: "KartPipe Project",
-        src: "https://res.cloudinary.com/deepcnbrz/video/upload/v1778608880/coders%20express/Copy_of_Video_06-_KartPipe_low_res_jggtyy.mp4"
+        src: "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1778608880/coders%20express/Copy_of_Video_06-_KartPipe_low_res_jggtyy.mp4"
       },
       {
         id: "rec-3",
         title: "Sikret Shoot",
-        src: "https://res.cloudinary.com/deepcnbrz/video/upload/v1778608811/coders%20express/Copy_of_Video_05-_Sikret_low_res_jj06rm.mp4"
+        src: "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1778608811/coders%20express/Copy_of_Video_05-_Sikret_low_res_jj06rm.mp4"
       }
     ]
   },
