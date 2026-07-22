@@ -27,7 +27,7 @@ function ClientName({ name, url, isLast }: { name: string; url: string; isLast: 
 
   const textStyle = {
     textDecoration: "none",
-    color: hovered && url ? "#ca7a3a" : "var(--color-text-muted)",
+    color: hovered && url ? "#eabca8" : "var(--color-text-muted)",
     cursor: url ? "pointer" : "default",
     transition: "color 0.2s ease",
     display: "inline",

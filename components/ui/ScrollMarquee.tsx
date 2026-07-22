@@ -56,7 +56,7 @@ export function ScrollMarquee({
     >
       <h2
         ref={textRef}
-        className="whitespace-nowrap text-[#ca7a3a] select-none will-change-transform"
+        className="whitespace-nowrap text-[#eabca8] select-none will-change-transform"
         style={{
           fontSize: "clamp(48px, 10vw, 245.76px)",
           fontWeight: 400,

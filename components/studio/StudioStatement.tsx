@@ -31,7 +31,7 @@ export function StudioStatement() {
             if (!word) return;
             const threshold = (i / total) * 0.85;
             gsap.to(word, {
-              color: progress >= threshold ? "#ca7a3a" : "#555555",
+              color: progress >= threshold ? "#eabca8" : "#555555",
               duration: 0.2,
               ease: "none",
               overwrite: "auto",

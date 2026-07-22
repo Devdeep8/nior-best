@@ -68,7 +68,7 @@ export function HighlightText({ segments, className = "" }: HighlightTextProps) 
           key={`${si}-${wi}`}
           className="ht-word inline-block"
           style={{
-            color: seg.highlight ? "#ca7a3a" : "#555",
+            color: seg.highlight ? "#eabca8" : "#555",
             fontWeight: seg.highlight ? 500 : 400,
           }}
         >

@@ -143,7 +143,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-[15px] text-white transition-colors duration-200 hover:text-[#ca7a3a] whitespace-nowrap"
+                className="text-[15px] text-white transition-colors duration-200 hover:text-[#eabca8] whitespace-nowrap"
                 onClick={handleNavClick}
               >
                 {link.label}
@@ -228,7 +228,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
             <div key={link.label} className="w-full max-w-sm">
               <Link
                 href={link.href}
-                className="block border-t border-white/10 py-6 text-center text-[28px] font-normal text-white hover:text-[#ca7a3a] transition-colors"
+                className="block border-t border-white/10 py-6 text-center text-[28px] font-normal text-white hover:text-[#eabca8] transition-colors"
                 onClick={handleNavClick}
               >
                 {link.label}

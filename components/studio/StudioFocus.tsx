@@ -240,7 +240,7 @@ export function StudioFocus() {
                       fontWeight: isActive ? 500 : 400,
                       lineHeight: 1.1,
                       letterSpacing: "-0.025em",
-                      color: isActive ? "#ca7a3a" : "rgba(255,255,255,0.18)",
+                      color: isActive ? "#eabca8" : "rgba(255,255,255,0.18)",
                       cursor: "pointer",
                       transition: "color 0.25s ease, font-weight 0.25s ease",
                       padding: "clamp(20px, 2.5vh, 40px) 0",

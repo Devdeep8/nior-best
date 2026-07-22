@@ -168,7 +168,7 @@ export function FullscreenVideoPlayer({
             {/* Elegant Floating Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 md:top-8 md:right-8 z-50 flex items-center justify-center h-12 w-12 rounded-full border border-white/10 bg-black/50 text-white/70 hover:text-white hover:border-[#ca7a3a]/50 hover:bg-[#ca7a3a]/10 transition-all duration-300 group/close"
+              className="absolute top-6 right-6 md:top-8 md:right-8 z-50 flex items-center justify-center h-12 w-12 rounded-full border border-white/10 bg-black/50 text-white/70 hover:text-white hover:border-[#eabca8]/50 hover:bg-[#eabca8]/10 transition-all duration-300 group/close"
               aria-label="Close video player"
             >
               <svg
@@ -184,7 +184,7 @@ export function FullscreenVideoPlayer({
             {!showEndScreen && (
               <div className="absolute bottom-0 left-0 w-full h-1.5 bg-white/10 z-20 pointer-events-none">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-[#ca7a3a] to-[#e8a87c]"
+                  className="h-full bg-gradient-to-r from-[#eabca8] to-[#e8a87c]"
                   initial={{ scaleX: 0 }}
                   style={{
                     transformOrigin: "left",
@@ -218,13 +218,13 @@ export function FullscreenVideoPlayer({
                       transition={{ delay: 0.1 }}
                       className="mb-12"
                     >
-                      <h2 className="text-sm md:text-base font-mono tracking-widest text-[#ca7a3a] uppercase mb-2">
+                      <h2 className="text-sm md:text-base font-mono tracking-widest text-[#eabca8] uppercase mb-2">
                         Watch More Stories
                       </h2>
                       <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                         Recommended Projects
                       </h3>
-                      <div className="mt-4 w-24 h-1 bg-[#ca7a3a] mx-auto rounded-full" />
+                      <div className="mt-4 w-24 h-1 bg-[#eabca8] mx-auto rounded-full" />
                     </motion.div>
 
                     {/* 3 Recommended Videos Grid */}
@@ -236,7 +236,7 @@ export function FullscreenVideoPlayer({
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2 + idx * 0.1 }}
                           onClick={() => handlePlayRecommended(vid.src)}
-                          className="group/card relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 aspect-video md:aspect-[4/3] cursor-pointer transition-all duration-500 hover:scale-[1.03] hover:border-[#ca7a3a]/50 hover:shadow-2xl hover:shadow-[#ca7a3a]/10"
+                          className="group/card relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 aspect-video md:aspect-[4/3] cursor-pointer transition-all duration-500 hover:scale-[1.03] hover:border-[#eabca8]/50 hover:shadow-2xl hover:shadow-[#eabca8]/10"
                         >
                           {/* Background Looping Muted Video */}
                           <video
@@ -254,7 +254,7 @@ export function FullscreenVideoPlayer({
                           {/* Floating Content */}
                           <div className="absolute inset-0 flex flex-col justify-between p-6 z-20">
                             {/* Small dynamic badge */}
-                            <span className="self-start px-2.5 py-1 rounded bg-[#ca7a3a]/20 border border-[#ca7a3a]/30 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-[#e8a87c] opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
+                            <span className="self-start px-2.5 py-1 rounded bg-[#eabca8]/20 border border-[#eabca8]/30 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-[#e8a87c] opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
                               Up Next
                             </span>
 
