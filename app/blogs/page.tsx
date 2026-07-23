@@ -4,8 +4,15 @@ import { Navbar } from "@/components/Navbar";
 import { getBlogs } from "@/lib/blogs";
 
 // Dynamic imports for below-the-fold components to reduce initial page load size
-const BlogListClient = dynamic(() => import("@/components/blog/BlogListClient").then(m => m.BlogListClient), { ssr: true });
-const Footer = dynamic(() => import("@/components/footer/Footer").then(m => m.Footer), { ssr: true });
+const BlogListClient = dynamic(
+  () =>
+    import("@/components/blog/BlogListClient").then((m) => m.BlogListClient),
+  { ssr: true },
+);
+const Footer = dynamic(
+  () => import("@/components/footer/Footer").then((m) => m.Footer),
+  { ssr: true },
+);
 
 export const metadata: Metadata = {
   title: "Blogs & Insights",
@@ -42,7 +49,11 @@ export default async function BlogsPage() {
 
             {/* Subtext */}
             <p className="text-white/60 text-lg md:text-xl font-normal leading-relaxed mt-4">
-              Stay ahead in the digital world with expert insights, practical marketing tips, SEO strategies, social media trends, website best practices, and industry updates. Explore our blogs to discover actionable ideas that help your business grow, connect with the right audience, and achieve lasting digital success.
+              Stay ahead in the digital world with expert insights, practical
+              marketing tips, SEO strategies, social media trends, website best
+              practices, and industry updates. Explore our blogs to discover
+              actionable ideas that help your business grow, connect with the
+              right audience, and achieve lasting digital success.
             </p>
           </div>
         </div>

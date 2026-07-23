@@ -158,7 +158,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-3 rounded-full border border-white/30 bg-[#171717] px-5 py-3 text-[15px] text-white transition-colors duration-200 hover:bg-brand hover:border-brand hover:text-white"
+              className="navbar-cta hidden sm:inline-flex items-center gap-3 rounded-full border border-white/30 bg-[#171717] px-5 py-3 text-[15px] text-white transition-colors duration-200 hover:bg-brand hover:border-brand hover:text-white"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -168,7 +168,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Mobile Menu button - Text "Menu" instead of hamburger */}
             <button
-              className="sm:hidden flex items-center justify-center rounded-full border border-white/30 bg-[#171717] px-4 h-10 text-[15px] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
+              className="navbar-cta sm:hidden flex items-center justify-center rounded-full border border-white/30 bg-[#171717] px-4 h-10 text-[15px] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? navbarContent.mobile.closeLabel : navbarContent.mobile.menuLabel}
             >
@@ -205,7 +205,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-[#171717] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
+              className="navbar-cta flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-[#171717] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -214,7 +214,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Close button */}
             <button
-              className="flex h-10 items-center justify-center rounded-full border border-white/20 bg-[#222] px-4 text-[15px] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
+              className="navbar-cta flex h-10 items-center justify-center rounded-full border border-white/20 bg-[#222] px-4 text-[15px] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Close

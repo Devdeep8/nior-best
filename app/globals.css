@@ -3,6 +3,8 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
+  --color-black: #000000;
+  --color-white: #ffffff;
   --muted: #444444;
   --accent: #5B21D4;
   --brand: #ca7a3a;
@@ -25,12 +27,155 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-black: var(--color-black);
+  --color-white: var(--color-white);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-brand: var(--brand);
   --font-serif: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
   --font-sans: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
 }
+
+/* Page themes mapping dark colors to custom light backgrounds and high-contrast dark text colors */
+body.page-home {
+  --background: #99BAB9;
+  --foreground: #0E1A1A;
+  --color-black: #99BAB9;
+  --color-white: #0E1A1A;
+  --color-bg-secondary: #8BA6A5;
+  --color-text-primary: #0E1A1A;
+  --color-text-secondary: #2C3C3C;
+  --color-text-muted: #4A5B5B;
+  --color-border: rgba(14, 26, 26, 0.15);
+  --color-border-hover: rgba(14, 26, 26, 0.3);
+}
+
+body.page-studio {
+  --background: #CCD5AE;
+  --foreground: #1D2310;
+  --color-black: #CCD5AE;
+  --color-white: #1D2310;
+  --color-bg-secondary: #BDC79B;
+  --color-text-primary: #1D2310;
+  --color-text-secondary: #3B4620;
+  --color-text-muted: #566432;
+  --color-border: rgba(29, 35, 16, 0.15);
+  --color-border-hover: rgba(29, 35, 16, 0.3);
+}
+
+body.page-blogs {
+  --background: #EABCA8;
+  --foreground: #22120A;
+  --color-black: #EABCA8;
+  --color-white: #22120A;
+  --color-bg-secondary: #DBAA95;
+  --color-text-primary: #22120A;
+  --color-text-secondary: #532C1B;
+  --color-text-muted: #72412A;
+  --color-border: rgba(34, 18, 10, 0.15);
+  --color-border-hover: rgba(34, 18, 10, 0.3);
+}
+
+body.page-contact {
+  --background: #E4ACB2;
+  --foreground: #240A10;
+  --color-black: #E4ACB2;
+  --color-white: #240A10;
+  --color-bg-secondary: #D6979E;
+  --color-text-primary: #240A10;
+  --color-text-secondary: #521B27;
+  --color-text-muted: #742D3C;
+  --color-border: rgba(36, 10, 16, 0.15);
+  --color-border-hover: rgba(36, 10, 16, 0.3);
+}
+
+/* Invert logo and other elements that require high visibility on light pages */
+body.page-home img[src*="logo-white"],
+body.page-studio img[src*="logo-white"],
+body.page-blogs img[src*="logo-white"],
+body.page-contact img[src*="logo-white"] {
+  filter: invert(1);
+}
+
+/* Scroll progress bar colors on light pages */
+body.page-home #scroll-progress,
+body.page-studio #scroll-progress,
+body.page-blogs #scroll-progress,
+body.page-contact #scroll-progress {
+  background: var(--foreground);
+}
+
+/* Navbar button override styling */
+body.page-home .navbar-cta,
+body.page-studio .navbar-cta,
+body.page-blogs .navbar-cta,
+body.page-contact .navbar-cta {
+  background-color: var(--foreground) !important;
+  color: var(--background) !important;
+  border-color: rgba(var(--foreground), 0.3) !important;
+}
+
+body.page-home .navbar-cta:hover,
+body.page-studio .navbar-cta:hover,
+body.page-blogs .navbar-cta:hover,
+body.page-contact .navbar-cta:hover {
+  background-color: var(--brand) !important;
+  border-color: var(--brand) !important;
+  color: #ffffff !important;
+}
+
+/* Color and background contrast overrides for light pages */
+body.page-home, body.page-studio, body.page-blogs, body.page-contact {
+  /* Secondary text color overrides */
+  .text-\[\#666\],
+  .text-\[\#555\],
+  .text-\[\#555555\],
+  .text-\[\#999\],
+  .text-\[\#999999\] {
+    color: var(--color-text-secondary) !important;
+  }
+
+  /* Muted text color overrides */
+  .text-\[\#888\],
+  .text-\[\#444\] {
+    color: var(--color-text-muted) !important;
+  }
+
+  /* Placeholder color overrides */
+  .placeholder\:text-\[\#666\]::placeholder,
+  .placeholder\:text-\[\#444\]::placeholder {
+    color: var(--color-text-muted) !important;
+    opacity: 0.8;
+  }
+
+  /* Accent brand color overrides for text highlights */
+  .text-\[\#eabca8\],
+  .group-hover\:text-\[\#eabca8\]\/80,
+  .hover\:text-\[\#eabca8\]:hover {
+    color: var(--color-brand) !important;
+  }
+
+  /* Input and panel background overrides */
+  .bg-\[\#141414\],
+  .bg-\[\#1a1a1a\],
+  .bg-\[\#111\],
+  .bg-\[\#111111\] {
+    background-color: var(--color-bg-secondary) !important;
+    color: var(--foreground) !important;
+  }
+
+  /* Translucent card and marquee wrapper background overrides */
+  .bg-zinc-800\/40,
+  .bg-zinc-900\/30,
+  .bg-zinc-900\/50,
+  .bg-zinc-800\/60 {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+}
+
+
+
 
 * {
   box-sizing: border-box;

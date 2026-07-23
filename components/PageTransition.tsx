@@ -8,6 +8,18 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   React.useEffect(() => {
+    // Update body classes for page themes
+    document.body.classList.remove("page-home", "page-studio", "page-blogs", "page-contact");
+    if (pathname === "/") {
+      document.body.classList.add("page-home");
+    } else if (pathname === "/studio") {
+      document.body.classList.add("page-studio");
+    } else if (pathname === "/blogs" || pathname?.startsWith("/blogs/")) {
+      document.body.classList.add("page-blogs");
+    } else if (pathname === "/contact") {
+      document.body.classList.add("page-contact");
+    }
+
     // Wait slightly for Next.js to render the new route's DOM
     const timer = setTimeout(() => {
       const observer = new IntersectionObserver(
