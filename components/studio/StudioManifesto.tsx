@@ -11,9 +11,8 @@ if (typeof window !== "undefined") {
 const MANIFESTO_TEXT =
   "We live at a time when technology is accelerating at an exponential rate, changing the way we live and relate to the world around us. Mixspace Studio operates as a hybrid think tank and design studio. By studying the effects of emerging technologies we envision how forward-thinking companies can thrive amidst exponential change.";
 
-// Use resolved hex — GSAP cannot tween FROM a CSS variable string
-const MUTED = "#555555"; // resolves --color-text-muted
-const LIT = "#eabca8";
+const MUTED = "var(--color-text-muted)";
+const LIT = "var(--color-brand)";
 
 type GsapTimeline = ReturnType<typeof gsap.timeline>;
 

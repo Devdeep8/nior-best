@@ -198,6 +198,21 @@ body.page-home, body.page-studio, body.page-blogs, body.page-contact {
   background-color: rgba(var(--color-brand), 0.2) !important;
 }
 
+/* Override all occurrences of orange/cream hex colors in gradients and text to use the brand accent color */
+.text-\[\#e8a87c\] {
+  color: var(--color-brand) !important;
+}
+.bg-\[\#e8a87c\] {
+  background-color: var(--color-brand) !important;
+}
+.to-\[\#e8a87c\] {
+  --tw-gradient-to: var(--color-brand) !important;
+}
+.from-\[\#eabca8\] {
+  --tw-gradient-from: var(--color-brand) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0)) !important;
+}
+
 
 * {
   box-sizing: border-box;

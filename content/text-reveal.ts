@@ -48,7 +48,7 @@ export const textRevealContent: TextRevealContent = {
     initialColor: "#444",
     revealedColor: "#ffffff",
     highlightedWords: ["high-performance", "cut", "40%"], // Words that highlight first/brighter
-    highlightColor: "#eabca8",
+    highlightColor: "var(--color-brand)",
     defaultMaxWidth: "900px",
   },
 

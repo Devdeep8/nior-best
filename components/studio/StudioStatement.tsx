@@ -17,7 +17,7 @@ export function StudioStatement() {
     if (!sectionRef.current || wordsRef.current.length === 0) return;
 
     const ctx = gsap.context(() => {
-      gsap.set(wordsRef.current, { color: "#555555" });
+      gsap.set(wordsRef.current, { color: "var(--color-text-muted)" });
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
@@ -31,7 +31,7 @@ export function StudioStatement() {
             if (!word) return;
             const threshold = (i / total) * 0.85;
             gsap.to(word, {
-              color: progress >= threshold ? "#eabca8" : "#555555",
+              color: progress >= threshold ? "var(--color-brand)" : "var(--color-text-muted)",
               duration: 0.2,
               ease: "none",
               overwrite: "auto",
@@ -71,7 +71,7 @@ export function StudioStatement() {
                 ref={(el) => {
                   if (el) wordsRef.current[i] = el;
                 }}
-                style={{ color: "#555555" }}
+                style={{ color: "var(--color-text-muted)" }}
               >
                 {word}
               </span>

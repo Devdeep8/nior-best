@@ -89,9 +89,9 @@ export function CapabilityList({ activeCapability, onCapabilityChange }: Capabil
       {capabilitiesContent.capabilities.map((capability) => (
         <button
           key={capability.id}
-          className="capability-item text-left font-medium transition-all duration-200 select-none hover:text-[#eabca8]"
+          className="capability-item text-left font-medium transition-all duration-200 select-none hover:text-brand"
           style={{
-            color: activeCapability === capability.id ? "#eabca8" : "#666666",
+            color: activeCapability === capability.id ? "var(--color-brand)" : "var(--color-text-secondary)",
             fontSize: "clamp(26px, 3.2vw, 64px)",
             lineHeight: 1.18,
             padding: "clamp(18px, 2.5vh, 36px) 0",

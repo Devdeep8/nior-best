@@ -108,9 +108,9 @@ export function StudioAbout() {
           >
             {/* Mixed weight — lighter text / bold emphasis / lighter / bold */}
             <span style={{ color: "rgba(255,255,255,0.45)", fontWeight: 300 }}>Mixspace Studio provides </span>
-            <span style={{ color: "#eabca8", fontWeight: 700 }}>services globally with its design &amp; development studio </span>
+            <span style={{ color: "var(--color-brand)", fontWeight: 700 }}>services globally with its design &amp; development studio </span>
             <span style={{ color: "rgba(255,255,255,0.45)", fontWeight: 300 }}>based in </span>
-            <span style={{ color: "#eabca8", fontWeight: 700 }}>Delhi, India.</span>
+            <span style={{ color: "var(--color-brand)", fontWeight: 700 }}>Delhi, India.</span>
           </h2>
 
           {/* Body paragraph */}
@@ -177,8 +177,8 @@ export function StudioAbout() {
           transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
         }
         .studio-about-cta:hover {
-          background-color: #eabca8 !important;
-          border-color: #eabca8 !important;
+          background-color: var(--brand) !important;
+          border-color: var(--brand) !important;
         }
       `}</style>
     </section>

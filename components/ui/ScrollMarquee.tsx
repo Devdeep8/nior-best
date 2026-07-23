@@ -52,11 +52,11 @@ export function ScrollMarquee({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden bg-black py-16 border-y border-white/8 flex items-center justify-center ${className}`}
+      className={`relative overflow-hidden bg-background py-16 border-y border-white/8 flex items-center justify-center ${className}`}
     >
       <h2
         ref={textRef}
-        className="whitespace-nowrap text-[#eabca8] select-none will-change-transform"
+        className="whitespace-nowrap text-brand select-none will-change-transform"
         style={{
           fontSize: "clamp(48px, 10vw, 245.76px)",
           fontWeight: 400,
