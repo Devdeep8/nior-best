@@ -169,7 +169,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="navbar-cta hidden sm:inline-flex items-center gap-3 rounded-full border border-[#cecccc] bg-[#cecccc] px-5 py-3 text-[15px] text-[#41050c] transition-colors duration-200 hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5]"
+              className="navbar-cta hidden sm:inline-flex items-center gap-3 rounded-full border border-[#cecccc] bg-[#cecccc] px-5 py-3 text-[15px] text-[#41050c] transition-colors duration-200 hover:bg-white hover:border-white hover:text-[#41050c]"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -179,7 +179,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Mobile Menu button - Text "Menu" instead of hamburger */}
             <button
-              className="navbar-cta sm:hidden flex items-center justify-center rounded-full border border-[#cecccc] bg-[#cecccc] px-4 h-10 text-[15px] text-[#41050c] hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-colors"
+              className="navbar-cta sm:hidden flex items-center justify-center rounded-full border border-[#cecccc] bg-[#cecccc] px-4 h-10 text-[15px] text-[#41050c] hover:bg-white hover:border-white hover:text-[#41050c] transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? navbarContent.mobile.closeLabel : navbarContent.mobile.menuLabel}
             >
@@ -216,7 +216,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="navbar-cta flex h-10 w-10 items-center justify-center rounded-full border border-[#cecccc] bg-[#cecccc] text-[#41050c] hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-colors"
+              className="navbar-cta flex h-10 w-10 items-center justify-center rounded-full border border-[#cecccc] bg-[#cecccc] text-[#41050c] hover:bg-white hover:border-white hover:text-[#41050c] transition-colors"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -225,7 +225,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Close button */}
             <button
-              className="navbar-cta flex h-10 items-center justify-center rounded-full border border-[#cecccc] bg-[#cecccc] px-4 text-[15px] text-[#41050c] hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-colors"
+              className="navbar-cta flex h-10 items-center justify-center rounded-full border border-[#cecccc] bg-[#cecccc] px-4 text-[15px] text-[#41050c] hover:bg-white hover:border-white hover:text-[#41050c] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Close

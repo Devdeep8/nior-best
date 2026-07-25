@@ -186,6 +186,24 @@ img[src*="logo orange"] {
   filter: hue-rotate(15deg) saturate(2.5) brightness(1.2) !important;
 }
 
+/* Explicit navbar button styling to ensure it is always brand-aligned */
+.navbar-cta,
+.navbar-cta span,
+.navbar-cta svg {
+  background-color: var(--brand) !important;
+  color: var(--background) !important;
+  border-color: var(--brand) !important;
+}
+
+.navbar-cta:hover,
+.navbar-cta:hover span,
+.navbar-cta:hover svg {
+  background-color: var(--color-white) !important;
+  color: var(--background) !important;
+  border-color: var(--color-white) !important;
+}
+
+
 
 /* Asset placeholder classes for easy replacement */
 .hero-video-bg {
