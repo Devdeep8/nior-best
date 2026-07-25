@@ -81,7 +81,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="bg-black py-32 border-t border-white/5 overflow-hidden">
+    <section className="bg-[var(--background)] py-32 border-t border-white/5 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <h2 className="text-white text-[clamp(48px,8vw,96px)] font-normal leading-[1.1] tracking-tight max-w-2xl">
           Our Testimonials
@@ -108,7 +108,7 @@ export function TestimonialsSection() {
         {testimonials.map((t) => (
           <div
             key={t.id}
-            className="snap-center shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] bg-[#0a0a0a] border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[500px]"
+            className="snap-center shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] bg-[#cecccc] border border-[#41050c]/10 rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[500px]"
           >
             {/* Top row: Avatar placeholder & Logo placeholder */}
             <div className="flex justify-between items-start mb-12">
@@ -128,20 +128,20 @@ export function TestimonialsSection() {
                   />
                 )}
               </div>
-              <div className="text-white/40 font-semibold tracking-wider uppercase text-sm">
+              <div className="text-[#41050c]/60 font-semibold tracking-wider uppercase text-sm">
                 {t.company}
               </div>
             </div>
 
             {/* Quote */}
-            <p className="text-white text-[clamp(20px,2.5vw,32px)] leading-[1.3] font-normal mb-16">
+            <p className="text-[#41050c] text-[clamp(20px,2.5vw,32px)] leading-[1.3] font-normal mb-16">
               "{t.quote}"
             </p>
 
             {/* Bottom info */}
             <div>
-              <p className="text-white font-medium text-lg">{t.name}</p>
-              <p className="text-[#666] text-sm">{t.company}</p>
+              <p className="text-[#41050c] font-medium text-lg">{t.name}</p>
+              <p className="text-[#41050c]/70 text-sm">{t.company}</p>
             </div>
           </div>
         ))}

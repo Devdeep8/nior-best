@@ -177,13 +177,13 @@ a, button, input, select, textarea {
 }
 
 ::selection {
-  background: rgba(206, 204, 204, 0.3);
+  background: rgba(255, 222, 89, 0.3);
   color: var(--foreground);
 }
 
-/* Desaturate the orange hover logo to match the light gray #cecccc accent color */
+/* Tint the orange hover logo to match the sunny yellow #ffde59 accent color */
 img[src*="logo orange"] {
-  filter: grayscale(1) brightness(1.2) !important;
+  filter: hue-rotate(15deg) saturate(2.5) brightness(1.2) !important;
 }
 
 
