@@ -18,10 +18,10 @@ function FormFieldWrapper({ label, required, isFocused, children }: any) {
     <div className="flex flex-col w-full">
       <div className="flex items-center gap-2 mb-2 relative h-5">
         {isFocused && (
-          <div className="w-[6px] h-[6px] bg-white rounded-full animate-pulse" />
+          <div className="w-[6px] h-[6px] bg-[#41050c] rounded-full animate-pulse" />
         )}
-        <span className={`text-[13px] font-medium text-white transition-all duration-300 ${isFocused ? "" : "pl-0"}`}>
-          {label} {required && <span className="text-[#888]">*</span>}
+        <span className={`text-[13px] font-medium text-[#41050c] transition-all duration-300 ${isFocused ? "" : "pl-0"}`}>
+          {label} {required && <span className="text-[#41050c]/60">*</span>}
         </span>
       </div>
       {children}
@@ -41,7 +41,7 @@ export function TextInput({ label, required, placeholder, type = "text", name }:
         required={required}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className="bg-transparent w-full text-base text-white border-b border-white/20 py-3 focus:border-white/70 transition-colors outline-none placeholder:text-[#444] font-normal"
+        className="bg-transparent w-full text-base text-[#41050c] border-b border-[#41050c]/20 py-3 focus:border-[#41050c]/70 transition-colors outline-none placeholder:text-[#41050c]/40 font-normal"
       />
     </FormFieldWrapper>
   );
@@ -60,9 +60,9 @@ export function TextArea({ label, required, placeholder, name }: BaseInputProps)
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           rows={4}
-          className="bg-transparent w-full text-base text-white border-b border-white/20 py-3 focus:border-white/70 transition-colors outline-none placeholder:text-[#444] font-normal resize-none min-h-[120px]"
+          className="bg-transparent w-full text-base text-[#41050c] border-b border-[#41050c]/20 py-3 focus:border-[#41050c]/70 transition-colors outline-none placeholder:text-[#41050c]/40 font-normal resize-none min-h-[120px]"
         />
-        <div className="absolute bottom-3 right-0 pointer-events-none text-[#666] select-none">
+        <div className="absolute bottom-3 right-0 pointer-events-none text-[#41050c]/60 select-none">
           ↗
         </div>
       </div>
@@ -98,14 +98,14 @@ export function CustomSelect({ label, required, options, placeholder, name }: Ba
             setIsOpen(!isOpen);
             setIsFocused(true);
           }}
-          className={`flex items-center justify-between w-full text-base border-b py-3 cursor-pointer transition-colors ${isOpen || isFocused ? "border-white/70" : "border-white/20"
+          className={`flex items-center justify-between w-full text-base border-b py-3 cursor-pointer transition-colors ${isOpen || isFocused ? "border-[#41050c]/70" : "border-[#41050c]/20"
             }`}
         >
-          <span className={selectedValue ? "text-white" : "text-[#444]"}>
+          <span className={selectedValue ? "text-[#41050c]" : "text-[#41050c]/40"}>
             {selectedValue || placeholder || "Select option"}
           </span>
           <svg
-            className={`w-3 h-3 text-[#666] transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+            className={`w-3 h-3 text-[#41050c]/60 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -115,7 +115,7 @@ export function CustomSelect({ label, required, options, placeholder, name }: Ba
         </div>
 
         {isOpen && (
-          <div className="absolute top-full left-0 w-full z-50 mt-1 bg-[#1a1a1a] border border-white/10 rounded-lg shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="absolute top-full left-0 w-full z-50 mt-1 bg-[#cecccc] border border-[#41050c]/20 rounded-lg shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
             {options.map((option) => (
               <div
                 key={option}
@@ -124,7 +124,7 @@ export function CustomSelect({ label, required, options, placeholder, name }: Ba
                   setIsOpen(false);
                   setIsFocused(false);
                 }}
-                className="px-4 py-3 text-[15px] text-white/80 hover:text-white hover:bg-white/5 cursor-pointer transition-colors"
+                className="px-4 py-3 text-[15px] text-[#41050c]/80 hover:text-[#41050c] hover:bg-[#41050c]/10 cursor-pointer transition-colors"
               >
                 {option}
               </div>
@@ -136,7 +136,7 @@ export function CustomSelect({ label, required, options, placeholder, name }: Ba
   );
 }
 
-const FormDivider = () => <div className="h-[1px] w-full bg-white/8 my-2" />;
+const FormDivider = () => <div className="h-[1px] w-full bg-[#41050c]/15 my-2" />;
 
 export function ProjectEnquiryForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -189,8 +189,8 @@ export function ProjectEnquiryForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-medium text-white mb-3">Submission Sent</h3>
-        <p className="text-white/60">Thank you. Our team will review your details and reach out shortly.</p>
+        <h3 className="text-2xl font-medium text-[#41050c] mb-3">Submission Sent</h3>
+        <p className="text-[#41050c]/70">Thank you. Our team will review your details and reach out shortly.</p>
       </div>
     );
   }
@@ -243,7 +243,7 @@ export function ProjectEnquiryForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="rounded-full bg-black text-white text-base font-medium px-9 py-3.5 border border-transparent hover:bg-white hover:text-black transition-all duration-300 w-fit cursor-pointer disabled:opacity-50"
+          className="rounded-full bg-[#cecccc] text-[#41050c] text-base font-medium px-9 py-3.5 border border-[#cecccc] hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-all duration-300 w-fit cursor-pointer disabled:opacity-50"
         >
           {isSubmitting ? "Sending..." : "Submit"}
         </button>
@@ -298,8 +298,8 @@ export function MinimalForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-medium text-white mb-3">Message Received</h3>
-        <p className="text-white/60">We'll be in touch shortly!</p>
+        <h3 className="text-2xl font-medium text-[#41050c] mb-3">Message Received</h3>
+        <p className="text-[#41050c]/70">We'll be in touch shortly!</p>
       </div>
     );
   }
@@ -319,7 +319,7 @@ export function MinimalForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="rounded-full bg-black text-white text-base font-medium px-9 py-3.5 border border-transparent hover:bg-white hover:text-black transition-all duration-300 w-fit cursor-pointer disabled:opacity-50"
+          className="rounded-full bg-[#cecccc] text-[#41050c] text-base font-medium px-9 py-3.5 border border-[#cecccc] hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-all duration-300 w-fit cursor-pointer disabled:opacity-50"
         >
           {isSubmitting ? "Sending..." : "Submit"}
         </button>

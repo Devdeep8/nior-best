@@ -2,7 +2,7 @@
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white pt-32 pb-8 px-6 lg:px-12 flex flex-col border-t border-white/5">
+    <footer className="bg-[var(--background)] text-white pt-32 pb-8 px-6 lg:px-12 flex flex-col border-t border-white/5">
       {/* Top row: Subscribe to us */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-4">
         <div className="flex items-center w-full flex-grow">
@@ -16,9 +16,9 @@ export function Footer() {
           <input
             type="email"
             placeholder="Email address"
-            className="bg-[#141414] border border-transparent focus:border-white/10 rounded-full px-6 py-4 text-white text-lg placeholder:text-[#666] outline-none w-full md:w-[340px] transition-all"
+            className="bg-[#cecccc] border border-transparent focus:border-[#41050c]/20 rounded-full px-6 py-4 text-[#41050c] text-lg placeholder:text-[#41050c]/60 outline-none w-full md:w-[340px] transition-all"
           />
-          <button className="bg-transparent border border-white text-white w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-brand hover:border-brand hover:text-white transition-colors text-lg">
+          <button className="bg-[#cecccc] border border-[#cecccc] text-[#41050c] w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-all text-lg cursor-pointer">
             Submit
           </button>
         </div>
