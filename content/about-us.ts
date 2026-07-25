@@ -63,10 +63,10 @@ export const aboutUsContent: AboutUsContent = {
   text: {
     content: "From scaling startups to elevating established businesses since 2019, we create viral visibility, powerful brand positioning, and customer experiences that turn clicks into lifetime communities.",
     ariaLabel: "From scaling startups to elevating established businesses since 2019, we create viral visibility, powerful brand positioning, and customer experiences that turn clicks into lifetime communities.",
-    initialColor: "#222",
+    initialColor: "rgba(246, 245, 245, 0.25)",
     revealedColor: "var(--color-brand)",
     highlightedWords: ["grow", "online", "social", "media,", "SEO,", "web", "development,", "digital", "ads."],
-    highlightColor: "#ffffff",
+    highlightColor: "#f6f5f5",
     defaultMaxWidth: "4xl",
   },
 

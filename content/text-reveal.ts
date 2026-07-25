@@ -45,8 +45,8 @@ export const textRevealContent: TextRevealContent = {
   text: {
     content: "We design high-performance systems that cut customer acquisition costs by up to 40%.",
     ariaLabel: "We design high-performance systems that cut customer acquisition costs by up to 40%.",
-    initialColor: "#444",
-    revealedColor: "#ffffff",
+    initialColor: "rgba(246, 245, 245, 0.25)",
+    revealedColor: "#f6f5f5",
     highlightedWords: ["high-performance", "cut", "40%"], // Words that highlight first/brighter
     highlightColor: "var(--color-brand)",
     defaultMaxWidth: "900px",
