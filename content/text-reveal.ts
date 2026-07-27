@@ -45,13 +45,8 @@ export const textRevealContent: TextRevealContent = {
   text: {
     content: "We design high-performance systems that cut customer acquisition costs by up to 40%.",
     ariaLabel: "We design high-performance systems that cut customer acquisition costs by up to 40%.",
-<<<<<<< Updated upstream
-    initialColor: "rgba(246, 245, 245, 0.25)",
-    revealedColor: "#f6f5f5",
-=======
     initialColor: "rgba(65, 5, 12, 0.2)",
     revealedColor: "#41050c",
->>>>>>> Stashed changes
     highlightedWords: ["high-performance", "cut", "40%"], // Words that highlight first/brighter
     highlightColor: "var(--color-brand)",
     defaultMaxWidth: "900px",
@@ -67,11 +62,7 @@ export const textRevealContent: TextRevealContent = {
 
   decoration: {
     dotSize: "8px",
-<<<<<<< Updated upstream
-    dotColor: "#ffffff",
-=======
     dotColor: "#41050c",
->>>>>>> Stashed changes
   },
 
   animation: {

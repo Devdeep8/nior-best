@@ -124,11 +124,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
     <>
       {/* Main Navbar */}
       <header
-<<<<<<< Updated upstream
-        className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-300 ${hasScrolled ? "bg-black/80 backdrop-blur-md border-b border-white/8" : "bg-transparent"
-=======
         className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-300 ${hasScrolled ? "bg-[var(--background)]/85 backdrop-blur-md border-b border-[#41050c]/10" : "bg-transparent"
->>>>>>> Stashed changes
           }`}
       >
         <div className="relative mx-auto h-20 px-6 lg:px-12 flex items-center justify-between w-full">
@@ -155,13 +151,9 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
                   key={link.label}
                   href={link.href}
                   className={`text-[15px] transition-colors duration-200 whitespace-nowrap ${
-<<<<<<< Updated upstream
-                    isActive ? "text-brand font-medium" : "text-white/80 hover:text-brand"
-=======
                     isActive
                       ? "text-[#41050c] font-medium"
                       : "text-[#41050c]/60 hover:text-[#41050c]"
->>>>>>> Stashed changes
                   }`}
                   onClick={handleNavClick}
                 >
@@ -179,11 +171,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< Updated upstream
-              className="navbar-cta hidden sm:inline-flex items-center gap-3 rounded-full border border-[#41050c] bg-[#41050c] px-5 py-3 text-[15px] text-[#cecccc] transition-colors duration-200 hover:bg-white hover:border-white hover:text-[#cecccc]"
-=======
               className="navbar-cta hidden sm:inline-flex items-center gap-3 rounded-full border border-[#41050c] bg-[#41050c] px-5 py-3 text-[15px] text-[#cecccc] transition-colors duration-200 hover:bg-[#41050c] hover:border-[#41050c] hover:text-[#cecccc]"
->>>>>>> Stashed changes
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -193,11 +181,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Mobile Menu button - Text "Menu" instead of hamburger */}
             <button
-<<<<<<< Updated upstream
-              className="navbar-cta sm:hidden flex items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] px-4 h-10 text-[15px] text-[#cecccc] hover:bg-white hover:border-white hover:text-[#cecccc] transition-colors"
-=======
               className="navbar-cta sm:hidden flex items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] px-4 h-10 text-[15px] text-[#cecccc] hover:bg-[#41050c] hover:border-[#41050c] hover:text-[#cecccc] transition-colors"
->>>>>>> Stashed changes
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? navbarContent.mobile.closeLabel : navbarContent.mobile.menuLabel}
             >
@@ -234,11 +218,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-<<<<<<< Updated upstream
-              className="navbar-cta flex h-10 w-10 items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] text-[#cecccc] hover:bg-white hover:border-white hover:text-[#cecccc] transition-colors"
-=======
               className="navbar-cta flex h-10 w-10 items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] text-[#cecccc] hover:bg-[#41050c] hover:border-[#41050c] hover:text-[#cecccc] transition-colors"
->>>>>>> Stashed changes
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -247,11 +227,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Close button */}
             <button
-<<<<<<< Updated upstream
-              className="navbar-cta flex h-10 items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] px-4 text-[15px] text-[#cecccc] hover:bg-white hover:border-white hover:text-[#cecccc] transition-colors"
-=======
               className="navbar-cta flex h-10 items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] px-4 text-[15px] text-[#cecccc] hover:bg-[#41050c] hover:border-[#41050c] hover:text-[#cecccc] transition-colors"
->>>>>>> Stashed changes
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Close
@@ -272,24 +248,15 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               <div key={link.label} className="w-full max-w-sm">
                 <Link
                   href={link.href}
-<<<<<<< Updated upstream
-                  className={`block border-t border-white/10 py-6 text-center text-[28px] font-normal transition-colors ${
-                    isActive ? "text-brand" : "text-white hover:text-brand"
-=======
                   className={`block border-t border-[#41050c]/10 py-6 text-center text-[28px] font-normal transition-colors ${
                     isActive ? "text-[#41050c]" : "text-[#41050c]/60 hover:text-[#41050c]"
->>>>>>> Stashed changes
                   }`}
                   onClick={handleNavClick}
                 >
                   {link.label}
                 </Link>
                 {index === navbarContent.navLinks.length - 1 && (
-<<<<<<< Updated upstream
-                  <div className="border-t border-white/10" />
-=======
                   <div className="border-t border-[#41050c]/10" />
->>>>>>> Stashed changes
                 )}
               </div>
             );

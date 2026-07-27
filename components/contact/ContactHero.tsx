@@ -8,7 +8,7 @@ const FULL_TEXT = "Get in touch with our team to discuss your business goals and
 
 // Identify specific groupings of words to track coloring styles easily
 const highlights = {
-  white: ["talking", "about", "a", "new", "project", "complete", "the", "form", "send", "us", "an", "email."],
+  burgundy: ["talking", "about", "a", "new", "project", "complete", "the", "form", "send", "us", "an", "email."],
   gray: ["If", "you", "are", "interested", "in", "—", "please", "or"]
 };
 
@@ -30,31 +30,17 @@ export function ContactHero() {
   // Individual word variants
   const wordVariants = (word: string) => {
     // Determine end color based on highlights map
-<<<<<<< Updated upstream
-    let finalColor = "#ffffff"; // Default
-    const cleanWord = word.replace(/[—.,]/g, '').trim();
-
-    if (highlights.gray.some(g => g === cleanWord || g === word)) {
-      finalColor = "#555555";
-    } else if (highlights.white.some(w => w === cleanWord || w === word)) {
-      finalColor = "#ffffff";
-    }
-
-    return {
-      hidden: { color: "#2a2a2a" },
-=======
     let finalColor = "#41050c"; // Default
     const cleanWord = word.replace(/[—.,]/g, '').trim();
 
     if (highlights.gray.some(g => g === cleanWord || g === word)) {
       finalColor = "rgba(65, 5, 12, 0.6)";
-    } else if (highlights.charcoal.some(w => w === cleanWord || w === word)) {
+    } else if (highlights.burgundy.some(w => w === cleanWord || w === word)) {
       finalColor = "#41050c";
     }
 
     return {
       hidden: { color: "rgba(65, 5, 12, 0.3)" },
->>>>>>> Stashed changes
       visible: {
         color: finalColor,
         transition: { duration: 0.5, ease: "easeOut" as const },
@@ -69,7 +55,7 @@ export function ContactHero() {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-black pt-[120px] flex flex-col lg:flex-row px-4 lg:px-0 max-w-8xl mx-auto">
+    <section className="w-full min-h-screen bg-[var(--background)] pt-[120px] flex flex-col lg:flex-row px-4 lg:px-0 max-w-8xl mx-auto">
       {/* LEFT COLUMN (48%) */}
       <div className="lg:w-[48%] flex flex-col pt-[60px] pb-[60px] px-6 lg:pl-10 lg:pr-[5%]">
         <motion.h1
@@ -94,21 +80,13 @@ export function ContactHero() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-<<<<<<< Updated upstream
-                className={`relative group w-fit text-left text-lg font-normal cursor-pointer pb-1.5 transition-colors duration-300 text-white hover:text-brand`}
-=======
                 className={`relative group w-fit text-left text-lg font-normal cursor-pointer pb-1.5 transition-colors duration-300 text-[#41050c] hover:text-brand`}
->>>>>>> Stashed changes
               >
                 {tab.label}
                 {/* Animated Underline */}
                 <span
                   className={`absolute bottom-0 right-0 w-full h-[1.5px] transition-transform duration-300 ease-out transform ${isActive
-<<<<<<< Updated upstream
-                    ? "bg-white scale-x-100 origin-left"
-=======
                     ? "bg-[#41050c] scale-x-100 origin-left"
->>>>>>> Stashed changes
                     : "bg-brand scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-right"
                     }`}
                 />

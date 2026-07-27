@@ -99,15 +99,9 @@ export function VideoBackground({
             className="absolute inset-0 flex items-center justify-center bg-black"
           >
             <div className="relative">
-<<<<<<< Updated upstream
-              <div className="h-12 w-12 animate-spin rounded-full border-2 border-white/20 border-t-white" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-2 w-2 animate-pulse rounded-full bg-white" />
-=======
               <div className="h-12 w-12 animate-spin rounded-full border-2 border-[#41050c]/20 border-t-[#41050c]" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="h-2 w-2 animate-pulse rounded-full bg-[#41050c]" />
->>>>>>> Stashed changes
               </div>
             </div>
           </motion.div>

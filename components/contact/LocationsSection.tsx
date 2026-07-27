@@ -26,20 +26,12 @@ function LiveClock({ timezone }: { timezone: string }) {
 
   if (!time) {
     return (
-<<<<<<< Updated upstream
-      <div className="min-w-[72px] h-8 bg-white/5 animate-pulse rounded-full" />
-=======
       <div className="min-w-[72px] h-8 bg-[#41050c]/10 animate-pulse rounded-full" />
->>>>>>> Stashed changes
     );
   }
 
   return (
-<<<<<<< Updated upstream
-    <div className="bg-[#222222] px-4 py-2 rounded-full text-white font-normal text-sm tracking-wide whitespace-nowrap select-none shrink-0">
-=======
     <div className="bg-[#41050c] px-4 py-2 rounded-full text-[#cecccc] font-normal text-sm tracking-wide whitespace-nowrap select-none shrink-0">
->>>>>>> Stashed changes
       {time}
     </div>
   );
@@ -93,15 +85,6 @@ export function LocationsSection() {
           <div className="w-full pt-4 pb-2 sm:py-5 flex flex-row items-center justify-between gap-3 px-1">
             {/* City + Email */}
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0">
-<<<<<<< Updated upstream
-              <span className="text-white font-normal text-sm sm:text-base lg:text-lg shrink-0">
-                {location.city}
-              </span>
-              <span className="text-white/40 shrink-0">—</span>
-
-              <a href={`mailto:${location.email}`}
-                className="text-white/60 text-sm sm:text-base lg:text-lg font-normal truncate border-b border-transparent hover:border-white hover:text-white transition-all duration-200 min-w-0"
-=======
               <span className="text-[#41050c] font-normal text-sm sm:text-base lg:text-lg shrink-0">
                 {location.city}
               </span>
@@ -109,7 +92,6 @@ export function LocationsSection() {
 
               <a href={`mailto:${location.email}`}
                 className="text-[#41050c]/60 text-sm sm:text-base lg:text-lg font-normal truncate border-b border-transparent hover:border-[#41050c] hover:text-[#41050c] transition-all duration-200 min-w-0"
->>>>>>> Stashed changes
               >
                 {location.email}
               </a>

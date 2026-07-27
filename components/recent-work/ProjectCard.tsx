@@ -135,13 +135,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Tag — top right */}
       <div className="absolute top-4 right-4 z-10">
         <span
-<<<<<<< Updated upstream
-          className="text-[11px] uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/20 backdrop-blur-sm"
-          style={{ background: "rgba(0,0,0,0.55)", color: "#fff" }}
-=======
           className="text-[11px] uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#cecccc]/20 backdrop-blur-sm"
           style={{ background: "rgba(65, 5, 12, 0.75)", color: "#cecccc" }}
->>>>>>> Stashed changes
         >
           {project.tag}
         </span>
@@ -157,11 +152,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
 
       {/* Bottom gradient for legibility */}
-<<<<<<< Updated upstream
-      <div className="absolute bottom-0 left-0 right-0 h-28 bg-linear-to-t from-black/70 to-transparent z-5 pointer-events-none" />
-=======
       <div className="absolute bottom-0 left-0 right-0 h-28 bg-linear-to-t from-[#41050c]/80 to-transparent z-5 pointer-events-none" />
->>>>>>> Stashed changes
     </div>
   );
 }

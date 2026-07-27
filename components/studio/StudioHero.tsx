@@ -105,15 +105,6 @@ export function StudioHero() {
       <div ref={pinRef} className="relative w-full h-screen overflow-hidden flex flex-col justify-center">
         {/* Top Text Row */}
         <div className="absolute top-[80px] left-[20px] md:left-[40px] right-[20px] md:right-[40px] flex justify-between pointer-events-none z-20">
-<<<<<<< Updated upstream
-          <span className="hero-top-label opacity-0 translate-y-[10px] text-[13px] uppercase tracking-[0.1em] text-[#999999]" style={{ fontFamily: "var(--font-body)" }}>
-            Think Tank
-          </span>
-          <span className="hero-top-label opacity-0 translate-y-[10px] text-[13px] uppercase tracking-[0.1em] text-[#999999]" style={{ fontFamily: "var(--font-body)" }}>
-            Est. 2019
-          </span>
-          <span className="hero-top-label opacity-0 translate-y-[10px] text-[13px] uppercase tracking-[0.1em] text-[#999999] hidden md:block" style={{ fontFamily: "var(--font-body)" }}>
-=======
           <span className="hero-top-label opacity-0 translate-y-[10px] text-[13px] uppercase tracking-[0.1em] text-[#41050c]/70" style={{ fontFamily: "var(--font-body)" }}>
             Think Tank
           </span>
@@ -121,7 +112,6 @@ export function StudioHero() {
             Est. 2019
           </span>
           <span className="hero-top-label opacity-0 translate-y-[10px] text-[13px] uppercase tracking-[0.1em] text-[#41050c]/70 hidden md:block" style={{ fontFamily: "var(--font-body)" }}>
->>>>>>> Stashed changes
             Creative Studio
           </span>
         </div>
@@ -137,11 +127,7 @@ export function StudioHero() {
             <div 
               key={idx}
               ref={(el) => { imagesRef.current[idx] = el; }}
-<<<<<<< Updated upstream
-              className="absolute w-[90vw] md:w-[65vw] max-w-[900px] aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-white/10"
-=======
               className="absolute w-[90vw] md:w-[65vw] max-w-[900px] aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-[#41050c]/10"
->>>>>>> Stashed changes
               style={{ 
                 transform: "translateY(120vh) scale(0.8)", 
                 opacity: 0,

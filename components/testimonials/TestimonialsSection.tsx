@@ -81,26 +81,15 @@ export function TestimonialsSection() {
   };
 
   return (
-<<<<<<< Updated upstream
-    <section className="bg-[var(--background)] py-32 border-t border-white/5 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <h2 className="text-white text-[clamp(48px,8vw,96px)] font-normal leading-[1.1] tracking-tight max-w-2xl">
-=======
     <section className="bg-[var(--background)] py-32 border-t border-[#41050c]/10 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <h2 className="text-[#41050c] text-[clamp(48px,8vw,96px)] font-normal leading-[1.1] tracking-tight max-w-2xl">
->>>>>>> Stashed changes
           Our Testimonials
         </h2>
 
         {/* Indicator */}
-<<<<<<< Updated upstream
-        <div className="flex items-center gap-4 text-[#555] font-mono text-lg pb-4">
-          <span className="text-white">{activeIndex}</span>
-=======
         <div className="flex items-center gap-4 text-[#41050c]/50 font-mono text-lg pb-4">
           <span className="text-[#41050c]">{activeIndex}</span>
->>>>>>> Stashed changes
           <span>—</span>
           <span>{testimonials.length}</span>
         </div>

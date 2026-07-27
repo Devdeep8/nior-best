@@ -80,11 +80,7 @@ function ToggleIcon({ isOpen }: { isOpen: boolean }) {
           left: 0,
           right: 0,
           height: "1px",
-<<<<<<< Updated upstream
-          backgroundColor: "rgba(255,255,255,0.6)",
-=======
           backgroundColor: "rgba(65,5,12,0.6)",
->>>>>>> Stashed changes
           transform: "translateY(-50%)",
           transition: "transform 0.3s ease",
         }}
@@ -97,11 +93,7 @@ function ToggleIcon({ isOpen }: { isOpen: boolean }) {
           top: 0,
           bottom: 0,
           width: "1px",
-<<<<<<< Updated upstream
-          backgroundColor: "rgba(255,255,255,0.6)",
-=======
           backgroundColor: "rgba(65,5,12,0.6)",
->>>>>>> Stashed changes
           transform: `translateX(-50%) scaleY(${isOpen ? 0 : 1})`,
           transition: "transform 0.3s ease",
         }}
@@ -122,11 +114,7 @@ function ServiceRow({
   return (
     <div
       style={{
-<<<<<<< Updated upstream
-        borderTop: "1px solid rgba(255,255,255,0.08)",
-=======
         borderTop: "1px solid rgba(65,5,12,0.1)",
->>>>>>> Stashed changes
         cursor: "pointer",
       }}
       onClick={onToggle}
@@ -141,11 +129,7 @@ function ServiceRow({
             fontFamily: "var(--font-body)",
             fontSize: "clamp(20px, 2.8vw, 36px)",
             fontWeight: 400,
-<<<<<<< Updated upstream
-            color: "#ffffff",
-=======
             color: "#41050c",
->>>>>>> Stashed changes
             margin: 0,
             letterSpacing: "-0.015em",
           }}
@@ -176,11 +160,7 @@ function ServiceRow({
             fontFamily: "var(--font-body)",
             fontSize: "clamp(13px, 1.2vw, 15px)",
             lineHeight: 1.7,
-<<<<<<< Updated upstream
-            color: "rgba(255,255,255,0.4)",
-=======
             color: "rgba(65,5,12,0.6)",
->>>>>>> Stashed changes
             margin: 0,
           }}
         >
@@ -196,11 +176,7 @@ function ServiceRow({
                 fontFamily: "var(--font-body)",
                 fontSize: "clamp(13px, 1.2vw, 15px)",
                 lineHeight: 2,
-<<<<<<< Updated upstream
-                color: "#ffffff",
-=======
                 color: "#41050c",
->>>>>>> Stashed changes
               }}
             >
               {item}
@@ -220,11 +196,7 @@ export function StudioServices() {
       className="w-full"
       style={{
         backgroundColor: "var(--background)",
-<<<<<<< Updated upstream
-        borderTop: "1px solid rgba(255,255,255,0.08)",
-=======
         borderTop: "1px solid rgba(65,5,12,0.1)",
->>>>>>> Stashed changes
         padding: "var(--space-xl, 80px) 0 var(--space-2xl, 120px) 0",
       }}
     >
@@ -259,11 +231,7 @@ export function StudioServices() {
               onToggle={() => setOpenIndex(openIndex === i ? -1 : i)}
             />
           ))}
-<<<<<<< Updated upstream
-          <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }} />
-=======
           <div style={{ borderTop: "1px solid rgba(65,5,12,0.1)" }} />
->>>>>>> Stashed changes
         </div>
       </div>
     </section>

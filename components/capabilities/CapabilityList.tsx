@@ -95,11 +95,7 @@ export function CapabilityList({ activeCapability, onCapabilityChange }: Capabil
             fontSize: "clamp(26px, 3.2vw, 64px)",
             lineHeight: 1.18,
             padding: "clamp(18px, 2.5vh, 36px) 0",
-<<<<<<< Updated upstream
-            borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
-=======
             borderBottom: "1px solid rgba(65, 5, 12, 0.1)",
->>>>>>> Stashed changes
             width: "100%",
           }}
           onMouseEnter={() => onCapabilityChangeRef.current(capability.id)}

@@ -163,11 +163,7 @@ export function StudioManifesto() {
             fontWeight: 400,
             letterSpacing: "-0.04em",
             lineHeight: 1,
-<<<<<<< Updated upstream
-            color: "#ffffff",
-=======
             color: "#41050c",
->>>>>>> Stashed changes
             whiteSpace: "nowrap",
           }}
         >
@@ -178,11 +174,7 @@ export function StudioManifesto() {
       {/* Full-width top border */}
       <div
         className="absolute top-0 left-0 right-0"
-<<<<<<< Updated upstream
-        style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}
-=======
         style={{ borderTop: "1px solid rgba(65,5,12,0.10)" }}
->>>>>>> Stashed changes
       />
 
       {/* Content */}

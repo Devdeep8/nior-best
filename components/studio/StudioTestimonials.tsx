@@ -64,11 +64,7 @@ export function StudioTestimonials() {
               fontWeight: 300,
               lineHeight: 1.1,
               letterSpacing: "-0.025em",
-<<<<<<< Updated upstream
-              color: "#ffffff",
-=======
               color: "#41050c",
->>>>>>> Stashed changes
               marginTop: "clamp(16px, 2vw, 24px)",
               maxWidth: "600px",
             }}

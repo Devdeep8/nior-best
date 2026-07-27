@@ -62,11 +62,7 @@ export function StudioAbout() {
       className="w-full"
       style={{
         backgroundColor: "var(--background)",
-<<<<<<< Updated upstream
-        borderTop: "1px solid rgba(255,255,255,0.08)",
-=======
         borderTop: "1px solid rgba(65,5,12,0.1)",
->>>>>>> Stashed changes
       }}
     >
       <div
@@ -103,11 +99,7 @@ export function StudioAbout() {
               fontWeight: 300,
               lineHeight: 1.1,
               letterSpacing: "-0.025em",
-<<<<<<< Updated upstream
-              color: "#ffffff",
-=======
               color: "#41050c",
->>>>>>> Stashed changes
               margin: "0 0 clamp(32px, 4vw, 56px) 0",
               maxWidth: "900px",
               opacity: 0,
@@ -115,15 +107,9 @@ export function StudioAbout() {
             }}
           >
             {/* Mixed weight — lighter text / bold emphasis / lighter / bold */}
-<<<<<<< Updated upstream
-            <span style={{ color: "rgba(255,255,255,0.45)", fontWeight: 300 }}>Mixspace Studio provides </span>
-            <span style={{ color: "var(--color-brand)", fontWeight: 700 }}>services globally with its design &amp; development studio </span>
-            <span style={{ color: "rgba(255,255,255,0.45)", fontWeight: 300 }}>based in </span>
-=======
             <span style={{ color: "rgba(65, 5, 12, 0.6)", fontWeight: 300 }}>Mixspace Studio provides </span>
             <span style={{ color: "var(--color-brand)", fontWeight: 700 }}>services globally with its design &amp; development studio </span>
             <span style={{ color: "rgba(65, 5, 12, 0.6)", fontWeight: 300 }}>based in </span>
->>>>>>> Stashed changes
             <span style={{ color: "var(--color-brand)", fontWeight: 700 }}>Delhi, India.</span>
           </h2>
 
@@ -156,21 +142,13 @@ export function StudioAbout() {
               gap: "6px",
               marginTop: "36px",
               padding: "14px 28px",
-<<<<<<< Updated upstream
-              border: "1px solid rgba(255,255,255,0.15)",
-=======
               border: "1px solid rgba(65,5,12,0.15)",
->>>>>>> Stashed changes
               borderRadius: "100px",
               fontSize: "13px",
               letterSpacing: "0.06em",
               textTransform: "uppercase" as const,
               fontFamily: "var(--font-body)",
-<<<<<<< Updated upstream
-              color: "#ffffff",
-=======
               color: "#41050c",
->>>>>>> Stashed changes
               backgroundColor: "transparent",
               cursor: "pointer",
               width: "fit-content",
