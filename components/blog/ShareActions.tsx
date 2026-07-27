@@ -35,7 +35,11 @@ export function ShareActions({ title }: ShareActionsProps) {
       {/* Twitter Share */}
       <button
         onClick={shareTwitter}
+<<<<<<< Updated upstream
         className="flex-1 lg:flex-initial flex items-center justify-center gap-2 lg:h-12 lg:w-12 rounded-full border border-white/10 hover:border-brand/40 bg-white/[0.01] hover:bg-brand/5 px-4 py-2.5 lg:p-0 text-xs lg:text-sm text-white/60 hover:text-white transition-all duration-300"
+=======
+        className="flex-1 lg:flex-initial flex items-center justify-center gap-2 lg:h-12 lg:w-12 rounded-full border border-[#41050c]/10 hover:border-[#41050c]/30 bg-[#41050c]/5 hover:bg-[#41050c]/10 px-4 py-2.5 lg:p-0 text-xs lg:text-sm text-[#41050c]/60 hover:text-[#41050c] transition-all duration-300"
+>>>>>>> Stashed changes
         title="Share on X"
       >
         <span className="lg:hidden font-mono uppercase tracking-wider text-[10px]">Share on X</span>
@@ -47,7 +51,11 @@ export function ShareActions({ title }: ShareActionsProps) {
       {/* LinkedIn Share */}
       <button
         onClick={shareLinkedIn}
+<<<<<<< Updated upstream
         className="flex-1 lg:flex-initial flex items-center justify-center gap-2 lg:h-12 lg:w-12 rounded-full border border-white/10 hover:border-brand/40 bg-white/[0.01] hover:bg-brand/5 px-4 py-2.5 lg:p-0 text-xs lg:text-sm text-white/60 hover:text-white transition-all duration-300"
+=======
+        className="flex-1 lg:flex-initial flex items-center justify-center gap-2 lg:h-12 lg:w-12 rounded-full border border-[#41050c]/10 hover:border-[#41050c]/30 bg-[#41050c]/5 hover:bg-[#41050c]/10 px-4 py-2.5 lg:p-0 text-xs lg:text-sm text-[#41050c]/60 hover:text-[#41050c] transition-all duration-300"
+>>>>>>> Stashed changes
         title="Share on LinkedIn"
       >
         <span className="lg:hidden font-mono uppercase tracking-wider text-[10px]">LinkedIn</span>
@@ -59,7 +67,11 @@ export function ShareActions({ title }: ShareActionsProps) {
       {/* Copy Link Button */}
       <button
         onClick={handleCopy}
+<<<<<<< Updated upstream
         className="flex-1 lg:flex-initial flex items-center justify-center gap-2 lg:h-12 lg:w-12 rounded-full border border-white/10 hover:border-brand/40 bg-white/[0.01] hover:bg-brand/5 px-4 py-2.5 lg:p-0 text-xs lg:text-sm text-white/60 hover:text-white transition-all duration-300 relative"
+=======
+        className="flex-1 lg:flex-initial flex items-center justify-center gap-2 lg:h-12 lg:w-12 rounded-full border border-[#41050c]/10 hover:border-[#41050c]/30 bg-[#41050c]/5 hover:bg-[#41050c]/10 px-4 py-2.5 lg:p-0 text-xs lg:text-sm text-[#41050c]/60 hover:text-[#41050c] transition-all duration-300 relative"
+>>>>>>> Stashed changes
         title="Copy link"
       >
         <span className="lg:hidden font-mono uppercase tracking-wider text-[10px]">
@@ -75,7 +87,11 @@ export function ShareActions({ title }: ShareActionsProps) {
 
         {/* Floating tooltip */}
         {copied && (
+<<<<<<< Updated upstream
           <span className="hidden lg:block absolute left-14 bg-brand text-white text-[10px] font-mono uppercase px-2.5 py-1 rounded-md tracking-wider shadow-xl animate-fade-in whitespace-nowrap">
+=======
+          <span className="hidden lg:block absolute left-14 bg-[#41050c] text-[#cecccc] text-[10px] font-mono uppercase px-2.5 py-1 rounded-md tracking-wider shadow-xl animate-fade-in whitespace-nowrap">
+>>>>>>> Stashed changes
             Link Copied!
           </span>
         )}

@@ -11,7 +11,11 @@ export function HeroDescription() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: heroContent.animation.descriptionDelay, duration: 0.6 }}
+<<<<<<< Updated upstream
         className="text-[15px] md:text-[17px] leading-[1.6] text-white/80 text-right md:text-left font-normal"
+=======
+        className="text-[15px] md:text-[17px] leading-[1.6] text-[#41050c]/80 text-right md:text-left font-normal"
+>>>>>>> Stashed changes
         aria-label={heroContent.description.ariaLabel}
       >
         {heroContent.description.text}

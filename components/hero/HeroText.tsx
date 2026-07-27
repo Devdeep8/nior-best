@@ -10,7 +10,11 @@ export function HeroText() {
         initial={{ opacity: 0, filter: "blur(12px)", }}
         animate={{ opacity: 1, filter: "blur(0px)", }}
         transition={{ duration: 1, ease: "easeOut" }}
+<<<<<<< Updated upstream
         className="text-[clamp(36px,9vw,72px)] font-normal leading-[1.1] text-white whitespace-normal md:whitespace-nowrap text-center md:text-left"
+=======
+        className="text-[clamp(36px,9vw,72px)] font-normal leading-[1.1] text-[#41050c] whitespace-normal md:whitespace-nowrap text-center md:text-left"
+>>>>>>> Stashed changes
       >
         Mixspace
       </motion.h1>
@@ -24,7 +28,11 @@ export function HeroText() {
           text-[clamp(36px,9vw,72px)]
           font-normal
           leading-[1.1]
+<<<<<<< Updated upstream
           text-white
+=======
+          text-[#41050c]
+>>>>>>> Stashed changes
           whitespace-normal
           md:whitespace-nowrap
           text-center

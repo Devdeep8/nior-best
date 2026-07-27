@@ -54,8 +54,13 @@ export const aboutUsContent: AboutUsContent = {
   labels: {
     index: "[01]",
     title: "ABOUT MIXSPACE STUDIO",
+<<<<<<< Updated upstream
     indexColor: "#555",
     titleColor: "#555",
+=======
+    indexColor: "rgba(65, 5, 12, 0.5)",
+    titleColor: "rgba(65, 5, 12, 0.5)",
+>>>>>>> Stashed changes
     fontSize: "11px",
     letterSpacing: "0.2em",
   },
@@ -63,7 +68,11 @@ export const aboutUsContent: AboutUsContent = {
   text: {
     content: "From scaling startups to elevating established businesses since 2019, we create viral visibility, powerful brand positioning, and customer experiences that turn clicks into lifetime communities.",
     ariaLabel: "From scaling startups to elevating established businesses since 2019, we create viral visibility, powerful brand positioning, and customer experiences that turn clicks into lifetime communities.",
+<<<<<<< Updated upstream
     initialColor: "rgba(246, 245, 245, 0.25)",
+=======
+    initialColor: "rgba(65, 5, 12, 0.2)",
+>>>>>>> Stashed changes
     revealedColor: "var(--color-brand)",
     highlightedWords: ["grow", "online", "social", "media,", "SEO,", "web", "development,", "digital", "ads."],
     highlightColor: "#f6f5f5",

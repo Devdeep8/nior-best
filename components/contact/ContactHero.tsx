@@ -30,6 +30,7 @@ export function ContactHero() {
   // Individual word variants
   const wordVariants = (word: string) => {
     // Determine end color based on highlights map
+<<<<<<< Updated upstream
     let finalColor = "#ffffff"; // Default
     const cleanWord = word.replace(/[—.,]/g, '').trim();
 
@@ -41,6 +42,19 @@ export function ContactHero() {
 
     return {
       hidden: { color: "#2a2a2a" },
+=======
+    let finalColor = "#41050c"; // Default
+    const cleanWord = word.replace(/[—.,]/g, '').trim();
+
+    if (highlights.gray.some(g => g === cleanWord || g === word)) {
+      finalColor = "rgba(65, 5, 12, 0.6)";
+    } else if (highlights.charcoal.some(w => w === cleanWord || w === word)) {
+      finalColor = "#41050c";
+    }
+
+    return {
+      hidden: { color: "rgba(65, 5, 12, 0.3)" },
+>>>>>>> Stashed changes
       visible: {
         color: finalColor,
         transition: { duration: 0.5, ease: "easeOut" as const },
@@ -80,13 +94,21 @@ export function ContactHero() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
+<<<<<<< Updated upstream
                 className={`relative group w-fit text-left text-lg font-normal cursor-pointer pb-1.5 transition-colors duration-300 text-white hover:text-brand`}
+=======
+                className={`relative group w-fit text-left text-lg font-normal cursor-pointer pb-1.5 transition-colors duration-300 text-[#41050c] hover:text-brand`}
+>>>>>>> Stashed changes
               >
                 {tab.label}
                 {/* Animated Underline */}
                 <span
                   className={`absolute bottom-0 right-0 w-full h-[1.5px] transition-transform duration-300 ease-out transform ${isActive
+<<<<<<< Updated upstream
                     ? "bg-white scale-x-100 origin-left"
+=======
+                    ? "bg-[#41050c] scale-x-100 origin-left"
+>>>>>>> Stashed changes
                     : "bg-brand scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-right"
                     }`}
                 />

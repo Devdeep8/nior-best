@@ -53,7 +53,11 @@ export function CapabilitiesSection() {
 
         {/* Mobile: Floating Video locked to bottom-right when section is active */}
         <div
+<<<<<<< Updated upstream
           className={`fixed bottom-6 right-4 z-40 w-44 sm:w-52 aspect-[4/3] overflow-hidden rounded-xl shadow-2xl border border-white/20 transition-all duration-500 transform lg:hidden ${
+=======
+          className={`fixed bottom-6 right-4 z-40 w-44 sm:w-52 aspect-[4/3] overflow-hidden rounded-xl shadow-2xl border border-[#41050c]/25 transition-all duration-500 transform lg:hidden ${
+>>>>>>> Stashed changes
             isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95 pointer-events-none"
           }`}
         >

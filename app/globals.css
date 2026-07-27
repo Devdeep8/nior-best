@@ -2,6 +2,7 @@
 
 :root {
   --background: #cecccc;
+<<<<<<< Updated upstream
   --foreground: #f6f5f5;
   --color-black: #cecccc;
   --color-white: #f6f5f5;
@@ -14,6 +15,20 @@
   --color-text-muted: rgba(246, 245, 245, 0.6);
   --color-border: rgba(246, 245, 245, 0.10);
   --color-border-hover: rgba(246, 245, 245, 0.25);
+=======
+  --foreground: #41050c;
+  --color-black: #cecccc;
+  --color-white: #f6f5f5;
+  --muted: #41050c;
+  --accent: #41050c;
+  --brand: #41050c;
+  --color-bg-secondary: #41050c;
+  --color-text-primary: #41050c;
+  --color-text-secondary: #41050c;
+  --color-text-muted: rgba(65, 5, 12, 0.6);
+  --color-border: rgba(65, 5, 12, 0.10);
+  --color-border-hover: rgba(65, 5, 12, 0.25);
+>>>>>>> Stashed changes
   --color-accent-warm: #41050c;
   --font-display: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
   --font-body: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
@@ -60,7 +75,7 @@ body {
     opacity: 0.8;
   }
 
-  /* Input, button, and panel background overrides to use secondary highlight color (#404040) */
+  /* Input, button, and panel background overrides to use secondary highlight color (#41050c) */
   .bg-\[\#141414\],
   .bg-\[\#1a1a1a\],
   .bg-\[\#111\],

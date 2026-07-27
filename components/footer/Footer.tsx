@@ -2,23 +2,37 @@
 
 export function Footer() {
   return (
+<<<<<<< Updated upstream
     <footer className="bg-[var(--background)] text-white pt-32 pb-8 px-6 lg:px-12 flex flex-col border-t border-white/5">
+=======
+    <footer className="bg-[var(--background)] text-[#41050c] pt-32 pb-8 px-6 lg:px-12 flex flex-col border-t border-[#41050c]/10">
+>>>>>>> Stashed changes
       {/* Top row: Subscribe to us */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-4">
         <div className="flex items-center w-full flex-grow">
           <h2 className="text-[clamp(28px,5vw,64px)] font-normal leading-tight whitespace-normal sm:whitespace-nowrap tracking-tight text-center md:text-left w-full md:w-auto">
             Subscribe to us
           </h2>
+<<<<<<< Updated upstream
           <div className="hidden md:block w-full h-[1px] bg-white/10 ml-12"></div>
+=======
+          <div className="hidden md:block w-full h-[1px] bg-[#41050c]/10 ml-12"></div>
+>>>>>>> Stashed changes
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0 mt-4 md:mt-0">
           <input
             type="email"
             placeholder="Email address"
+<<<<<<< Updated upstream
             className="bg-[#41050c] border border-transparent focus:border-[#cecccc]/20 rounded-full px-6 py-4 text-[#cecccc] text-lg placeholder:text-[#cecccc]/60 outline-none w-full md:w-[340px] transition-all"
           />
           <button className="bg-[#41050c] border border-[#41050c] text-[#cecccc] w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-all text-lg cursor-pointer">
+=======
+            className="bg-[#41050c] border border-transparent focus:border-[#41050c]/20 rounded-full px-6 py-4 text-[#cecccc] text-lg placeholder:text-[#cecccc]/60 outline-none w-full md:w-[340px] transition-all"
+          />
+          <button className="bg-[#41050c] border border-[#41050c] text-[#cecccc] w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-white hover:border-white hover:text-[#41050c] transition-all text-lg cursor-pointer">
+>>>>>>> Stashed changes
             Submit
           </button>
         </div>

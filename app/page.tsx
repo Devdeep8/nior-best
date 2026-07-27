@@ -17,7 +17,11 @@ const Footer = dynamic(() => import("@/components/footer").then(m => m.Footer), 
 
 export default function Home() {
   return (
+<<<<<<< Updated upstream
     <div className="min-h-screen bg-black text-white">
+=======
+    <div className="min-h-screen bg-[var(--background)] text-[#41050c]">
+>>>>>>> Stashed changes
       {/* Hero Section */}
       <Hero />
 

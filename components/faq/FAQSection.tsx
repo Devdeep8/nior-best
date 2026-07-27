@@ -45,9 +45,15 @@ export function FAQSection() {
   };
 
   return (
+<<<<<<< Updated upstream
     <section className="bg-black py-24 sm:py-32 border-t border-white/5">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-white text-[clamp(40px,6vw,64px)] font-normal leading-[1.1] tracking-tight mb-16 text-center">
+=======
+    <section className="bg-[var(--background)] py-24 sm:py-32 border-t border-[#41050c]/10">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <h2 className="text-[#41050c] text-[clamp(40px,6vw,64px)] font-normal leading-[1.1] tracking-tight mb-16 text-center">
+>>>>>>> Stashed changes
           Frequently Asked Questions
         </h2>
         
@@ -58,18 +64,31 @@ export function FAQSection() {
             return (
               <div 
                 key={index} 
+<<<<<<< Updated upstream
                 className="border-b border-white/10 pb-6 overflow-hidden transition-all duration-300"
+=======
+                className="border-b border-[#41050c]/10 pb-6 overflow-hidden transition-all duration-300"
+>>>>>>> Stashed changes
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full text-left flex justify-between items-center py-4 focus:outline-none group"
                 >
+<<<<<<< Updated upstream
                   <h3 className="text-white text-xl sm:text-2xl font-medium tracking-tight pr-8 group-hover:text-brand transition-colors">
                     {faq.question}
                   </h3>
                   <div className={`relative flex items-center justify-center w-6 h-6 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
                     <div className="absolute w-full h-[2px] bg-white rounded-full"></div>
                     <div className={`absolute w-[2px] h-full bg-white rounded-full transition-transform duration-300 ${isOpen ? 'rotate-90 opacity-0' : ''}`}></div>
+=======
+                  <h3 className="text-[#41050c] text-xl sm:text-2xl font-medium tracking-tight pr-8 group-hover:text-brand transition-colors">
+                    {faq.question}
+                  </h3>
+                  <div className={`relative flex items-center justify-center w-6 h-6 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+                    <div className="absolute w-full h-[2px] bg-[#41050c] rounded-full"></div>
+                    <div className={`absolute w-[2px] h-full bg-[#41050c] rounded-full transition-transform duration-300 ${isOpen ? 'rotate-90 opacity-0' : ''}`}></div>
+>>>>>>> Stashed changes
                   </div>
                 </button>
                 
@@ -79,7 +98,11 @@ export function FAQSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
+<<<<<<< Updated upstream
                     <p className="text-[#999] text-lg sm:text-xl leading-relaxed font-light">
+=======
+                    <p className="text-[#41050c]/70 text-lg sm:text-xl leading-relaxed font-light">
+>>>>>>> Stashed changes
                       {faq.answer}
                     </p>
                   </div>

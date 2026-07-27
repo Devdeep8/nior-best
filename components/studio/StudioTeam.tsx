@@ -38,7 +38,11 @@ function ToggleIcon({ isOpen }: { isOpen: boolean }) {
           left: 0,
           right: 0,
           height: "1px",
+<<<<<<< Updated upstream
           backgroundColor: "rgba(255,255,255,0.5)",
+=======
+          backgroundColor: "rgba(65,5,12,0.6)",
+>>>>>>> Stashed changes
           transform: "translateY(-50%)",
         }}
       />
@@ -49,7 +53,11 @@ function ToggleIcon({ isOpen }: { isOpen: boolean }) {
           top: 0,
           bottom: 0,
           width: "1px",
+<<<<<<< Updated upstream
           backgroundColor: "rgba(255,255,255,0.5)",
+=======
+          backgroundColor: "rgba(65,5,12,0.6)",
+>>>>>>> Stashed changes
           transform: `translateX(-50%) scaleY(${isOpen ? 0 : 1})`,
           transition: "transform 0.3s ease",
         }}
@@ -69,7 +77,11 @@ function TeamRow({
 }) {
   return (
     <div
+<<<<<<< Updated upstream
       style={{ borderTop: "1px solid rgba(255,255,255,0.08)", cursor: "pointer" }}
+=======
+      style={{ borderTop: "1px solid rgba(65,5,12,0.1)", cursor: "pointer" }}
+>>>>>>> Stashed changes
       onClick={onToggle}
     >
       {/* Collapsed header row: Name | Title | — | Toggle (stacks on mobile, aligns on tablet+) */}
@@ -85,7 +97,11 @@ function TeamRow({
               fontFamily: "var(--font-body)",
               fontSize: "clamp(18px, 2vw, 26px)",
               fontWeight: 400,
+<<<<<<< Updated upstream
               color: "#ffffff",
+=======
+              color: "#41050c",
+>>>>>>> Stashed changes
               margin: 0,
               letterSpacing: "-0.01em",
             }}
@@ -100,7 +116,11 @@ function TeamRow({
               fontFamily: "var(--font-body)",
               fontSize: "clamp(13px, 1.4vw, 17px)",
               fontWeight: 400,
+<<<<<<< Updated upstream
               color: "rgba(255,255,255,0.45)",
+=======
+              color: "rgba(65,5,12,0.6)",
+>>>>>>> Stashed changes
             }}
           >
             {member.title}
@@ -177,7 +197,11 @@ function TeamRow({
               fontFamily: "var(--font-body)",
               fontSize: "14px",
               lineHeight: 1.75,
+<<<<<<< Updated upstream
               color: "rgba(255,255,255,0.55)",
+=======
+              color: "rgba(65,5,12,0.8)",
+>>>>>>> Stashed changes
               margin: 0,
             }}
           >
@@ -197,7 +221,11 @@ export function StudioTeam() {
       className="w-full"
       style={{
         backgroundColor: "var(--background)",
+<<<<<<< Updated upstream
         borderTop: "1px solid rgba(255,255,255,0.08)",
+=======
+        borderTop: "1px solid rgba(65,5,12,0.1)",
+>>>>>>> Stashed changes
         padding: "var(--space-xl, 80px) 0 var(--space-2xl, 120px) 0",
       }}
     >
@@ -228,7 +256,11 @@ export function StudioTeam() {
               onToggle={() => setOpenIndex(openIndex === i ? -1 : i)}
             />
           ))}
+<<<<<<< Updated upstream
           <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }} />
+=======
+          <div style={{ borderTop: "1px solid rgba(65,5,12,0.1)" }} />
+>>>>>>> Stashed changes
         </div>
       </div>
     </section>

@@ -184,7 +184,11 @@ export function FullscreenVideoPlayer({
             {!showEndScreen && (
               <div className="absolute bottom-0 left-0 w-full h-1.5 bg-white/10 z-20 pointer-events-none">
                 <motion.div
+<<<<<<< Updated upstream
                   className="h-full bg-gradient-to-r from-[#eabca8] to-[#e8a87c]"
+=======
+                  className="h-full bg-gradient-to-r from-[#cecccc] to-[#41050c]"
+>>>>>>> Stashed changes
                   initial={{ scaleX: 0 }}
                   style={{
                     transformOrigin: "left",

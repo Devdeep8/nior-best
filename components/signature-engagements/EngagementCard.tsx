@@ -55,8 +55,13 @@ export function EngagementCard({ engagement, index }: EngagementCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
+<<<<<<< Updated upstream
           <div className="absolute inset-0 bg-[#1a1a1a] transition-transform duration-700 ease-out group-hover:scale-105 flex items-center justify-center border border-white/5">
              <span className="text-white/10 font-mono text-sm tracking-widest uppercase">Media Placeholder</span>
+=======
+          <div className="absolute inset-0 bg-[#41050c]/5 transition-transform duration-700 ease-out group-hover:scale-105 flex items-center justify-center border border-[#41050c]/10">
+             <span className="text-[#41050c]/20 font-mono text-sm tracking-widest uppercase">Media Placeholder</span>
+>>>>>>> Stashed changes
           </div>
         )}
 
@@ -68,10 +73,17 @@ export function EngagementCard({ engagement, index }: EngagementCardProps) {
 
       {/* Text Content */}
       <div className="flex flex-col gap-3 pr-4">
+<<<<<<< Updated upstream
         <h3 className="text-white text-2xl font-medium tracking-tight">
           {engagement.title}
         </h3>
         <p className="text-[#666] text-[15px] leading-relaxed font-normal">
+=======
+        <h3 className="text-[#41050c] text-2xl font-medium tracking-tight">
+          {engagement.title}
+        </h3>
+        <p className="text-[#41050c]/70 text-[15px] leading-relaxed font-normal">
+>>>>>>> Stashed changes
           {engagement.description}
         </p>
       </div>
