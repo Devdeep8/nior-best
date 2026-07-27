@@ -108,7 +108,7 @@ export function TestimonialsSection() {
         {testimonials.map((t) => (
           <div
             key={t.id}
-            className="snap-center shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] bg-[#cecccc] border border-[#41050c]/10 rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[500px]"
+            className="snap-center shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] bg-[#41050c] border border-[#cecccc]/10 rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[500px]"
           >
             {/* Top row: Avatar placeholder & Logo placeholder */}
             <div className="flex justify-between items-start mb-12">
@@ -128,20 +128,20 @@ export function TestimonialsSection() {
                   />
                 )}
               </div>
-              <div className="text-[#41050c]/60 font-semibold tracking-wider uppercase text-sm">
+              <div className="text-[#cecccc]/60 font-semibold tracking-wider uppercase text-sm">
                 {t.company}
               </div>
             </div>
 
             {/* Quote */}
-            <p className="text-[#41050c] text-[clamp(20px,2.5vw,32px)] leading-[1.3] font-normal mb-16">
+            <p className="text-[#cecccc] text-[clamp(20px,2.5vw,32px)] leading-[1.3] font-normal mb-16">
               "{t.quote}"
             </p>
 
             {/* Bottom info */}
             <div>
-              <p className="text-[#41050c] font-medium text-lg">{t.name}</p>
-              <p className="text-[#41050c]/70 text-sm">{t.company}</p>
+              <p className="text-[#cecccc] font-medium text-lg">{t.name}</p>
+              <p className="text-[#cecccc]/70 text-sm">{t.company}</p>
             </div>
           </div>
         ))}

@@ -74,22 +74,22 @@ export function StudioTestimonials() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-[#41050c]/15">
+        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-[#cecccc]/15">
           {founders.map((founder, index) => (
             <div
               key={founder.name}
               className="flex flex-col p-6 md:p-10 md:pr-[clamp(40px,5vw,80px)] md:pl-[clamp(40px,5vw,80px)]"
               style={{
-                backgroundColor: "#cecccc",
-                borderRight: index < founders.length - 1 ? "1px solid rgba(65, 5, 12, 0.15)" : "none",
-                borderBottom: "1px solid rgba(65, 5, 12, 0.15)",
+                backgroundColor: "#41050c",
+                borderRight: index < founders.length - 1 ? "1px solid rgba(206, 204, 204, 0.15)" : "none",
+                borderBottom: "1px solid rgba(206, 204, 204, 0.15)",
               }}
             >
               {/* Circular avatar */}
               <div className="mb-10">
                 <div
                   className="w-16 h-16 rounded-full overflow-hidden relative flex items-center justify-center"
-                  style={{ backgroundColor: "rgba(65, 5, 12, 0.1)" }}
+                  style={{ backgroundColor: "rgba(206, 204, 204, 0.1)" }}
                 >
                   {founder.photo ? (
                     <Image
@@ -104,7 +104,7 @@ export function StudioTestimonials() {
                     <span
                       style={{
                         fontFamily: "var(--font-body)",
-                        color: "#41050c",
+                        color: "#cecccc",
                         fontSize: "16px",
                         fontWeight: 500,
                         letterSpacing: "0.02em",
@@ -122,7 +122,7 @@ export function StudioTestimonials() {
                   fontFamily: "var(--font-body)",
                   fontSize: "clamp(14px, 1.2vw, 17px)",
                   lineHeight: 1.75,
-                  color: "#41050c",
+                  color: "#cecccc",
                   margin: 0,
                   flex: 1,
                 }}
@@ -131,13 +131,13 @@ export function StudioTestimonials() {
               </p>
 
               {/* Bottom info */}
-              <div className="mt-10 pt-6" style={{ borderTop: "1px solid rgba(65, 5, 12, 0.15)" }}>
+              <div className="mt-10 pt-6" style={{ borderTop: "1px solid rgba(206, 204, 204, 0.15)" }}>
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
                     fontSize: "clamp(16px, 1.5vw, 20px)",
                     fontWeight: 500,
-                    color: "#41050c",
+                    color: "#cecccc",
                     margin: 0,
                     letterSpacing: "-0.01em",
                   }}
@@ -148,7 +148,7 @@ export function StudioTestimonials() {
                   style={{
                     fontFamily: "var(--font-body)",
                     fontSize: "clamp(12px, 1vw, 14px)",
-                    color: "rgba(65, 5, 12, 0.7)",
+                    color: "rgba(206, 204, 204, 0.7)",
                     margin: 0,
                     marginTop: "6px",
                   }}

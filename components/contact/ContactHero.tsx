@@ -98,7 +98,7 @@ export function ContactHero() {
 
       {/* RIGHT COLUMN (52%) */}
       <div className="lg:w-[52%] w-full px-0 sm:px-6 lg:pl-4 lg:pr-20 py-12 relative">
-        <div className="lg:sticky lg:top-[100px] bg-[#cecccc] border border-[#41050c]/10 rounded-2xl py-8 px-5 sm:py-12 sm:px-10 min-h-[500px] flex flex-col">
+        <div className="lg:sticky lg:top-[100px] bg-[#41050c] border border-[#cecccc]/10 rounded-2xl py-8 px-5 sm:py-12 sm:px-10 min-h-[500px] flex flex-col">
           <motion.div
             key={activeTab} // Re-animate content change
             initial={{ opacity: 0, y: 10 }}

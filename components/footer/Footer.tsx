@@ -16,9 +16,9 @@ export function Footer() {
           <input
             type="email"
             placeholder="Email address"
-            className="bg-[#cecccc] border border-transparent focus:border-[#41050c]/20 rounded-full px-6 py-4 text-[#41050c] text-lg placeholder:text-[#41050c]/60 outline-none w-full md:w-[340px] transition-all"
+            className="bg-[#41050c] border border-transparent focus:border-[#cecccc]/20 rounded-full px-6 py-4 text-[#cecccc] text-lg placeholder:text-[#cecccc]/60 outline-none w-full md:w-[340px] transition-all"
           />
-          <button className="bg-[#cecccc] border border-[#cecccc] text-[#41050c] w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-all text-lg cursor-pointer">
+          <button className="bg-[#41050c] border border-[#41050c] text-[#cecccc] w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-all text-lg cursor-pointer">
             Submit
           </button>
         </div>

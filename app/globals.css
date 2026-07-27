@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #41050c;
+  --background: #cecccc;
   --foreground: #f6f5f5;
-  --color-black: #41050c;
+  --color-black: #cecccc;
   --color-white: #f6f5f5;
   --muted: #404040;
-  --accent: #cecccc;
-  --brand: #cecccc;
+  --accent: #41050c;
+  --brand: #41050c;
   --color-bg-secondary: #404040;
   --color-text-primary: #f6f5f5;
-  --color-text-secondary: #cecccc;
+  --color-text-secondary: #41050c;
   --color-text-muted: rgba(246, 245, 245, 0.6);
   --color-border: rgba(246, 245, 245, 0.10);
   --color-border-hover: rgba(246, 245, 245, 0.25);
-  --color-accent-warm: #cecccc;
+  --color-accent-warm: #41050c;
   --font-display: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
   --font-body: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
   --transition-fast: 200ms ease;
