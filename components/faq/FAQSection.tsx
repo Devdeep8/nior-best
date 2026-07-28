@@ -64,12 +64,12 @@ export function FAQSection() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full text-left flex justify-between items-center py-4 focus:outline-none group"
                 >
-                  <h3 className="text-[#41050c] text-xl sm:text-2xl font-medium tracking-tight pr-8 group-hover:text-brand transition-colors">
+                  <h3 className="text-[#404040] text-xl sm:text-2xl font-medium tracking-tight pr-8 group-hover:text-[#41050c] transition-colors">
                     {faq.question}
                   </h3>
                   <div className={`relative flex items-center justify-center w-6 h-6 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
-                    <div className="absolute w-full h-[2px] bg-[#41050c] rounded-full"></div>
-                    <div className={`absolute w-[2px] h-full bg-[#41050c] rounded-full transition-transform duration-300 ${isOpen ? 'rotate-90 opacity-0' : ''}`}></div>
+                    <div className="absolute w-full h-[2px] bg-[#404040] group-hover:bg-[#41050c] transition-colors rounded-full"></div>
+                    <div className={`absolute w-[2px] h-full bg-[#404040] group-hover:bg-[#41050c] transition-colors rounded-full transition-transform duration-300 ${isOpen ? 'rotate-90 opacity-0' : ''}`}></div>
                   </div>
                 </button>
                 
