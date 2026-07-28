@@ -2,7 +2,7 @@
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--background)] text-[#41050c] pt-32 pb-8 px-6 lg:px-12 flex flex-col border-t border-[#41050c]/10">
+    <footer className="bg-[var(--background)] pt-32 pb-8 px-6 lg:px-12 flex flex-col border-t border-[#41050c]/10">
       {/* Top row: Subscribe to us */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-4">
         <div className="flex items-center w-full flex-grow">
@@ -18,7 +18,7 @@ export function Footer() {
             placeholder="Email address"
             className="bg-[#404040] border border-transparent focus:bg-[#41050c] focus:border-[#41050c]/20 rounded-full px-6 py-4 text-[#f6f5f5] text-lg placeholder:text-[#f6f5f5]/60 outline-none w-full md:w-[340px] transition-all"
           />
-          <button className="bg-[#404040] border border-[#404040] text-[#f6f5f5] w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-white hover:border-white hover:text-[#41050c] active:bg-[#41050c] active:border-[#41050c] active:text-[#f6f5f5] focus:bg-[#41050c] focus:border-[#41050c] focus:text-[#f6f5f5] transition-all text-lg cursor-pointer">
+         <button className="bg-[#404040] border border-[#404040] w-full sm:w-auto font-medium px-10 py-4 rounded-full hover:bg-white hover:border-white focus:text-[#f6f5f5] text-white  transition-all text-lg cursor-pointer">
             Submit
           </button>
         </div>

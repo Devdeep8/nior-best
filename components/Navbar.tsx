@@ -6,28 +6,36 @@ import Link from "next/link";
 import { navbarContent, type SectionInfo } from "@/content/navbar";
 
 // Logo SVG Component
-function LogoMark() {
+function LogoMark({ hasScrolled = false }: { hasScrolled?: boolean }) {
+  const primarySrc = hasScrolled
+    ? "/assets/logo/Mixspace-Studio-logo-burgundy-transparent.png"
+    : "/assets/logo/Mixspace-Studio-logo-white-transparent.png";
+    
+  const hoverSrc = hasScrolled
+    ? "/assets/logo/Mixspace-Studio-logo-charcoal-transparent.png"
+    : "/assets/logo/Mixspace-Studio-logo-burgundy-transparent.png";
+
   return (
     <div className="grid items-center group h-12 pointer-events-auto">
-      {/* Primary White Logo */}
+      {/* Primary Logo */}
       <div className="col-start-1 row-start-1 flex items-center justify-center">
         <Image
-          src="/assets/logo/Mixspace-Studio-logo-white.png"
+          src={primarySrc}
           alt="Mixspace Studio"
-          width={1981}
-          height={675}
+          width={582}
+          height={178}
           className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
           priority
         />
       </div>
-      {/* Hover Orange Logo */}
+      {/* Hover Logo */}
       <div className="col-start-1 row-start-1 flex items-center justify-center">
         <Image
-          src="/assets/logo/Mixspace Studio logo orange.png"
+          src={hoverSrc}
           alt="Mixspace Studio Hover"
-          width={1697}
-          height={516}
-          className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100 scale-[0.8]"
+          width={582}
+          height={178}
+          className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
           priority
         />
       </div>
@@ -134,7 +142,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
             className="flex items-center relative z-10 shrink-0"
             aria-label={navbarContent.logo.ariaLabel}
           >
-            <LogoMark />
+            <LogoMark hasScrolled={hasScrolled} />
           </Link>
 
           {/* Navigation Links - Center */}
