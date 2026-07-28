@@ -28,9 +28,9 @@ export function CapabilitiesMarquee() {
   const renderTag = (text: string, index: number) => (
     <div
       key={`${text}-${index}`}
-      className="group px-6 py-3.5 sm:px-8 sm:py-4 rounded-full border border-[#41050c]/10 bg-[#cecccc]/30 backdrop-blur-xs flex items-center justify-center transition-all duration-300 hover:border-[#41050c] hover:bg-[#cecccc]/50 cursor-default"
+      className="group px-6 py-3.5 sm:px-8 sm:py-4 rounded-full border border-transparent bg-[#41050c] flex items-center justify-center transition-all duration-300 hover:bg-[#404040] active:bg-[#404040] cursor-pointer"
     >
-      <span className="text-[#41050c] font-medium tracking-wide text-sm sm:text-base md:text-lg transition-colors duration-300">
+      <span className="text-[#cecccc] font-medium tracking-wide text-sm sm:text-base md:text-lg transition-colors duration-300">
         {text}
       </span>
     </div>
