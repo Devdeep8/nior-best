@@ -22,7 +22,7 @@ const TEAM = [
     id: "03",
     name: "Harshita Dewan",
     title: "Creative Director ( Content & Strategies)",
-    photo: "",
+    photo: "/images/harshita-dewan.png",
     bio: "Luca leads the creative vision across all Mixspace Studio studio output. With a background in brand identity, motion and digital design, he has shaped campaigns and identities for Fortune 500 companies and emerging Web3 brands alike.",
   },
 

@@ -23,7 +23,7 @@ const founders = [
   {
     name: "Harshita Dewan",
     role: "Creative Director, Mixspace Studio",
-    photo: "",
+    photo: "/images/harshita-dewan.png",
     initials: "HD",
     quote:
       "Great marketing begins with understanding people, not just algorithms. As Creative Director, I focus on building authentic brand stories backed by data-driven strategies that inspire action. From crafting compelling content to designing impactful campaigns, every idea is created with purpose - to help brands connect, engage, and grow in an ever-evolving digital landscape while staying true to their unique identity.",
