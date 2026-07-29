@@ -128,20 +128,20 @@ export function TestimonialsSection() {
                   />
                 )}
               </div>
-              <div className="text-[#cecccc]/60 font-semibold tracking-wider uppercase text-sm">
+              <div className="text-[#f6f5f5]/60 font-semibold tracking-wider uppercase text-sm">
                 {t.company}
               </div>
             </div>
 
             {/* Quote */}
-            <p className="text-[#cecccc] text-[clamp(20px,2.5vw,32px)] leading-[1.3] font-normal mb-16">
+            <p className="text-[#f6f5f5] text-[clamp(20px,2.5vw,32px)] leading-[1.3] font-normal mb-16">
               "{t.quote}"
             </p>
 
             {/* Bottom info */}
             <div>
-              <p className="text-[#cecccc] font-medium text-lg">{t.name}</p>
-              <p className="text-[#cecccc]/70 text-sm">{t.company}</p>
+              <p className="text-[#f6f5f5] font-medium text-lg">{t.name}</p>
+              <p className="text-[#f6f5f5]/70 text-sm">{t.company}</p>
             </div>
           </div>
         ))}

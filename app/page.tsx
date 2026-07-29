@@ -17,7 +17,7 @@ const Footer = dynamic(() => import("@/components/footer").then(m => m.Footer), 
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[#41050c]">
+    <div className="min-h-screen bg-[var(--background)] ">
       {/* Hero Section */}
       <Hero />
 

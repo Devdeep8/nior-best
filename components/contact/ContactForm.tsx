@@ -243,7 +243,7 @@ export function ProjectEnquiryForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="rounded-full bg-[#41050c] text-[#cecccc] text-base font-medium px-9 py-3.5 border border-[#41050c] hover:bg-white hover:border-white hover:text-[#41050c] transition-all duration-300 w-fit cursor-pointer disabled:opacity-50"
+          className="rounded-full bg-[#41050c] text-[#f6f5f5] text-base font-medium px-9 py-3.5 border border-[#41050c] hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-all duration-300 w-fit cursor-pointer disabled:opacity-50"
         >
           {isSubmitting ? "Sending..." : "Submit"}
         </button>

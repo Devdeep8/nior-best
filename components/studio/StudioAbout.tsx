@@ -178,6 +178,7 @@ export function StudioAbout() {
         }
         .studio-about-cta:hover {
           background-color: var(--brand) !important;
+          color: var(--background) !important;
           border-color: var(--brand) !important;
         }
       `}</style>

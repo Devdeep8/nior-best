@@ -30,7 +30,7 @@ export function CapabilitiesMarquee() {
       key={`${text}-${index}`}
       className="group px-6 py-3.5 sm:px-8 sm:py-4 rounded-full border border-transparent bg-[#41050c] flex items-center justify-center transition-all duration-300 hover:bg-[#404040] active:bg-[#404040] cursor-pointer"
     >
-      <span className="text-[#cecccc] font-medium tracking-wide text-sm sm:text-base md:text-lg transition-colors duration-300">
+      <span className="text-[#f6f5f5] font-medium tracking-wide text-sm sm:text-base md:text-lg transition-colors duration-300">
         {text}
       </span>
     </div>

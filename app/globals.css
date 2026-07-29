@@ -191,16 +191,16 @@ img[src*="logo orange"] {
 .navbar-cta span,
 .navbar-cta svg {
   background-color: var(--brand) !important;
-  color: var(--background) !important;
+  color: var(--color-white) !important;
   border-color: var(--brand) !important;
 }
 
 .navbar-cta:hover,
 .navbar-cta:hover span,
 .navbar-cta:hover svg {
-  background-color: var(--color-white) !important;
-  color: var(--background) !important;
-  border-color: var(--color-white) !important;
+  background-color: #404040 !important;
+  color: var(--color-white) !important;
+  border-color: #404040 !important;
 }
 
 

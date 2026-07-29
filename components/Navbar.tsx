@@ -6,39 +6,17 @@ import Link from "next/link";
 import { navbarContent, type SectionInfo } from "@/content/navbar";
 
 // Logo SVG Component
-function LogoMark({ hasScrolled = false }: { hasScrolled?: boolean }) {
-  const primarySrc = hasScrolled
-    ? "/assets/logo/Mixspace-Studio-logo-burgundy-transparent.png"
-    : "/assets/logo/Mixspace-Studio-logo-white-transparent.png";
-    
-  const hoverSrc = hasScrolled
-    ? "/assets/logo/Mixspace-Studio-logo-charcoal-transparent.png"
-    : "/assets/logo/Mixspace-Studio-logo-burgundy-transparent.png";
-
+function LogoMark() {
   return (
-    <div className="grid items-center group h-12 pointer-events-auto">
-      {/* Primary Logo */}
-      <div className="col-start-1 row-start-1 flex items-center justify-center">
-        <Image
-          src={primarySrc}
-          alt="Mixspace Studio"
-          width={582}
-          height={178}
-          className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-          priority
-        />
-      </div>
-      {/* Hover Logo */}
-      <div className="col-start-1 row-start-1 flex items-center justify-center">
-        <Image
-          src={hoverSrc}
-          alt="Mixspace Studio Hover"
-          width={582}
-          height={178}
-          className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-          priority
-        />
-      </div>
+    <div className="flex items-center h-12 pointer-events-auto">
+      <Image
+        src="/assets/logo/Mixspace-Studio-logo-burgundy-transparent.png"
+        alt="Mixspace Studio"
+        width={582}
+        height={178}
+        className="h-12 w-auto object-contain py-1"
+        priority
+      />
     </div>
   );
 }
@@ -142,7 +120,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
             className="flex items-center relative z-10 shrink-0"
             aria-label={navbarContent.logo.ariaLabel}
           >
-            <LogoMark hasScrolled={hasScrolled} />
+            <LogoMark />
           </Link>
 
           {/* Navigation Links - Center */}
@@ -179,7 +157,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="navbar-cta hidden sm:inline-flex items-center gap-3 rounded-full border border-[#41050c] bg-[#41050c] px-5 py-3 text-[15px] text-[#cecccc] transition-colors duration-200 hover:bg-[#41050c] hover:border-[#41050c] hover:text-[#cecccc]"
+              className="navbar-cta hidden sm:inline-flex items-center gap-3 rounded-full border border-[#41050c] bg-[#41050c] px-5 py-3 text-[15px] text-[#f6f5f5] transition-colors duration-200 hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5]"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -189,7 +167,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Mobile Menu button - Text "Menu" instead of hamburger */}
             <button
-              className="navbar-cta sm:hidden flex items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] px-4 h-10 text-[15px] text-[#cecccc] hover:bg-[#41050c] hover:border-[#41050c] hover:text-[#cecccc] transition-colors"
+              className="navbar-cta sm:hidden flex items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] px-4 h-10 text-[15px] text-[#f6f5f5] hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? navbarContent.mobile.closeLabel : navbarContent.mobile.menuLabel}
             >
