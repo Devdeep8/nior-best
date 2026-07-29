@@ -91,7 +91,7 @@ export function LocationsSection() {
               <span className="text-[#41050c]/40 shrink-0">—</span>
 
               <a href={`mailto:${location.email}`}
-                className="text-[#41050c]/60 text-sm sm:text-base lg:text-lg font-normal truncate border-b border-transparent hover:border-[#41050c] hover:text-[#41050c] transition-all duration-200 min-w-0"
+                className="text-[#f6f5f5] text-sm sm:text-base lg:text-lg font-normal truncate border-b border-transparent hover:border-[#f6f5f5] hover:text-[#f6f5f5] transition-all duration-200 min-w-0"
               >
                 {location.email}
               </a>

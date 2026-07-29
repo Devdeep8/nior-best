@@ -67,7 +67,7 @@ export const heroContent: HeroContent = {
   },
 
   video: {
-    src: "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1778419667/3197cdd6-1ef0a0b9_fianin.mp4",
+    src: "/assets/video/IMG_5724.MP4",
     alt: "Abstract dark video background with futuristic visual effects",
     fallbackColor: "#0a0a0a",
     // OLD urls (swap back by pasting one as thumbnailVideoSrc value):
