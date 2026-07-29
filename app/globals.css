@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --muted: #444444;
-  --accent: #5B21D4;
-  --brand: #ca7a3a;
-  --color-bg-secondary: #111111;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #999999;
-  --color-text-muted: #555555;
-  --color-border: rgba(255,255,255,0.10);
-  --color-border-hover: rgba(255,255,255,0.25);
-  --color-accent-warm: #e8e6df;
+  --background: #cecccc;
+  --foreground: #41050c;
+  --color-black: #cecccc;
+  --color-white: #f6f5f5;
+  --muted: #41050c;
+  --accent: #41050c;
+  --brand: #41050c;
+  --color-bg-secondary: #41050c;
+  --color-text-primary: #41050c;
+  --color-text-secondary: #41050c;
+  --color-text-muted: rgba(65, 5, 12, 0.6);
+  --color-border: rgba(65, 5, 12, 0.10);
+  --color-border-hover: rgba(65, 5, 12, 0.25);
+  --color-accent-warm: #41050c;
   --font-display: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
   --font-body: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
   --transition-fast: 200ms ease;
@@ -25,12 +27,102 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-black: var(--color-black);
+  --color-white: var(--color-white);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-brand: var(--brand);
   --font-serif: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
   --font-sans: 'DM Sans', var(--font-inter), 'Helvetica Neue', sans-serif;
 }
+
+/* Global color and background contrast overrides for the new burgundy/gray theme */
+body {
+  /* Secondary text color overrides */
+  .text-\[\#666\],
+  .text-\[\#555\],
+  .text-\[\#555555\],
+  .text-\[\#999\],
+  .text-\[\#999999\] {
+    color: var(--color-text-secondary) !important;
+  }
+
+  /* Muted text color overrides */
+  .text-\[\#888\],
+  .text-\[\#444\] {
+    color: var(--color-text-muted) !important;
+  }
+
+  /* Placeholder color overrides */
+  .placeholder\:text-\[\#666\]::placeholder,
+  .placeholder\:text-\[\#444\]::placeholder {
+    color: var(--color-text-muted) !important;
+    opacity: 0.8;
+  }
+
+  /* Input, button, and panel background overrides to use secondary highlight color (#41050c) */
+  .bg-\[\#141414\],
+  .bg-\[\#1a1a1a\],
+  .bg-\[\#111\],
+  .bg-\[\#111111\],
+  .bg-\[\#171717\],
+  .bg-\[\#222\] {
+    background-color: var(--color-bg-secondary) !important;
+    color: var(--foreground) !important;
+  }
+
+  /* Translucent card and marquee wrapper background overrides */
+  .bg-zinc-800\/40,
+  .bg-zinc-900\/30,
+  .bg-zinc-900\/50,
+  .bg-zinc-800\/60 {
+    background-color: rgba(246, 245, 245, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+}
+
+/* Accent brand color overrides for text highlights - maps the old cream color to the new yellow accent dynamically */
+.text-\[\#eabca8\] {
+  color: var(--color-brand) !important;
+}
+.hover\:text-\[\#eabca8\]:hover {
+  color: var(--color-brand) !important;
+}
+.group-hover\:text-\[\#eabca8\]\/80:hover,
+.group-hover\:text-\[\#eabca8\]\/80 {
+  color: var(--color-brand) !important;
+}
+.border-\[\#eabca8\]\/30 {
+  border-color: rgba(var(--color-brand), 0.3) !important;
+}
+.hover\:border-\[\#eabca8\]\/40:hover {
+  border-color: rgba(var(--color-brand), 0.4) !important;
+}
+.hover\:border-\[\#eabca8\]\/50:hover {
+  border-color: rgba(var(--color-brand), 0.5) !important;
+}
+.bg-\[\#eabca8\]\/5 {
+  background-color: rgba(var(--color-brand), 0.05) !important;
+}
+.bg-\[\#eabca8\]\/20 {
+  background-color: rgba(var(--color-brand), 0.2) !important;
+}
+
+/* Override all occurrences of orange/cream hex colors in gradients and text to use the brand accent color */
+.text-\[\#e8a87c\] {
+  color: var(--color-brand) !important;
+}
+.bg-\[\#e8a87c\] {
+  background-color: var(--color-brand) !important;
+}
+.to-\[\#e8a87c\] {
+  --tw-gradient-to: var(--color-brand) !important;
+}
+.from-\[\#eabca8\] {
+  --tw-gradient-from: var(--color-brand) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0)) !important;
+}
+
 
 * {
   box-sizing: border-box;
@@ -85,9 +177,33 @@ a, button, input, select, textarea {
 }
 
 ::selection {
-  background: rgba(91, 33, 212, 0.3);
-  color: #ffffff;
+  background: rgba(255, 222, 89, 0.3);
+  color: var(--foreground);
 }
+
+/* Tint the orange hover logo to match the sunny yellow #ffde59 accent color */
+img[src*="logo orange"] {
+  filter: hue-rotate(15deg) saturate(2.5) brightness(1.2) !important;
+}
+
+/* Explicit navbar button styling to ensure it is always brand-aligned */
+.navbar-cta,
+.navbar-cta span,
+.navbar-cta svg {
+  background-color: var(--brand) !important;
+  color: var(--color-white) !important;
+  border-color: var(--brand) !important;
+}
+
+.navbar-cta:hover,
+.navbar-cta:hover span,
+.navbar-cta:hover svg {
+  background-color: #404040 !important;
+  color: var(--color-white) !important;
+  border-color: #404040 !important;
+}
+
+
 
 /* Asset placeholder classes for easy replacement */
 .hero-video-bg {

@@ -8,29 +8,15 @@ import { navbarContent, type SectionInfo } from "@/content/navbar";
 // Logo SVG Component
 function LogoMark() {
   return (
-    <div className="grid items-center group h-12 pointer-events-auto">
-      {/* Primary White Logo */}
-      <div className="col-start-1 row-start-1 flex items-center justify-center">
-        <Image
-          src="/assets/logo/Mixspace-Studio-logo-white.png"
-          alt="Mixspace Studio"
-          width={1981}
-          height={675}
-          className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
-          priority
-        />
-      </div>
-      {/* Hover Orange Logo */}
-      <div className="col-start-1 row-start-1 flex items-center justify-center">
-        <Image
-          src="/assets/logo/Mixspace Studio logo orange.png"
-          alt="Mixspace Studio Hover"
-          width={1697}
-          height={516}
-          className="h-12 w-auto object-contain py-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100 scale-[0.8]"
-          priority
-        />
-      </div>
+    <div className="flex items-center h-12 pointer-events-auto">
+      <Image
+        src="/assets/logo/Mixspace-Studio-logo-burgundy-transparent.png"
+        alt="Mixspace Studio"
+        width={582}
+        height={178}
+        className="h-12 w-auto object-contain py-1"
+        priority
+      />
     </div>
   );
 }
@@ -124,7 +110,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
     <>
       {/* Main Navbar */}
       <header
-        className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-300 ${hasScrolled ? "bg-black/80 backdrop-blur-md border-b border-white/8" : "bg-transparent"
+        className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-300 ${hasScrolled ? "bg-[var(--background)]/85 backdrop-blur-md border-b border-[#41050c]/10" : "bg-transparent"
           }`}
       >
         <div className="relative mx-auto h-20 px-6 lg:px-12 flex items-center justify-between w-full">
@@ -139,17 +125,30 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
           {/* Navigation Links - Center */}
           <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden items-center gap-8 md:flex lg:gap-12">
-            {navbarContent.navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-[15px] text-white transition-colors duration-200 hover:text-[#eabca8] whitespace-nowrap"
-                onClick={handleNavClick}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navbarContent.navLinks.map((link) => {
+              const isWorkActive = link.href === "/#recent-work" && pathname === "/";
+              const isStudioActive = link.href === "/studio" && pathname === "/studio";
+              const isBlogsActive = link.href === "/blogs" && (pathname === "/blogs" || pathname?.startsWith("/blogs/"));
+              const isContactActive = link.href === "/contact" && pathname === "/contact";
+              const isActive = isWorkActive || isStudioActive || isBlogsActive || isContactActive;
+
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`text-[15px] transition-colors duration-200 whitespace-nowrap ${
+                    isActive
+                      ? "text-[#41050c] font-medium"
+                      : "text-[#41050c]/60 hover:text-[#41050c]"
+                  }`}
+                  onClick={handleNavClick}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
+
 
           {/* Right side - CTA button and Mobile menu toggle */}
           <div className="flex items-center gap-3 relative z-10 shrink-0">
@@ -158,7 +157,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-3 rounded-full border border-white/30 bg-[#171717] px-5 py-3 text-[15px] text-white transition-colors duration-200 hover:bg-brand hover:border-brand hover:text-white"
+              className="navbar-cta hidden sm:inline-flex items-center gap-3 rounded-full border border-[#41050c] bg-[#41050c] px-5 py-3 text-[15px] text-[#f6f5f5] transition-colors duration-200 hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5]"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -168,7 +167,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Mobile Menu button - Text "Menu" instead of hamburger */}
             <button
-              className="sm:hidden flex items-center justify-center rounded-full border border-white/30 bg-[#171717] px-4 h-10 text-[15px] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
+              className="navbar-cta sm:hidden flex items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] px-4 h-10 text-[15px] text-[#f6f5f5] hover:bg-[#404040] hover:border-[#404040] hover:text-[#f6f5f5] transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? navbarContent.mobile.closeLabel : navbarContent.mobile.menuLabel}
             >
@@ -205,7 +204,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
               href={navbarContent.ctaButton.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-[#171717] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
+              className="navbar-cta flex h-10 w-10 items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] text-[#cecccc] hover:bg-[#41050c] hover:border-[#41050c] hover:text-[#cecccc] transition-colors"
               aria-label={navbarContent.ctaButton.ariaLabel}
               onClick={handleNavClick}
             >
@@ -214,7 +213,7 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
             {/* Close button */}
             <button
-              className="flex h-10 items-center justify-center rounded-full border border-white/20 bg-[#222] px-4 text-[15px] text-white hover:bg-brand hover:border-brand hover:text-white transition-colors"
+              className="navbar-cta flex h-10 items-center justify-center rounded-full border border-[#41050c] bg-[#41050c] px-4 text-[15px] text-[#cecccc] hover:bg-[#41050c] hover:border-[#41050c] hover:text-[#cecccc] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Close
@@ -224,20 +223,30 @@ export function Navbar({ sections = navbarContent.sections }: NavbarProps) {
 
         {/* Mobile navigation links */}
         <nav className="flex h-[calc(100vh-5rem)] flex-col items-center justify-center px-6">
-          {navbarContent.navLinks.map((link, index) => (
-            <div key={link.label} className="w-full max-w-sm">
-              <Link
-                href={link.href}
-                className="block border-t border-white/10 py-6 text-center text-[28px] font-normal text-white hover:text-[#eabca8] transition-colors"
-                onClick={handleNavClick}
-              >
-                {link.label}
-              </Link>
-              {index === navbarContent.navLinks.length - 1 && (
-                <div className="border-t border-white/10" />
-              )}
-            </div>
-          ))}
+          {navbarContent.navLinks.map((link, index) => {
+            const isWorkActive = link.href === "/#recent-work" && pathname === "/";
+            const isStudioActive = link.href === "/studio" && pathname === "/studio";
+            const isBlogsActive = link.href === "/blogs" && (pathname === "/blogs" || pathname?.startsWith("/blogs/"));
+            const isContactActive = link.href === "/contact" && pathname === "/contact";
+            const isActive = isWorkActive || isStudioActive || isBlogsActive || isContactActive;
+
+            return (
+              <div key={link.label} className="w-full max-w-sm">
+                <Link
+                  href={link.href}
+                  className={`block border-t border-[#41050c]/10 py-6 text-center text-[28px] font-normal transition-colors ${
+                    isActive ? "text-[#41050c]" : "text-[#41050c]/60 hover:text-[#41050c]"
+                  }`}
+                  onClick={handleNavClick}
+                >
+                  {link.label}
+                </Link>
+                {index === navbarContent.navLinks.length - 1 && (
+                  <div className="border-t border-[#41050c]/10" />
+                )}
+              </div>
+            );
+          })}
         </nav>
       </div>
     </>

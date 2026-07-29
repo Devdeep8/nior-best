@@ -120,10 +120,10 @@ export default function DashboardPage() {
         <div className="flex items-center gap-4">
           <Link href="/">
             <Image
-              src="/assets/logo/Mixspace-Studio-logo-white.png"
+              src="/assets/logo/Mixspace-Studio-logo-white-transparent.png"
               alt="Mixspace Studio Logo"
-              width={160}
-              height={55}
+              width={582}
+              height={178}
               className="h-8 w-auto object-contain"
             />
           </Link>

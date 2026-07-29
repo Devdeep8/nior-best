@@ -133,8 +133,8 @@ export function CTAButton({
   // Base styles based on variant
   const baseClasses =
     variant === "outline"
-      ? "border-2 border-white !text-white bg-transparent hover:bg-brand hover:!text-white hover:border-brand"
-      : "border-2 border-transparent bg-white !text-black hover:bg-transparent hover:border-brand hover:!text-brand";
+      ? "border-2 border-[#41050c] !text-[#41050c] bg-transparent hover:bg-[#41050c] hover:!text-[#f6f5f5] hover:border-[#41050c]"
+      : "border-2 border-transparent bg-[#41050c] !text-[#f6f5f5] hover:bg-[#404040] hover:border-[#404040] hover:!text-[#f6f5f5]";
 
   return (
     <motion.a

@@ -28,13 +28,13 @@ const articles = [
 
 export function ResearchSection() {
   return (
-    <section className="bg-black py-32 border-t border-white/5 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[var(--background)] py-32 border-t border-[#41050c]/10 px-4 sm:px-6 lg:px-8">
       {/* Header Label [05] */}
       <SectionLabels
         index="[05]"
         title="RESEARCH & WRITINGS"
-        indexColor="#555"
-        titleColor="#555"
+        indexColor="#41050c/50"
+        titleColor="#41050c/50"
       />
 
       <div className="pt-20 mx-auto max-w-7xl">
@@ -47,20 +47,20 @@ export function ResearchSection() {
                 className="w-full aspect-4/5 rounded-2xl overflow-hidden relative"
                 style={{ backgroundColor: article.color }}
               >
-                <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105 border border-white/5 flex items-center justify-center">
-                  <span className="text-white/10 font-mono text-sm tracking-widest uppercase">Media</span>
+                <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105 border border-[#41050c]/10 flex items-center justify-center">
+                  <span className="text-[#41050c]/20 font-mono text-sm tracking-widest uppercase">Media</span>
                 </div>
               </div>
 
               {/* Text Content */}
               <div className="flex flex-col gap-3">
-                <span className="text-[#666] text-sm font-medium tracking-wide">
+                <span className="text-[#41050c]/60 text-sm font-medium tracking-wide">
                   {article.tag}
                 </span>
-                <h3 className="text-white text-2xl font-medium tracking-tight">
+                <h3 className="text-[#41050c] text-2xl font-medium tracking-tight">
                   {article.title}
                 </h3>
-                <p className="text-[#555] text-sm">
+                <p className="text-[#41050c]/50 text-sm">
                   {article.subtitle}
                 </p>
               </div>

@@ -22,8 +22,8 @@ export function useScrollRevealText<T extends HTMLElement = HTMLElement>(
     start = "top 80%",
     end = "bottom 20%",
     scrub = 1,
-    initialColor = "#333",
-    revealedColor = "#ffffff",
+    initialColor = "rgba(65, 5, 12, 0.15)",
+    revealedColor = "rgba(65, 5, 12, 0.45)",
   } = options;
 
   useEffect(() => {
@@ -61,13 +61,13 @@ export function useScrollRevealText<T extends HTMLElement = HTMLElement>(
 
     wordElements.forEach((wordEl, index) => {
       const isHighlighted = wordEl.dataset.highlight === "true";
-      const highlightColor = isHighlighted ? "#ffffff" : revealedColor;
+      const highlightColor = isHighlighted ? "#41050c" : revealedColor;
 
       gsap.fromTo(
         wordEl,
         { color: initialColor },
         {
-          color: highlightedWord => (highlightedWord ? "#ffffff" : revealedColor),
+          color: highlightedWord => (highlightedWord ? "#41050c" : revealedColor),
           ease: "none",
           scrollTrigger: {
             trigger: element,
@@ -79,7 +79,7 @@ export function useScrollRevealText<T extends HTMLElement = HTMLElement>(
               const wordProgress = progress * words.length;
 
               if (wordProgress >= index) {
-                gsap.set(wordEl, { color: isHighlighted ? "#ffffff" : revealedColor });
+                gsap.set(wordEl, { color: isHighlighted ? "#41050c" : revealedColor });
               } else {
                 gsap.set(wordEl, { color: initialColor });
               }

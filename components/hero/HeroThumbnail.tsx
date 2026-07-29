@@ -47,7 +47,7 @@ export function HeroThumbnail() {
         animate={{ opacity: 1 }}
         transition={{ delay: heroContent.animation.thumbnailDelay, duration: 0.6 }}
         onClick={() => setIsPlayerOpen(true)}
-        className="group md:absolute relative md:bottom-20 bottom-0 md:left-12 left-0 mt-12 md:mt-0 w-[184px] h-[144px] overflow-hidden rounded-xl border border-white/10 bg-[#1a1a1a] cursor-pointer hover:border-[#eabca8]/50 hover:scale-[1.05] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+        className="group md:absolute relative md:bottom-20 bottom-0 md:left-12 left-0 mt-12 md:mt-0 w-[184px] h-[144px] overflow-hidden rounded-xl border border-[#41050c]/10 bg-[#41050c]/5 cursor-pointer hover:border-[#41050c]/30 hover:scale-[1.05] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
       >
         {youtubeEmbedUrl ? (
           /*
@@ -86,11 +86,11 @@ export function HeroThumbnail() {
         ) : null}
 
         {/* Dark gradient vignette overlay — sits above iframe so no YouTube UI peeks through */}
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500 z-10" />
+        <div className="absolute inset-0 bg-[#41050c]/10 group-hover:bg-[#41050c]/25 transition-colors duration-500 z-10" />
 
         {/* Play button overlay with custom brand colors on hover */}
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white transition-all duration-500 group-hover:scale-110 group-hover:bg-[#eabca8] group-hover:border-[#eabca8] group-hover:shadow-lg group-hover:shadow-[#eabca8]/30">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#41050c]/10 backdrop-blur-md border border-[#41050c]/20 text-[#41050c] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#41050c] group-hover:border-[#41050c] group-hover:text-[#cecccc] group-hover:shadow-lg group-hover:shadow-[#41050c]/20">
             <svg
               viewBox="0 0 24 24"
               className="ml-0.5 h-5 w-5 fill-current transition-colors duration-300"

@@ -18,7 +18,7 @@ const Footer = dynamic(() => import("@/components/footer/Footer").then(m => m.Fo
 
 export default function StudioPage() {
   return (
-    <main className="min-h-screen bg-black selection:bg-brand/30">
+    <main className="min-h-screen bg-[var(--background)] text-[#41050c] selection:bg-brand/30">
       <Navbar />
 
       <StudioHero />

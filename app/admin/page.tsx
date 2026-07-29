@@ -104,10 +104,10 @@ export default function AdminPage() {
         {/* Brand Header */}
         <div className="flex flex-col items-center mb-8">
           <Image
-            src="/assets/logo/Mixspace-Studio-logo-white.png"
+            src="/assets/logo/Mixspace-Studio-logo-white-transparent.png"
             alt="Mixspace Studio"
-            width={200}
-            height={68}
+            width={582}
+            height={178}
             className="h-10 w-auto object-contain mb-2"
           />
           <h2 className="text-xs font-mono uppercase tracking-[0.25em] text-white/40">

@@ -14,7 +14,7 @@ export function BookCallSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-white text-[clamp(28px,4.5vw,56px)] font-medium tracking-tight max-w-5xl leading-[1.1] mb-6"
+        className="text-[#41050c] text-[clamp(28px,4.5vw,56px)] font-medium tracking-tight max-w-5xl leading-[1.1] mb-6"
       >
         Ready to stop wasting money and start scaling?
       </motion.h2>
@@ -25,7 +25,7 @@ export function BookCallSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-        className="text-[#999] text-base md:text-lg max-w-2xl leading-relaxed mb-14"
+        className="text-[#41050c]/60 text-base md:text-lg max-w-2xl leading-relaxed mb-14"
       >
         Message us on WhatsApp to get a direct audit of how we can cut your overhead costs by up to 40% and double your pipeline. No tech jargon, just results.
       </motion.p>
@@ -41,14 +41,14 @@ export function BookCallSection() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="relative flex items-center p-2 rounded-full border border-white/20 overflow-hidden cursor-pointer transition-colors duration-500"
+        className="relative flex items-center p-2 rounded-full border border-[#41050c]/20 overflow-hidden cursor-pointer transition-colors duration-500"
         style={{
-          borderColor: isHovered ? "#ffffff" : "rgba(255, 255, 255, 0.2)"
+          borderColor: isHovered ? "#41050c" : "rgba(65, 5, 12, 0.2)"
         }}
       >
         {/* Background animation layer */}
         <motion.div
-          className="absolute inset-0 w-full h-full bg-white z-0"
+          className="absolute inset-0 w-full h-full bg-[#41050c] z-0"
           initial={{ x: "-100%" }}
           animate={{ x: isHovered ? "0%" : "-100%" }}
           transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
@@ -67,7 +67,7 @@ export function BookCallSection() {
             transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
             className="w-14 h-14 bg-white rounded-full flex items-center justify-center transition-colors duration-500"
             style={{
-              backgroundColor: isHovered ? "#000000" : "#ffffff"
+              backgroundColor: isHovered ? "#cecccc" : "#41050c"
             }}
           >
             <svg
@@ -77,7 +77,7 @@ export function BookCallSection() {
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               className="transition-colors duration-500"
-              style={{ color: isHovered ? "#ffffff" : "#000000" }}
+              style={{ color: isHovered ? "#41050c" : "#cecccc" }}
             >
               <path d="M13 2L3 14H12V22L22 10H13V2Z" />
             </svg>
@@ -88,7 +88,7 @@ export function BookCallSection() {
             layout
             transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
             className="px-8 text-lg font-normal tracking-tight transition-colors duration-500"
-            style={{ color: isHovered ? "#000000" : "#ffffff" }}
+            style={{ color: isHovered ? "#cecccc" : "#41050c" }}
           >
             Message on WhatsApp
           </motion.span>

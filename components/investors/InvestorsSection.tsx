@@ -70,7 +70,7 @@ export function InvestorsSection() {
     ));
 
   return (
-    <section className="bg-black py-24 sm:py-32 overflow-hidden border-t border-white/5">
+    <section className="bg-[var(--background)] py-24 sm:py-32 overflow-hidden border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16 text-center">
         <h2 className="text-[#555] text-xl md:text-2xl font-medium tracking-tight">
           At Mixspace Studio, we’re proud partners of brands making an impact.
@@ -79,8 +79,8 @@ export function InvestorsSection() {
 
       <div className="flex flex-col gap-8 relative">
         {/* Left and right fade gradients for the marquee */}
-        <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-black to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-black to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[var(--background)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[var(--background)] to-transparent z-10 pointer-events-none" />
 
         <InfiniteMarquee
           items={renderLogos(row1Logos)}

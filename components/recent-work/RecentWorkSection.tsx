@@ -24,8 +24,8 @@ export function RecentWorkSection() {
       <SectionLabels
         index={label.index}
         title={label.title}
-        indexColor="#555"
-        titleColor="#555"
+        indexColor="#41050c/50"
+        titleColor="#41050c/50"
       />
       <div className="pt-20 ">
 

@@ -9,13 +9,13 @@ export function SignatureEngagementsSection() {
   const { label, headline, engagements } = signatureEngagementsContent;
 
   return (
-    <section id="signature-engagements" className="relative bg-black px-4 sm:px-6 lg:px-8 pt-24 pb-32 border-t border-white/5">
+    <section id="signature-engagements" className="relative bg-[var(--background)] px-4 sm:px-6 lg:px-8 pt-24 pb-32 border-t border-[#41050c]/10">
       {/* Header Label [04] SIGNATURE ENGAGEMENTS */}
       <SectionLabels
         index={label.index}
         title={label.title}
-        indexColor="#555"
-        titleColor="#555"
+        indexColor="#41050c/50"
+        titleColor="#41050c/50"
       />
 
       <div className="pt-20">

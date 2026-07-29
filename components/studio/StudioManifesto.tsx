@@ -11,9 +11,8 @@ if (typeof window !== "undefined") {
 const MANIFESTO_TEXT =
   "We live at a time when technology is accelerating at an exponential rate, changing the way we live and relate to the world around us. Mixspace Studio operates as a hybrid think tank and design studio. By studying the effects of emerging technologies we envision how forward-thinking companies can thrive amidst exponential change.";
 
-// Use resolved hex — GSAP cannot tween FROM a CSS variable string
-const MUTED = "#555555"; // resolves --color-text-muted
-const LIT = "#eabca8";
+const MUTED = "var(--color-text-muted)";
+const LIT = "var(--color-brand)";
 
 type GsapTimeline = ReturnType<typeof gsap.timeline>;
 
@@ -164,7 +163,7 @@ export function StudioManifesto() {
             fontWeight: 400,
             letterSpacing: "-0.04em",
             lineHeight: 1,
-            color: "#ffffff",
+            color: "#41050c",
             whiteSpace: "nowrap",
           }}
         >
@@ -175,7 +174,7 @@ export function StudioManifesto() {
       {/* Full-width top border */}
       <div
         className="absolute top-0 left-0 right-0"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}
+        style={{ borderTop: "1px solid rgba(65,5,12,0.10)" }}
       />
 
       {/* Content */}
