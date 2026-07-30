@@ -73,7 +73,7 @@ export const heroContent: HeroContent = {
     // OLD urls (swap back by pasting one as thumbnailVideoSrc value):
     // "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1778743838/coders%20express/volvo_ryz9sp.mp4"
     // "https://www.youtube.com/watch?v=Ro_3DJ9w0cI"
-    thumbnailVideoSrc: "https://.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1783592510/video6230893928879497424_j7wkzf.mp4res",
+    thumbnailVideoSrc: "https://res.cloudinary.com/deepcnbrz/video/upload/f_auto,q_auto/v1783592510/video6230893928879497424_j7wkzf.mp4",
     recommendedVideos: [
       {
         id: "rec-1",
