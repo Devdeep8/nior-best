@@ -5,6 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
+interface AdminSidebarProps {
+  onMobileToggle?: () => void;
+}
+
 interface MenuItem {
   name: string;
   href: string;
@@ -17,7 +21,7 @@ const menuItems: MenuItem[] = [
   { name: "Blogs", href: "/admin/dashboard?tab=blogs", icon: "📝" },
 ];
 
-export default function AdminSidebar() {
+export default function AdminSidebar({ onMobileToggle }: AdminSidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
@@ -44,7 +48,10 @@ export default function AdminSidebar() {
       {mobileOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-          onClick={() => setMobileOpen(false)}
+          onClick={() => {
+            setMobileOpen(false);
+            onMobileToggle?.();
+          }}
         />
       )}
 
@@ -98,7 +105,10 @@ export default function AdminSidebar() {
             <Link
               key={item.href}
               href={item.href}
-              onClick={() => setMobileOpen(false)}
+              onClick={() => {
+                setMobileOpen(false);
+                onMobileToggle?.();
+              }}
               className={`
                 flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200
                 ${isActive(item.href)
