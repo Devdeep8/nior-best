@@ -490,3 +490,124 @@ body:has(button:hover) #cursor-ring {
   background-size: 200% 100%;
   animation: reel-shimmer 2.5s ease-in-out infinite;
 }
+
+/* ========================================
+   ADMIN PANEL SPECIFIC STYLES
+   Simple blue theme for admin dashboard only
+   ======================================== */
+
+/* High contrast text colors for admin */
+.admin-theme {
+  /* Main text colors */
+  --admin-text-primary: #FFFFFF !important;
+  --admin-text-secondary: #E5E7EB !important;
+  --admin-text-muted: #9CA3AF !important;
+  --admin-text-dark: #111827 !important;
+}
+
+/* Text color overrides for high contrast */
+.admin-theme .text-white {
+  color: var(--admin-text-primary) !important;
+}
+
+.admin-theme .text-white\/60 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.admin-theme .text-white\/40 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.admin-theme .text-white\/35 {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.admin-theme .text-white\/30 {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.admin-theme .text-white\/25 {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.admin-theme .text-white\/20 {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.admin-theme .text-black {
+  color: var(--admin-text-primary) !important;
+}
+
+/* Apply simple blue accent to admin pages */
+.admin-theme .text-brand {
+  color: #60A5FA !important;
+  font-weight: 500 !important;
+}
+
+.admin-theme .bg-brand {
+  background-color: #3B82F6 !important;
+}
+
+.admin-theme .border-brand {
+  border-color: #60A5FA !important;
+}
+
+/* Hover states for admin */
+.admin-theme .hover\:text-brand:hover {
+  color: #60A5FA !important;
+}
+
+.admin-theme .hover\:bg-brand:hover {
+  background-color: #3B82F6 !important;
+}
+
+.admin-theme .hover\:border-brand:hover {
+  border-color: #60A5FA !important;
+}
+
+/* Focus states for admin */
+.admin-theme .focus\:border-brand\/50:focus {
+  border-color: rgba(96, 165, 250, 0.6) !important;
+}
+
+/* Selection background in admin */
+.admin-theme .selection\:bg-brand\/30::selection {
+  background-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Enhanced input text contrast */
+.admin-theme input[type="text"],
+.admin-theme input[type="password"],
+.admin-theme input[type="email"],
+.admin-theme textarea,
+.admin-theme select {
+  color: #FFFFFF !important;
+}
+
+/* Enhanced button contrast */
+.admin-theme button {
+  color: #FFFFFF !important;
+}
+
+.admin-theme .bg-white {
+  background-color: #F3F4F6 !important;
+  color: #111827 !important;
+}
+
+/* High contrast for text elements */
+.admin-theme h1, .admin-theme h2, .admin-theme h3, .admin-theme h4 {
+  color: #FFFFFF !important;
+}
+
+.admin-theme p, .admin-theme span, .admin-theme div {
+  color: inherit !important;
+}
+
+/* Link high contrast */
+.admin-theme a {
+  color: #60A5FA !important;
+}
+
+.admin-theme a:hover {
+  color: #93C5FD !important;
+}

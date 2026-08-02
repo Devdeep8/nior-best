@@ -96,7 +96,7 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-4 relative overflow-hidden font-sans selection:bg-brand/30">
+    <div className="admin-theme min-h-screen bg-black flex items-center justify-center px-4 relative overflow-hidden font-sans selection:bg-brand/30">
       {/* Background radial highlight */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand/5 rounded-full blur-[120px] pointer-events-none" />
 

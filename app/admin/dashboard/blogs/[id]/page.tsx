@@ -4,6 +4,7 @@ import React, { useState, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import ImageUpload from "@/components/admin/ImageUpload";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -115,7 +116,7 @@ export default function EditBlogPage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-[#060606] text-white font-sans selection:bg-brand/30 pb-20">
+    <div className="admin-theme min-h-screen bg-[#060606] text-white font-sans selection:bg-brand/30 pb-20">
       {/* Top Header */}
       <header className="border-b border-white/5 bg-black py-5 px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-4">
@@ -254,20 +255,13 @@ export default function EditBlogPage({ params }: Props) {
                 />
               </div>
 
-              {/* Row 4: Image URL */}
-              <div className="space-y-2">
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-white/40">
-                  Cover Image URL
-                </label>
-                <input
-                  type="text"
-                  value={imageUrl}
-                  onChange={(e) => setImageUrl(e.target.value)}
-                  placeholder="e.g. https://images.unsplash.com/photo-..."
-                  className="w-full bg-[#121212] border border-white/10 focus:border-brand/50 rounded-lg px-4 py-3 text-sm text-white placeholder-white/20 outline-none transition-colors"
-                  disabled={loading}
-                />
-              </div>
+              {/* Row 4: Image Upload */}
+              <ImageUpload
+                value={imageUrl}
+                onChange={setImageUrl}
+                label="Cover Image"
+                placeholder="Upload cover image for article"
+              />
 
               {/* Row 5: Content Editor */}
               <div className="space-y-2">
@@ -313,16 +307,11 @@ export default function EditBlogPage({ params }: Props) {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-mono uppercase tracking-wider text-white/40">
-                    Author Image URL
-                  </label>
-                  <input
-                    type="text"
+                  <ImageUpload
                     value={authorImage}
-                    onChange={(e) => setAuthorImage(e.target.value)}
-                    placeholder="https://images.unsplash.com/photo-..."
-                    className="w-full bg-[#121212] border border-white/10 focus:border-brand/50 rounded-lg px-4 py-3 text-sm text-white placeholder-white/20 outline-none transition-colors"
-                    disabled={loading}
+                    onChange={setAuthorImage}
+                    label="Author Image"
+                    placeholder="Upload author profile image"
                   />
                 </div>
               </div>

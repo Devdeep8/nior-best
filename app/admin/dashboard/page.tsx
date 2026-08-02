@@ -114,7 +114,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#060606] text-white font-sans selection:bg-brand/30">
+    <div className="admin-theme min-h-screen bg-[#060606] text-white font-sans selection:bg-brand/30">
       {/* Dashboard Top Header */}
       <header className="border-b border-white/5 bg-black py-5 px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-4">
