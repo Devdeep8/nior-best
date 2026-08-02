@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import AdminSidebar from "@/components/admin/AdminSidebar";
+import AdminHeader from "@/components/admin/AdminHeader";
+import StatsCard from "@/components/admin/StatsCard";
 
 interface Lead {
   id: string;
@@ -29,6 +32,8 @@ interface Blog {
 
 export default function DashboardPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"leads" | "blogs">("leads");
   const [leads, setLeads] = useState<Lead[]>([]);
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -104,44 +109,71 @@ export default function DashboardPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center text-white">
+      <div className="admin-theme min-h-screen bg-[#060606] flex items-center justify-center text-white">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-8 h-8 border-2 border-brand border-t-transparent rounded-full animate-spin" />
-          <span className="font-mono text-xs tracking-widest text-white/50 uppercase">Accessing Database...</span>
+          <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+          <span className="font-mono text-xs tracking-widest text-white/50 uppercase">Loading Dashboard...</span>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="admin-theme min-h-screen bg-[#060606] text-white font-sans selection:bg-brand/30">
-      {/* Dashboard Top Header */}
-      <header className="border-b border-white/5 bg-black py-5 px-6 md:px-12 flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <Link href="/">
-            <Image
-              src="/assets/logo/Mixspace-Studio-logo-white-transparent.png"
-              alt="Mixspace Studio Logo"
-              width={582}
-              height={178}
-              className="h-8 w-auto object-contain"
-            />
-          </Link>
-          <span className="h-4 w-[1px] bg-white/20 hidden sm:inline" />
-          <span className="text-[10px] font-mono tracking-widest text-white/40 uppercase hidden sm:inline">
-            Control Console
-          </span>
-        </div>
-        <button
-          onClick={handleLogout}
-          className="border border-white/20 hover:border-brand hover:text-brand rounded-full px-5 py-2 text-xs font-mono tracking-widest uppercase transition-colors"
-        >
-          Sign Out
-        </button>
-      </header>
+    <div className="admin-theme min-h-screen bg-[#060606] text-white font-sans selection:bg-blue-500/30">
+      <AdminSidebar onMobileToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
 
-      {/* Main Grid Workspace */}
-      <main className="max-w-7xl mx-auto px-6 md:px-12 py-12">
+      <div className="lg:ml-64">
+        <AdminHeader
+          title="Dashboard"
+          subtitle="Welcome back! Here's what's happening today."
+          breadcrumbs={[{ label: "Admin" }, { label: "Dashboard" }]}
+          onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+        />
+
+      {/* Main Content */}
+      <main className="p-6 lg:p-8">
+        {error && (
+          <div className="mb-6 bg-red-500/10 border border-red-500/20 text-red-400 text-sm p-4 rounded-xl font-mono">
+            {error}
+          </div>
+        )}
+
+        {/* Stats Overview */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <StatsCard
+            title="Total Leads"
+            value={leads.length}
+            icon="📥"
+            color="blue"
+            description="All submissions"
+          />
+          <StatsCard
+            title="Total Articles"
+            value={blogs.length}
+            icon="📝"
+            color="green"
+            description="Published blogs"
+          />
+          <StatsCard
+            title="This Month"
+            value={leads.filter(l => {
+              const date = new Date(l.createdAt);
+              const now = new Date();
+              return date.getMonth() === now.getMonth() && date.getFullYear() === now.getFullYear();
+            }).length}
+            icon="📊"
+            color="purple"
+            description="New leads"
+          />
+          <StatsCard
+            title="Quick Actions"
+            value="—"
+            icon="⚡"
+            color="orange"
+            description="Shortcuts"
+            onClick={() => setActiveTab("blogs")}
+          />
+        </div>
         {error && (
           <div className="bg-red-500/10 border border-red-500/20 text-red-400 text-sm p-4 rounded-xl mb-8 font-mono">
             {error}
@@ -149,44 +181,44 @@ export default function DashboardPage() {
         )}
 
         {/* Tab Headers */}
-        <div className="flex border-b border-white/5 mb-8 gap-8">
+        <div className="flex border-b border-white/5 mb-6 gap-6">
           <button
             onClick={() => setActiveTab("leads")}
-            className={`pb-4 text-sm font-mono tracking-wider uppercase transition-colors relative ${
-              activeTab === "leads" ? "text-brand font-semibold" : "text-white/40 hover:text-white"
+            className={`pb-3 px-2 text-sm font-mono tracking-wider uppercase transition-colors relative ${
+              activeTab === "leads" ? "text-blue-400 font-semibold" : "text-white/40 hover:text-white/60"
             }`}
           >
             Leads / Inquiries ({leads.length})
             {activeTab === "leads" && (
-              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand" />
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-400" />
             )}
           </button>
           <button
             onClick={() => setActiveTab("blogs")}
-            className={`pb-4 text-sm font-mono tracking-wider uppercase transition-colors relative ${
-              activeTab === "blogs" ? "text-brand font-semibold" : "text-white/40 hover:text-white"
+            className={`pb-3 px-2 text-sm font-mono tracking-wider uppercase transition-colors relative ${
+              activeTab === "blogs" ? "text-blue-400 font-semibold" : "text-white/40 hover:text-white/60"
             }`}
           >
             Journal / Blogs ({blogs.length})
             {activeTab === "blogs" && (
-              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand" />
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-400" />
             )}
           </button>
         </div>
 
         {/* Tab Body: LEADS */}
         {activeTab === "leads" && (
-          <div className="space-y-6 animate-fadeIn">
+          <div className="space-y-4">
             {leads.length === 0 ? (
-              <div className="text-center py-20 border border-dashed border-white/5 rounded-2xl">
-                <p className="text-white/40 font-mono text-sm uppercase">No submission records found.</p>
+              <div className="text-center py-16 border border-dashed border-white/5 rounded-xl">
+                <p className="text-white/40 font-mono text-sm uppercase">No submission records found</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-6">
                 {leads.map((lead) => (
                   <div
                     key={lead.id}
-                    className="bg-black border border-white/5 hover:border-white/10 rounded-2xl p-6 md:p-8 transition-colors flex flex-col justify-between gap-6"
+                    className="bg-[#080808] border border-white/5 hover:border-blue-500/20 rounded-xl p-5 transition-all duration-200 flex flex-col justify-between gap-4"
                   >
                     <div>
                       {/* Top Info */}
@@ -260,28 +292,28 @@ export default function DashboardPage() {
 
         {/* Tab Body: BLOGS */}
         {activeTab === "blogs" && (
-          <div className="space-y-6 animate-fadeIn">
+          <div className="space-y-6">
             {/* Create Action */}
             <div className="flex justify-between items-center">
-              <h3 className="text-xl font-serif text-white tracking-tight">Journal Articles</h3>
+              <h3 className="text-lg font-semibold text-white tracking-tight">Journal Articles</h3>
               <Link
                 href="/admin/dashboard/blogs/new"
-                className="bg-white hover:bg-brand hover:text-white text-black font-semibold px-6 py-3 rounded-full text-xs font-mono tracking-widest uppercase transition-colors"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-5 py-2.5 rounded-lg text-xs font-mono tracking-widest uppercase transition-colors flex items-center gap-2"
               >
-                + New Article
+                <span>+</span> New Article
               </Link>
             </div>
 
             {blogs.length === 0 ? (
-              <div className="text-center py-20 border border-dashed border-white/5 rounded-2xl mt-4">
-                <p className="text-white/40 font-mono text-sm uppercase">No blog articles found.</p>
+              <div className="text-center py-16 border border-dashed border-white/5 rounded-xl">
+                <p className="text-white/40 font-mono text-sm uppercase">No blog articles found</p>
               </div>
             ) : (
-              <div className="bg-black border border-white/5 rounded-2xl overflow-hidden mt-4">
+              <div className="bg-[#080808] border border-white/5 rounded-xl overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse text-sm">
                     <thead>
-                      <tr className="border-b border-white/10 bg-white/[0.02] text-xs font-mono tracking-wider text-white/40 uppercase">
+                      <tr className="border-b border-white/10 bg-white/5 text-xs font-mono tracking-wider text-white/40 uppercase">
                         <th className="p-4 pl-6">Title</th>
                         <th className="p-4">Category</th>
                         <th className="p-4">Read Time</th>
@@ -291,25 +323,29 @@ export default function DashboardPage() {
                     </thead>
                     <tbody className="divide-y divide-white/5">
                       {blogs.map((blog) => (
-                        <tr key={blog.id} className="hover:bg-white/[0.01] transition-colors">
-                          <td className="p-4 pl-6 font-serif font-medium text-white max-w-xs truncate">
+                        <tr key={blog.id} className="hover:bg-white/5 transition-colors">
+                          <td className="p-4 pl-6 font-medium text-white max-w-xs truncate">
                             {blog.title}
                           </td>
-                          <td className="p-4 text-xs font-mono text-brand uppercase">{blog.category}</td>
-                          <td className="p-4 text-xs font-mono text-white/50">{blog.readTime}</td>
-                          <td className="p-4 text-xs font-mono text-white/40">
+                          <td className="p-4">
+                            <span className="text-xs font-mono bg-blue-500/10 text-blue-400 px-2 py-1 rounded uppercase">
+                              {blog.category}
+                            </span>
+                          </td>
+                          <td className="p-4 text-xs text-white/50">{blog.readTime}</td>
+                          <td className="p-4 text-xs text-white/40">
                             {new Date(blog.publishedAt).toLocaleDateString()}
                           </td>
-                          <td className="p-4 pr-6 text-right space-x-4">
+                          <td className="p-4 pr-6 text-right space-x-3">
                             <Link
                               href={`/admin/dashboard/blogs/${blog.id}`}
-                              className="text-xs font-mono text-white/60 hover:text-white tracking-wide"
+                              className="text-xs font-medium text-white/60 hover:text-white tracking-wide transition-colors"
                             >
                               Edit
                             </Link>
                             <button
                               onClick={() => handleDeleteBlog(blog.id)}
-                              className="text-xs font-mono text-red-500 hover:text-red-400 tracking-wide"
+                              className="text-xs font-medium text-red-400/80 hover:text-red-400 tracking-wide transition-colors"
                             >
                               Delete
                             </button>
@@ -324,6 +360,7 @@ export default function DashboardPage() {
           </div>
         )}
       </main>
+      </div>
     </div>
   );
 }

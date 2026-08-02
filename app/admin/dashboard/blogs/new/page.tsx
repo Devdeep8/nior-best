@@ -5,9 +5,12 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import ImageUpload from "@/components/admin/ImageUpload";
+import AdminSidebar from "@/components/admin/AdminSidebar";
+import AdminHeader from "@/components/admin/AdminHeader";
 
 export default function NewBlogPage() {
   const router = useRouter();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -68,34 +71,31 @@ export default function NewBlogPage() {
   };
 
   return (
-    <div className="admin-theme min-h-screen bg-[#060606] text-white font-sans selection:bg-brand/30 pb-20">
-      {/* Top Header */}
-      <header className="border-b border-white/5 bg-black py-5 px-6 md:px-12 flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <Link href="/admin/dashboard">
-            <Image
-              src="/assets/logo/Mixspace-Studio-logo-white-transparent.png"
-              alt="Mixspace Studio Logo"
-              width={582}
-              height={178}
-              className="h-8 w-auto object-contain"
-            />
-          </Link>
-          <span className="h-4 w-[1px] bg-white/20" />
-          <span className="text-[10px] font-mono tracking-widest text-white/40 uppercase">
-            New Article
-          </span>
-        </div>
-        <Link
-          href="/admin/dashboard"
-          className="border border-white/10 hover:border-white/20 rounded-full px-5 py-2 text-xs font-mono tracking-widest uppercase transition-colors"
-        >
-          Cancel
-        </Link>
-      </header>
+    <div className="admin-theme min-h-screen bg-[#060606] text-white font-sans selection:bg-blue-500/30 pb-20">
+      <AdminSidebar onMobileToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
 
-      {/* Main Workspace */}
-      <main className="max-w-4xl mx-auto px-6 mt-12 animate-fadeIn">
+      <div className="lg:ml-64">
+        <AdminHeader
+          title="Create New Article"
+          subtitle="Write and publish a new blog post"
+          breadcrumbs={[
+            { label: "Admin", href: "/admin" },
+            { label: "Dashboard", href: "/admin/dashboard" },
+            { label: "New Article" }
+          ]}
+          action={
+            <Link
+              href="/admin/dashboard"
+              className="border border-white/10 hover:border-white/20 rounded-lg px-4 py-2 text-xs font-mono tracking-widest uppercase transition-colors"
+            >
+              Cancel
+            </Link>
+          }
+          onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+        />
+
+      {/* Main Content */}
+      <main className="p-6 lg:p-8 max-w-5xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-serif text-white tracking-tight">Create New Article</h2>
           <button
@@ -119,7 +119,7 @@ export default function NewBlogPage() {
         )}
 
         {previewMode ? (
-          <div className="bg-black border border-white/10 rounded-2xl p-8 min-h-[400px]">
+          <div className="bg-[#080808] border border-white/5 rounded-xl p-8 min-h-100">
             <span className="text-[11px] font-mono tracking-widest text-brand uppercase block mb-3">
               {category} • {readTime}
             </span>
@@ -288,6 +288,7 @@ export default function NewBlogPage() {
           </form>
         )}
       </main>
+      </div>
     </div>
   );
 }

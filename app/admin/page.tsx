@@ -86,9 +86,9 @@ export default function AdminPage() {
 
   if (checking) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center text-white">
+      <div className="admin-theme min-h-screen bg-black flex items-center justify-center text-white">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-8 h-8 border-2 border-brand border-t-transparent rounded-full animate-spin" />
+          <div className="w-10 h-10 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
           <span className="font-mono text-xs tracking-widest text-white/50 uppercase">Loading Session...</span>
         </div>
       </div>
@@ -96,9 +96,9 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="admin-theme min-h-screen bg-black flex items-center justify-center px-4 relative overflow-hidden font-sans selection:bg-brand/30">
+    <div className="admin-theme min-h-screen bg-black flex items-center justify-center px-4 relative overflow-hidden font-sans selection:bg-blue-500/30">
       {/* Background radial highlight */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="w-full max-w-[420px] z-10">
         {/* Brand Header */}
@@ -116,8 +116,8 @@ export default function AdminPage() {
         </div>
 
         {/* Card */}
-        <div className="bg-[#0b0b0b] border border-white/5 rounded-2xl p-8 shadow-2xl">
-          <h3 className="text-xl font-serif font-medium text-white mb-6 tracking-tight">
+        <div className="bg-[#080808] border border-white/5 rounded-xl p-8 shadow-2xl">
+          <h3 className="text-xl font-semibold text-white mb-6 tracking-tight">
             {isSetup ? "Configure System Owner" : "Sign in to Dashboard"}
           </h3>
 
@@ -163,7 +163,7 @@ export default function AdminPage() {
 
             <button
               type="submit"
-              className="w-full bg-white text-black font-semibold py-3.5 rounded-lg text-sm transition-all hover:bg-brand hover:text-white disabled:opacity-50 mt-2 flex items-center justify-center gap-2"
+              className="w-full bg-blue-500 text-white font-semibold py-3.5 rounded-lg text-sm transition-all hover:bg-blue-600 disabled:opacity-50 mt-2 flex items-center justify-center gap-2"
               disabled={loading}
             >
               {loading ? (
